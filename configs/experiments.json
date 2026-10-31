@@ -1,0 +1,74 @@
+{
+  "main": {
+    "vision_backbone": "TC_MVE",
+    "reasoning_queries": true,
+    "spatial_supervision": true,
+    "point_prompts": false,
+    "box_prompt": true,
+    "coarse_mask_prompt": true,
+    "semantic_prompt": true
+  },
+  "no_rq": {
+    "vision_backbone": "TC_MVE",
+    "reasoning_queries": false,
+    "spatial_supervision": true,
+    "point_prompts": false,
+    "box_prompt": true,
+    "coarse_mask_prompt": true,
+    "semantic_prompt": true
+  },
+  "no_semantic": {
+    "vision_backbone": "TC_MVE",
+    "reasoning_queries": true,
+    "spatial_supervision": true,
+    "point_prompts": false,
+    "box_prompt": true,
+    "coarse_mask_prompt": true,
+    "semantic_prompt": false
+  },
+  "box_only": {
+    "vision_backbone": "TC_MVE",
+    "reasoning_queries": true,
+    "spatial_supervision": true,
+    "point_prompts": false,
+    "box_prompt": true,
+    "coarse_mask_prompt": false,
+    "semantic_prompt": true
+  },
+  "no_spatial_heatmap_loss": {
+    "vision_backbone": "TC_MVE",
+    "reasoning_queries": true,
+    "spatial_supervision": false,
+    "point_prompts": false,
+    "box_prompt": true,
+    "coarse_mask_prompt": true,
+    "semantic_prompt": true
+  },
+  "medsam_vision": {
+    "vision_backbone": "medsam",
+    "reasoning_queries": true,
+    "spatial_supervision": true,
+    "point_prompts": false,
+    "box_prompt": true,
+    "coarse_mask_prompt": true,
+    "semantic_prompt": true
+  },
+  "coarse_mask_only": {
+    "vision_backbone": "TC_MVE",
+    "reasoning_queries": true,
+    "spatial_supervision": true,
+    "point_prompts": false,
+    "box_prompt": false,
+    "coarse_mask_prompt": true,
+    "semantic_prompt": true
+  },
+  "semantic_only": {
+    "vision_backbone": "TC_MVE",
+    "reasoning_queries": true,
+    "spatial_supervision": true,
+    "point_prompts": false,
+    "box_prompt": false,
+    "coarse_mask_prompt": false,
+    "semantic_prompt": true
+  }
+}

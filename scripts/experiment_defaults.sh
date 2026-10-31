@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+SEED=${SEED:-2026}
+GPU_IDS=${GPU_IDS:-0,1,2,3,4,5}
+DATA_ROOT=${DATA_ROOT:-/data/ReaSeg/data}
+PRETRAINED_ROOT=${PRETRAINED_ROOT:-/data/ReaSeg/pretrained}
+export SEED GPU_IDS DATA_ROOT PRETRAINED_ROOT

@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-02",
+  "method": "Opened using web browsing tool; content returned and destination identity checked. No claim of local HTTP HEAD status.",
+  "links": [
+    {
+      "url": "https://github.com/bowang-lab/MedSAM",
+      "result": "Content retrieved; expected project or official documentation"
+    },
+    {
+      "url": "https://github.com/facebookresearch/segment-anything",
+      "result": "Content retrieved; expected project or official documentation"
+    },
+    {
+      "url": "https://github.com/PRIS-CV/MedReasoner",
+      "result": "Content retrieved; expected project or official documentation"
+    },
+    {
+      "url": "https://pris-cv.github.io/MedReasoner/",
+      "result": "Content retrieved; expected project or official documentation"
+    },
+    {
+      "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site",
+      "result": "Content retrieved; expected project or official documentation"
+    }
+  ],
+  "not_checked": "No actual MedSPAR release URL exists to verify; placeholders are not links. Local preview checked separately in browser QA."
+}

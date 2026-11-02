@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-02",
+  "assets": [
+    {
+      "path": "assets/images/framework/medspar-architecture.png",
+      "source": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\MedSPAR_architecture\\MedSPAR_architecture.png",
+      "source_sha256": "5daf9681ddaa474ac0cbeb677fbcd1ccb0a73c38e8f27890c57008e65adf6ee0",
+      "copy_sha256": "5daf9681ddaa474ac0cbeb677fbcd1ccb0a73c38e8f27890c57008e65adf6ee0",
+      "copied_unchanged": true,
+      "meaning": "Existing architecture draft; schematic symbols only, no patient image or measured prediction",
+      "authorization": "User explicitly requested use of existing suitable project figures",
+      "version_status": "Draft; final paper figure selection pending"
+    },
+    {
+      "path": "assets/images/dataset/construction-mobile.svg",
+      "source": "New original text/vector diagram; maintenance/draw_diagrams.py",
+      "sha256": "a7f5a5d52876d2a5035a7a892c15c614918e53917fad40bb61aa05dcd120e027",
+      "meaning": "No medical data or experimental prediction"
+    },
+    {
+      "path": "assets/images/dataset/construction.svg",
+      "source": "New original text/vector diagram; maintenance/draw_diagrams.py",
+      "sha256": "26fd55802f3328aa4e6f9da908af938788226644e60fc93907af1efffe608a76",
+      "meaning": "No medical data or experimental prediction"
+    },
+    {
+      "path": "assets/images/favicon.svg",
+      "source": "New original text/vector diagram; maintenance/draw_diagrams.py",
+      "sha256": "ed14faf55cd670103e24dd0105a24455df6dc8156fcd4ebbd1c73b17b2123d20",
+      "meaning": "No medical data or experimental prediction"
+    },
+    {
+      "path": "assets/images/framework/method-overview.svg",
+      "source": "New original text/vector diagram; maintenance/draw_diagrams.py",
+      "sha256": "c040edfd9a5669326292d21c7c465f5c05f6081862bd8544099de31e8825da47",
+      "meaning": "No medical data or experimental prediction"
+    },
+    {
+      "path": "assets/images/teaser/task-overview-mobile.svg",
+      "source": "New original text/vector diagram; maintenance/draw_diagrams.py",
+      "sha256": "388034f300da46c50aadefba87ff38b1411513ff476c1f8a06a39b50ee751446",
+      "meaning": "No medical data or experimental prediction"
+    },
+    {
+      "path": "assets/images/teaser/task-overview.svg",
+      "source": "New original text/vector diagram; maintenance/draw_diagrams.py",
+      "sha256": "e8efe20cec12096e21903a29624b615c729827181033803e72f4fe2c2e0c3bd9",
+      "meaning": "No medical data or experimental prediction"
+    }
+  ]
+}

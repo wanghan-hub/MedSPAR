@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+<title id="title">MedSPAR code-derived method overview</title><desc id="desc">TC-MVE supplies a compressed prefix to the LLM, a full grid to ACSG, and direct image embeddings to the SAM decoder. SGPA produces geometric and semantic prompts. No data or predictions are illustrated.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#216960"/></marker></defs>
+<rect width="1200" height="650" fill="#fff"/>
+<g font-family="Arial, sans-serif">
+<text x="30" y="35" fill="#216960" font-size="12" font-weight="700" text-anchor="start">QUESTION-CONDITIONED VISION</text>
+<text x="425" y="35" fill="#216960" font-size="12" font-weight="700" text-anchor="start">ANSWER-CONDITIONED GROUNDING</text>
+<text x="875" y="35" fill="#216960" font-size="12" font-weight="700" text-anchor="start">PROMPT ADAPTATION</text>
+<rect x="30" y="65" width="310" height="83" rx="5" fill="#f4f7f5" stroke="#d8e2de"/>
+<path d="M31 71V142" stroke="#216960" stroke-width="3"/>
+<text x="48" y="94" fill="#172d33" font-size="20" font-weight="600" text-anchor="start">Image + question</text>
+<text x="48" y="121" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">Question also enters BERT and LLM</text>
+<rect x="30" y="185" width="310" height="111" rx="5" fill="#f4f7f5" stroke="#d8e2de"/>
+<path d="M31 191V290" stroke="#216960" stroke-width="3"/>
+<text x="48" y="214" fill="#172d33" font-size="20" font-weight="600" text-anchor="start">TC-MVE</text>
+<text x="48" y="241" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">BERT → connector → gated attention</text>
+<text x="48" y="264" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">before ViT blocks 2, 5, 6, 11 (0-based)</text>
+<path d="M185 148V185" fill="none" stroke="#216960" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="425" y="65" width="340" height="83" rx="5" fill="#f4f7f5" stroke="#d8e2de"/>
+<path d="M426 71V142" stroke="#216960" stroke-width="3"/>
+<text x="443" y="94" fill="#172d33" font-size="20" font-weight="600" text-anchor="start">Compress + project grid X</text>
+<text x="443" y="121" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">Visual prefix + question → LLM</text>
+<rect x="425" y="185" width="340" height="111" rx="5" fill="#f4f7f5" stroke="#d8e2de"/>
+<path d="M426 191V290" stroke="#216960" stroke-width="3"/>
+<text x="443" y="214" fill="#172d33" font-size="20" font-weight="600" text-anchor="start">Answer states + SEG state</text>
+<text x="443" y="241" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">Free generation, then hidden forward</text>
+<text x="443" y="264" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">Pool 4 answer queries + project anchor</text>
+<path d="M595 148V185" fill="none" stroke="#216960" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="425" y="355" width="340" height="126" rx="5" fill="#f4f7f5" stroke="#d8e2de"/>
+<path d="M426 361V475" stroke="#216960" stroke-width="3"/>
+<text x="443" y="384" fill="#172d33" font-size="20" font-weight="600" text-anchor="start">ACSG</text>
+<text x="443" y="411" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">Query self-attention + grid cross-attention</text>
+<text x="443" y="434" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">Updated anchor ↔ full spatial grid X</text>
+<text x="443" y="457" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">Spatial logits + grounded queries</text>
+<path d="M595 296V355" fill="none" stroke="#216960" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M340 220H380V105H425" fill="none" stroke="#216960" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="349" y="197" fill="#216960" font-size="16" font-weight="700" text-anchor="start">X</text>
+<path d="M340 263H395V416H425" fill="none" stroke="#216960" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="300" y="336" fill="#216960" font-size="14" font-weight="400" text-anchor="start">Full grid X</text>
+<rect x="875" y="65" width="295" height="83" rx="5" fill="#f4f7f5" stroke="#d8e2de"/>
+<path d="M876 71V142" stroke="#216960" stroke-width="3"/>
+<text x="893" y="94" fill="#172d33" font-size="20" font-weight="600" text-anchor="start">SGPA · geometry</text>
+<text x="893" y="121" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">Predicted box + coarse-mask logits</text>
+<rect x="875" y="195" width="295" height="83" rx="5" fill="#f4f7f5" stroke="#d8e2de"/>
+<path d="M876 201V272" stroke="#216960" stroke-width="3"/>
+<text x="893" y="224" fill="#172d33" font-size="20" font-weight="600" text-anchor="start">SAM prompt encoder</text>
+<text x="893" y="251" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">Geometric sparse + dense prompts</text>
+<path d="M1025 148V195" fill="none" stroke="#216960" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="875" y="335" width="295" height="106" rx="5" fill="#f4f7f5" stroke="#d8e2de"/>
+<path d="M876 341V435" stroke="#216960" stroke-width="3"/>
+<text x="893" y="364" fill="#172d33" font-size="20" font-weight="600" text-anchor="start">SGPA · semantics</text>
+<text x="893" y="391" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">Grounded queries → project + gate</text>
+<text x="893" y="414" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">Bypass the prompt encoder</text>
+<path d="M765 389H820V105H875" fill="none" stroke="#216960" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M765 431H800V389H875" fill="none" stroke="#216960" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="875" y="513" width="295" height="85" rx="5" fill="#f4f7f5" stroke="#d8e2de"/>
+<path d="M876 519V592" stroke="#216960" stroke-width="3"/>
+<text x="893" y="542" fill="#172d33" font-size="20" font-weight="600" text-anchor="start">SAM mask decoder</text>
+<text x="893" y="569" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">Binary target mask</text>
+<path d="M1170 236H1186V555H1170" fill="none" stroke="#216960" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M1025 441V513" fill="none" stroke="#216960" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="1003" y="484" fill="#216960" font-size="13" font-weight="400" text-anchor="start">Concat sparse prompts</text>
+<path d="M185 296V555H875" fill="none" stroke="#216960" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="247" y="541" fill="#216960" font-size="16" font-weight="600" text-anchor="start">Post-neck image embeddings E → direct decoder path</text>
+<text x="30" y="622" fill="#52676d" font-size="13" font-weight="400" text-anchor="start">MAIN CONFIGURATION  /  No point prompts  /  Original explanatory drawing; no experimental tensors shown</text>
+</g></svg>

@@ -1,0 +1,2254 @@
+[
+  {
+    "path": "E:\\Project\\MedSPAR\\checkpoint_io.py",
+    "sha256": "97eb42d8ffb9babd1a9d95de7024823815cebfc8ff79fdf0ec45f815a6ff83b0"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\experiment_protocol.py",
+    "sha256": "e3c22e0c23d955bda7229f2b5aba71e069436c39088c5406240482d39592b2e4"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\experiment_reporting.py",
+    "sha256": "fbd59d95e96e7ad926b19aace9deff2e8553a1b0d42bf8a7bcd9c0c0877518c4"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\README.md",
+    "sha256": "274f218f50f9ac4a267904647c67c13edfed09d7ac34f793c97c2b4fab3cf538"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\requirements.txt",
+    "sha256": "6e74eb91c594858ef04823980129a9bc8f20b3cbde77ea4e099e81db83a24c28"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\run_all.sh",
+    "sha256": "896ff3cb9cc4fd73506fcecde4d75af7900e7b0def67cc4b6f6ab8a74e490866"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\THIRD_PARTY_NOTICES.md",
+    "sha256": "b795dd8c4efcf891c6c515e35852dc576b9f7b12b1a4dee007aaff26cf178c75"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\configs\\experiments.json",
+    "sha256": "26173b9d3623d96bc9e86d0335046b251f7433e9bf06fd7e5bab7016514f0cc8"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\configs\\stage0_medsam.json",
+    "sha256": "726b2868be531f5a47b6a2f7a28947b29f5e52b48ce57234750d3eda2961120a"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\configs\\stage1_tc_mve.json",
+    "sha256": "1ff4dc419c45d75763e7484ee0c177e5e2bba27e88cd22a46e5b0cd5278c8fa0"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\configs\\stage2_medspar.json",
+    "sha256": "f6a8620a8a9ca9d1cd224a6df040e039db4190034f2dcff5310f1cd696a5b828"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_generate\\brats_reasonseg.py",
+    "sha256": "1e812000a9728e5d30f0ea6250568ef2970a31b88a87b762927402224bf2744f"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_generate\\build_breast_reasonseg_json.py",
+    "sha256": "9d3ebd23e84cc87a8e2449064721a498ab17870ebdd209be0d70cac563b3b81f"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_generate\\build_liver_reasonseg_json.py",
+    "sha256": "ec3460456975138de2da14eefe496faf129f1141850f9056dea437501612fe67"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_generate\\build_lung_reasonseg_json.py",
+    "sha256": "5c3828ab1836a777452794ace97ee76d0cbd4e22c1dc14064e76fec985b24cfe"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_generate\\build_pancreas_reasonseg_json.py",
+    "sha256": "d320fe25eaca6bbe9dcd9de0784ce31bee6edecf8f3dd03d3dd1f8357fc30342"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_generate\\build_prostate_reasonseg_json.py",
+    "sha256": "2c067680f9fedc86ac0dd367efa5aced333433f3e98d9c290b88e8f9c4077c09"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_generate\\build_tn3k_reasonseg_json.py",
+    "sha256": "564fa7a1d0990415de067912f5e9500c39a17a1c43ebdb18cb5862c9e74641a1"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_generate\\kits23_reasonseg.py",
+    "sha256": "c18edee66deeb90ee022444a5ca5c5b07b8383d5ce20d8f78bc3ef41a4f142e5"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_generate\\poly_reasonseg.py",
+    "sha256": "d95988e964222f07e92d88d64bed6d006c63c83168135a588f68bbcccb41988d"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_generate\\skin_reasonseg.py",
+    "sha256": "6222780b1069315280965b077394a2903f116745dcba6cdb16e6d87e4c3a54f0"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_process\\01b_fix_qin_3d_from_dicomseg.py",
+    "sha256": "b5db0464f1256ee99aacb9519723e9cedd294609a13039b28a0a2c5c1058d3d9"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_process\\01_build_lung_3d_from_dicomseg.py",
+    "sha256": "6e266d5eb3a3c8a457417525383f306c091529a544423e573b614953960df5ac"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_process\\02_export_lung_2d_from_3d.py",
+    "sha256": "b8e8fdc72b7b7a7d2182c96dd87dacf0910cd21de807fe81580567a20c90171e"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_process\\build_picai_2d_prostate.py",
+    "sha256": "0f941e5e87b47a139c9a75ea9464aa88e709ae1e9e819403b2f8a8f4b1f5214e"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_process\\build_picai_2d_prostate_gland.py",
+    "sha256": "0e32fe9f98fd3c0a16891ea656f0dfb857a0e3b075c3b7119718ee7ad5c46556"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_process\\build_prostate158_2d.py",
+    "sha256": "35b5f9befdb7d3d56f31126342cbaffd22d16b4b6e0448ff3c7189b146114adb"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_process\\convert_pants_to_2d_pancreas.py",
+    "sha256": "757f771872641e0cdfe3e13b4599b6fce73c42389164004cbd5388f8cfb3ed7b"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_process\\extract_2d_from_3d_pairs.py",
+    "sha256": "8bd1ec22dec6c31d66e8ab7d6f746309b6c8de657963d87d5d95d2f04b131304"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_process\\merge_polyp_datasets.py",
+    "sha256": "4153daf9e22a6784cb217ecaadbc955cd7c909da391e925eded306413832b727"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_process\\prepare_breast_dce_100_pairs.py",
+    "sha256": "beae266790690337b5f874b7beec5e2b3a5e621824797c8f4924b4aec1b0317f"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_process\\prepare_mama_mia_pairs.py",
+    "sha256": "c6b5451728fc7de6dda4a513975b0b4e65e75b3e86a266f5e4df07b108f98513"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_process\\prepare_picai_pairs_from_seg.py",
+    "sha256": "7fead4811dae01e5dbdbb7605e73796b9beb087b358192e8b2e300787945281f"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_process\\process_brainmri.py",
+    "sha256": "4cfe9da16c6a051067d51eb202b849f41f4885df45517c7a1aebb16e23c862df"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_process\\process_brats_all.py",
+    "sha256": "a8b58cb25132c0bdd1c9bb320f2b27247be60f265a2129fceaaf7d019e5f158d"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_process\\process_brats_WT.py",
+    "sha256": "cad4f21ec047705fbe634fe9a2e38b1c059fa7aa10f45227271067bd957923a3"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_process\\process_busi.py",
+    "sha256": "cdf3320f0df792343af149994f8f9e00af1355c157a0b202e16dc5b07419a69b"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_process\\process_datasets.py",
+    "sha256": "ae4efcaa560ad196472070356245fefa4952bb7b331b91c9edd67f74a40f7b30"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_process\\process_fedbca.py",
+    "sha256": "b8f771eba9e9555e44525739939a797cdcda4b61f7eb9166f6e2144df2e8b337"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_process\\process_kits23.py",
+    "sha256": "1fc20a33edc0eee1f396d314b30257102607b22512dd0ed8d937c365a83f81b5"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_process\\process_lits.py",
+    "sha256": "e4073d2225359d744b965d170108cffa6aa082c308eb31b78c8343ba9f51e26c"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_process\\process_msd.py",
+    "sha256": "ec607008e96b534f20c3a01c300888883bce232c2fdfd381d8b4d3a87aa7a38f"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_process\\process_nlstseg.py",
+    "sha256": "020ab19f9c5e2595ad82dd6b8ec8680c79b902359c6a923676ee3188d8b719f6"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_process\\process_polyp.py",
+    "sha256": "6cd8284526c7723940371f5610a66505ae50a48d705eab0f5a555ac1b39a3218"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_process\\process_promise12.py",
+    "sha256": "2fc51ebe3366b6ec9f4374d79aa8483b0d72d2e4a0a7aba07902c42555eb4711"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_process\\process_skin.py",
+    "sha256": "a69855f1192483f4a90644a044a5fd9f761ae25a7cd48b996f15d77a7ecb4deb"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\data_process\\process_tn3k.py",
+    "sha256": "5b59bfa34c30420549f77fa5c97aef589a78778a1d76fe257d39cadcee3050e5"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\evaluation\\eval_stage0_medsam.py",
+    "sha256": "e8fef39d7a2cbb73b09b8efd26228666c169ac166cbf35dbefae6d958cf17e12"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\evaluation\\eval_stage1_tc_mve.py",
+    "sha256": "ef35f9ea7d36f1d43d5ae7c8f1fef03d6b7de32970033d09c7df255ba50dc52f"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\evaluation\\eval_stage2_medspar.py",
+    "sha256": "a153ab6102924ac8011ec93d007cab34b73bee02bc585f4efff693d0f7991857"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\evaluation\\generation_helpers.py",
+    "sha256": "e15b15a9ccda4fe4a2268686054d8e2717e2b7f1f81aa99976eeb5769000c7d2"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\evaluation\\__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\MedSPAR\\collator.py",
+    "sha256": "b7560b32046ec11d35380b37cebab7b3e14c28c58cedf80eb501b5344eab9176"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\MedSPAR\\dataset.py",
+    "sha256": "f00917240f4d075878f0d4cd1873f2f9c4ac0529b60cd8967bc094846aabe886"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\MedSPAR\\experiments.py",
+    "sha256": "fb2256579bcc962bcaf92a7a9121f1be810537f5c4e66e14d273eb2e39397517"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\MedSPAR\\generation.py",
+    "sha256": "84088b316f0a38ffec2ed3dd8d36eb01fa9194e5a0e26b75c6c5081ac1100205"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\MedSPAR\\llm_backbone.py",
+    "sha256": "942634edfa54a7e1ffa4e725b862d535ff4e69385b05a5ce290c48d986c390c0"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\MedSPAR\\losses.py",
+    "sha256": "9840caaabb34c1a42008e6b761efc29b30adfeceec866962ad4eba95aea03a9d"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\MedSPAR\\medsam_bridge.py",
+    "sha256": "09feaa7ad7d2b507f1daa9337187337fb0ed9c93b0c05f218855f2476a790545"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\MedSPAR\\model.py",
+    "sha256": "5f1528539ebed17e4ad917f0572c0e953530a3bea56ea6030b4208f4c87cedd5"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\MedSPAR\\projectors.py",
+    "sha256": "050faa18e6268b435dae525c1ba03eb73cefbe17793721bf18f81803246cd519"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\MedSPAR\\seg_token.py",
+    "sha256": "9c846359aa86ef25b803cf47f855498b02a0d4e941c4fd0a04e87510b4e2b708"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\MedSPAR\\spatial_grounding.py",
+    "sha256": "f28ba46208adb52631fef0cc8102fab5a3a252a7e408ce56653fc8c520790728"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\MedSPAR\\stage_policy.py",
+    "sha256": "1b416c3813eef42d7654ce5d55a6efff2f874220bb2784ccd8c4ef12e53e6e46"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\MedSPAR\\train_utils.py",
+    "sha256": "27cab790a2a6a83afe24de168b9cbf889976026d511c063edb321481a55e9066"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\MedSPAR\\vision_backbones.py",
+    "sha256": "fcf741514989960fa1605314a1801b9be6ce6c339a9e8b3bc579544eb85197ed"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\MedSPAR\\__init__.py",
+    "sha256": "31b3e56a90eea7f997d89609136e7614bbd1571b3432d4c073e2b64a9a14a27c"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\scripts\\eval_stage0_medsam.sh",
+    "sha256": "a0262f66c44f294e1e655d37a5d65e72fee84ec73bad2541c525c908f88f4a76"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\scripts\\eval_stage1_tc_mve.sh",
+    "sha256": "aab4c081571eb04dceb65ee53275e7dad47aca7bf40f863552f56da8ee302c62"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\scripts\\eval_stage2_medspar.sh",
+    "sha256": "af89f7eab0ea4e90c74b8bb05750cf95ec261a5a5a45ed29f97b7ade101e7099"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\scripts\\experiment_defaults.sh",
+    "sha256": "aaec63ca1dc852bef0644971216234cd9b941b13d62540288d71e879e0a0ce18"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\scripts\\run_all_ablations.sh",
+    "sha256": "cabd8a72da765a61ff487c9b2b4111d92dcc8b37372408ded0e736d24d33b682"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\scripts\\train_box_only.sh",
+    "sha256": "135c3b9f215f0cc68a5ceed9c4b38fb9747ae6f1dca9e9dfefab4d19406f0d63"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\scripts\\train_coarse_mask_only.sh",
+    "sha256": "438c5c57a42ca58b53e0f19c796ff959b93de3e1e625a26072146e93fff4827d"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\scripts\\train_main.sh",
+    "sha256": "f48faa6c9587e025865a27cddae21918679825a07559aae19efc84bcc7f881e5"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\scripts\\train_medsam_vision.sh",
+    "sha256": "670b92832152abfac090a828a59358bc4d829d22869721c779ce9468ebcb99a7"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\scripts\\train_no_rq.sh",
+    "sha256": "0f65068d23c3973b4f55ba59ef6e30dd010e8ee688a8e71bd8df4f3c626e505f"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\scripts\\train_no_semantic.sh",
+    "sha256": "1d29c6c9822ecbf4aacf0cf8b6564d633504bc23dc673298a3c3ffb7008b0fd6"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\scripts\\train_no_spatial_heatmap_loss.sh",
+    "sha256": "2c13f9724ae8ee1095a980a156db4af036e42e0f4aff125e5056733ceff33708"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\scripts\\train_semantic_only.sh",
+    "sha256": "5ac282387076c2fd377e07ffa66cfa6d884bd88c1ebfdb3641d1ff2ad5fe7b26"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\scripts\\train_stage0_medsam.sh",
+    "sha256": "6392704195f9d85d0a0bd312adb462819ed0db9f2b73f4b9b25107494ac867ea"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\scripts\\train_stage1_tc_mve.sh",
+    "sha256": "d9f780bc91c2ea1d4c80024a90d2b06012a259291605dd16b38b3f6d97e350b0"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\scripts\\train_stage2_medspar.sh",
+    "sha256": "b31ea3bdd6a04d902123b03bf16b7d479eb2430d9bf9849967e3ace701dabe91"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\segment_anything\\automatic_mask_generator.py",
+    "sha256": "77842dcb57c68e6eeaeed8a73c5fd079cd20967c2176daf1f115d5be2b2416d9"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\segment_anything\\build_sam.py",
+    "sha256": "f8d09bf0233f3635f1a4d52c049390d8c115a501461f839631757616eda70519"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\segment_anything\\predictor.py",
+    "sha256": "f4125a596a7871043c3f29217b9ff69dfc779490beec2f743d71d8ffe8c51a40"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\segment_anything\\__init__.py",
+    "sha256": "1c22ab77db285b05b7e0a60cd417459182613ea5c746dffec6993a5f86cdbcf1"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\TC_MVE\\box_ops.py",
+    "sha256": "dfedb7e9f22fda07b307c4b5f431d59f41d5d3f60f0ff9dc67c23538de356447"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\TC_MVE\\dataset.py",
+    "sha256": "278ec3a140e5288c093635f1b274206a5ced471428cbcc024e223e5a239aaef2"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\TC_MVE\\encoder.py",
+    "sha256": "da2738c2924e90d86b0cf0c52085a7268a07b05f593819f8409935d32d268d0d"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\TC_MVE\\gated_cross_attention.py",
+    "sha256": "bbfda67a9dcf4c941f56f0eb99eab964715584bfc4b256c6ee59acb698e347c4"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\TC_MVE\\losses.py",
+    "sha256": "60c69e129bd4984fe10e454a4d8ad63b9fd5e41ed86266ab742324a41cc89bd7"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\TC_MVE\\model.py",
+    "sha256": "54dc000dbdb88da3e7d1d24f2c634cda36330225839e79d1d1affbf644e056e6"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\TC_MVE\\patch_head.py",
+    "sha256": "2b518251abaf73a1af4ba26738ce97907309d39a8fab13c4c3b47f56aac0c4c4"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\TC_MVE\\prompt_builder.py",
+    "sha256": "c68eb7fafc8a746e17ff1320b762bb480d9b2a75e2926de5def76ec9e91fc3da"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\TC_MVE\\steered_image_encoder.py",
+    "sha256": "e47a3c5a147ff58c1f777c86a71f36e107a13898cd82b8e79550186a521079b7"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\TC_MVE\\text_encoder.py",
+    "sha256": "dc50d32e988774b07b42747b36aa29e5699d0885a2264b19d61d92be7717ec72"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\TC_MVE\\train_utils.py",
+    "sha256": "f0d895cd2abdc0ef7e9b3b237b34140e280aec1e27eaaa526388e83778d8fced"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\TC_MVE\\__init__.py",
+    "sha256": "da8fde6869567afa78282b720b4ed1617434d337c95b14871ac39f5dffe56dce"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\tools\\add_seg_token_to_llm.py",
+    "sha256": "26aa1aa4b2405a2e038907db185887cad7ba03d0faeefd81e8dcdcc68b11c2b7"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\tools\\run_experiments.py",
+    "sha256": "a0b614dc3ba93206e277ff7880b2cfb79289ce225103defc3476e0702cf97db3"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\train\\train_stage0_medsam.py",
+    "sha256": "ec93535d7c2a617388bb564e05e3eb7c4d100bc234e81c46e12f2600a1cd01ac"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\train\\train_stage1.py",
+    "sha256": "f630a129d210ad47daa7c0246ed87c5d948aed6df8daac3e38462be2b3f961d7"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\train\\train_stage2.py",
+    "sha256": "bba643811d665ca19bf278fd0c35c0b209146ec5714330c082b6efcda02ac96e"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\train\\__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\segment_anything\\modeling\\common.py",
+    "sha256": "77581b8217e25c9ace51f7356fccd1a07ed2962d0f74aae2491f1001750565f1"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\segment_anything\\modeling\\image_encoder.py",
+    "sha256": "afd56922b0c2903f0ddcc75ea2819b42c534c6a830082794f8b93028a2d0c19c"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\segment_anything\\modeling\\mask_decoder.py",
+    "sha256": "270dea7cb1103e7ad04932b7c45e5b0d5ba0db0a8a13734a55bbce0e002fadf7"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\segment_anything\\modeling\\prompt_encoder.py",
+    "sha256": "6961f2b6b336501ecaed497b5642e2626d60a81e6b861455822678df256f3664"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\segment_anything\\modeling\\sam.py",
+    "sha256": "4a5eb2d47f10e2762c29eed6212c190a54709edc3ce01c1f136bce6d901473a6"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\segment_anything\\modeling\\transformer.py",
+    "sha256": "9bd360481a8f693e0b4054a229b5a5bb60efc38bb92e004de138009eba98cd94"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\segment_anything\\modeling\\__init__.py",
+    "sha256": "7bd468bf97fea2758bcdf18977dc8e60d6f90d1d02f5413a2870740005ecfbe8"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\segment_anything\\utils\\amg.py",
+    "sha256": "a308a3908bdab30515e0f68f4f3ff7dfd00a35055106b4e83635dc0c5df2ef11"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\segment_anything\\utils\\onnx.py",
+    "sha256": "1e89e913b79660ac1c8870c8d494adc23ee9f591e90c14d53ec6587e6ce18ade"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\segment_anything\\utils\\transforms.py",
+    "sha256": "6351ec01f61abfb69a529bb7de105f86a52d519e5d25c004c96b0e483b9791af"
+  },
+  {
+    "path": "E:\\Project\\MedSPAR\\segment_anything\\utils\\__init__.py",
+    "sha256": "5f0b78fc8a07e575fded364917a215ebb440df00d90c789d9a3d801fee6f1223"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\paper\\references.bib",
+    "sha256": "46d127875896dcb341e55f5ec2ed98a61f367ae9582ff0a83913a02d579140b1"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\paper\\references_dataset.bib",
+    "sha256": "e028ab07414bb545f918dbf07d8053e3903dee131385bdb93df201b17742118b"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\paper\\references_non_dataset.bib",
+    "sha256": "467ea62984d656a60e0bb4b9aaf2fff303b16bc9cd094e28ff40d288cdaf6512"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\paper\\drafts\\01_introduction.tex",
+    "sha256": "0f646c81486fe3adc47db3a4cc7e73efa8f02401a57f2177d03bb9a8aebaaab1"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\paper\\drafts\\02_related_work.tex",
+    "sha256": "bf3470c7e2444b05cc93ef9c3cbe806ea94499273a5dce4e0066719d13bb63ba"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\paper\\drafts\\03_method.tex",
+    "sha256": "1202a9ea93bfad0c5dbde169efad7581f98438b6755aaa20e67c8371973b52e5"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\paper\\drafts\\04_1_experimental_setup.md",
+    "sha256": "5ec558adde0ebd68c7ef166cb853d70a8ba890e77398add58ff12d1fa0f7f69b"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\paper\\drafts\\04_1_experimental_setup.tex",
+    "sha256": "6e8a4d7360ac11ff9753616348216c85e162781efaa654ab2db4a4605596e08a"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\paper\\drafts\\04_2_comparison.md",
+    "sha256": "74dbfd00426e3d624f977f6aaedf86e3f674ca96178b298f9b405a2a9cfad627"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\paper\\drafts\\04_2_comparison.tex",
+    "sha256": "d684c24fe1e871405135eb2740fd91c57a2112bab6657b3b930cab6e8053a541"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\paper\\evidence\\dataset_references_excluded.md",
+    "sha256": "8fff300e09ec483a279b47a7925789b6e60382b5525bb178c4f689836ca426da"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\paper\\evidence\\reference_integrity_report.md",
+    "sha256": "60dbdc4c283475be0ee9389b7769bc8928044aaba6d28f86c4c267d46ed4781b"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\paper\\evidence\\reference_ledger.md",
+    "sha256": "97c611187775ddb902b348d0bc0410bf8ab1651b0e53a12810e778add39ed85a"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\paper\\evidence\\reference_plan.md",
+    "sha256": "d18cfa51d6e36feec953164f0d3559ea76244466aafa55c57a1e1a292f8ecc2e"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\paper\\evidence\\section_4_1_notes.md",
+    "sha256": "a23231137fb60333bcf3c72ce06d53bc3a51edf38cb56ea451f6aa27caaf984f"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\paper\\evidence\\section_4_2_notes.md",
+    "sha256": "2db1588b8ab22bf3f43a7bd2d23bb8c637e5c2ae0112e6c6e01be21fe0ad71db"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\figure2_dataset\\DRAWING_NOTES.md",
+    "sha256": "536ec4047bf4966a3037891de1746f315024b9fff82ed55320ef6ecfc73e397d"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\figure2_dataset\\Figure2_dataset_draft.pdf",
+    "sha256": "90f26648090d690c3696064adedc39ec619e517a113e1fa8fd47ff1b2f983c73"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\figure2_dataset\\Figure2_dataset_draft.png",
+    "sha256": "78de3f60dff25a8643f7259cd7b2c05e2cd63fe781c95b281d0793c881a292d7"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\figure2_dataset\\Figure2_dataset_draft.svg",
+    "sha256": "d0ac913b03cd5fbbb065f1a8fff4ebf05bc5ed0749f92ac5da7376818195bf75"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\MedSPAR_architecture\\MedSPAR_architecture.pdf",
+    "sha256": "301052878fcaf9da0e34ff64e5fa7c56f0596be6008a0993b5a1efd99e927a12"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\MedSPAR_architecture\\MedSPAR_architecture.png",
+    "sha256": "5daf9681ddaa474ac0cbeb677fbcd1ccb0a73c38e8f27890c57008e65adf6ee0"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\medspar_overview_abcd_v2\\draw_figure.py",
+    "sha256": "a6e9ced67eb51e72928d47fd5c058ed777149e674bae25990f032d8f8555287a"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\medspar_overview_abcd_v2\\FIGURE_NOTES.md",
+    "sha256": "edfe9b58c18d9a812575dc51ef14cea8c6ed323b3a6e37407559c2d779e2cb0d"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\medspar_overview_abcd_v2\\medspar_overview_abcd_v2.pdf",
+    "sha256": "ad01c90f356839c6f2fd3ecc89770dda0398acf1ad43d11bac0e15a375e5de7b"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\medspar_overview_abcd_v2\\medspar_overview_abcd_v2.png",
+    "sha256": "9e10ee5b1814c92f188106db4e7d40d0cb8c459a300528946c11fef216b8d282"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\medspar_overview_abcd_v2\\medspar_overview_abcd_v2.svg",
+    "sha256": "921587aecdd9085fa6364f8690529c1fbed4177c2bae7a8eb73b5f1ae0d5a69d"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\medspar_overview_reference\\draw_overview.py",
+    "sha256": "f6ee36f9d4c67e928103dbec920ac943d450d519599251da80ece37b9d9bf821"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\medspar_overview_reference\\FIGURE_NOTES.md",
+    "sha256": "33c1989d820ea5e780070ad42d4862ce3a400652c2c25fa45c4e858e176ad32f"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\medspar_overview_reference\\medspar_overview_reference.pdf",
+    "sha256": "0f2034e12e7aef623ebdc2f369e21c8893b6b0d4f4139f9f93d77ca0d0b2b077"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\medspar_overview_reference\\medspar_overview_reference.png",
+    "sha256": "1a87cdd0dddce8048babee6a03b51f760f6f1b979d561e470c12ea81469497bb"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\medspar_overview_reference\\medspar_overview_reference.svg",
+    "sha256": "23d6b74e5dabf6d0c4159c4c555b832998a4e349a9043f7c1e8926e768b4879e"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\figure2_dataset\\assets\\ct_input_example.png",
+    "sha256": "9d1f551d53d25f37f432120370c944121e08d8de9e6ce599214d405ff63436c6"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\figure2_dataset\\review\\Figure2_at_paper_size_150dpi.png",
+    "sha256": "1d544057f709bc3d20314636450f1ada7504428bb7d8555b9ae5d2dc7168a673"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\figure2_dataset\\review\\geometry_and_editability_check.json",
+    "sha256": "792202a7fd4a1b31103bc01e902478374d10c39fe842fd8bbbddfa23272c2630"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\figure2_dataset\\review\\pdf_check.json",
+    "sha256": "5bb9a49272fd298b96f226d23f25b6b3b2cd1bf20bf1d2d6666f9190f4afa819"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\figure2_dataset\\review\\pdf_render.png",
+    "sha256": "17201e3bf1a7f5f782b4cffe0714e2e75169a92bce5a00204f83584453d43392"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\figure2_dataset\\review\\svg_browser_check.json",
+    "sha256": "2f0952b3a8a3e03383d3dd9aac90a749c0646b8addebed19bba432fbc9076d9a"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\figure2_dataset\\review\\svg_browser_render.png",
+    "sha256": "a87de8e25bd0f2c5c024e2d61d0b37da3dd16a2add2573f284f76b1b2205f891"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\figure2_dataset\\source\\build_annotation_guided_v2.py",
+    "sha256": "0a42cad121315b6efe67996b8428661c672906a054fe7e21dde503f90bd754f0"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\figure2_dataset\\source\\draw_figure2.py",
+    "sha256": "53522d622bb6c82766227f64faf55525fb7ba4d371c3d06ad0ac53285549c844"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\figure2_dataset\\v2_annotation_guided\\Figure2_dataset_annotation_guided_v2.pdf",
+    "sha256": "e36ffbf2073db8a85dab2318dae0eeba1b7e0e3333dc12f0f7b0b6dc3729b0b0"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\figure2_dataset\\v2_annotation_guided\\Figure2_dataset_annotation_guided_v2.png",
+    "sha256": "bb67890ea606b8f57b1059510e3ea32ac312a468686f5091e727d73011c76a39"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\figure2_dataset\\v2_annotation_guided\\Figure2_dataset_annotation_guided_v2.svg",
+    "sha256": "ceaa433a9dc7815f1c9f27a718a79bfc57c2429cd3c14eb0a5cb81957d972b49"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\figure2_dataset\\v2_annotation_guided\\REVISION_NOTES.md",
+    "sha256": "fd6c2279968695ba93322089fe886f9cfa5c5813de9451af65e606245c86f04b"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\figure2_dataset\\v2_annotation_guided\\assets\\ct_input_example.png",
+    "sha256": "9d1f551d53d25f37f432120370c944121e08d8de9e6ce599214d405ff63436c6"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\figure2_dataset\\v2_annotation_guided\\review\\Figure2_at_paper_size_150dpi.png",
+    "sha256": "2f9b6b91c5a331590058ac0e12c84d5840af4417cf3ad1b92fb6162046553b92"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\figure2_dataset\\v2_annotation_guided\\review\\geometry_and_editability_check.json",
+    "sha256": "67da651b86c8e43b46479f2f0152bcbabd49b031e69f72373a6ddf0a2b711bfc"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\figure2_dataset\\v2_annotation_guided\\review\\pdf_check.json",
+    "sha256": "18e3a9d8611fe45122ecce84f4538b411730be87bf355ee3e196a9235c583c5a"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\figure2_dataset\\v2_annotation_guided\\review\\pdf_render.png",
+    "sha256": "766b6dbcf84954962f138488713f52b8f81e10be98d07575436990fd626662d3"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\figure2_dataset\\v2_annotation_guided\\review\\svg_browser_check.json",
+    "sha256": "056d8be367417d6e91822a5f26bb9e96ba231eaafbb6778dd4366a84c99be43a"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\figure2_dataset\\v2_annotation_guided\\review\\svg_browser_render.png",
+    "sha256": "cfced6d01b903c04e1e212c38942de930adab46dd2869e9580c8c96539cfcae3"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figures\\figure2_dataset\\v2_annotation_guided\\source\\draw_figure2.py",
+    "sha256": "e36c8e11b620c4532b6dc1553497e78c1876daf3775b48621cacded6042f7e45"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\data_flow_mapping.md",
+    "sha256": "00a1a2534ae27d5d9b339436ab97f2a62c149856de508747385e6d273877c4e9"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\design_principles.md",
+    "sha256": "5121156824dbbe394930aa50f6107473c0425167e23c81d657c5bb2839fa80c6"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\final_design_report.md",
+    "sha256": "dfb5b6eedadcdef82d5bc4d8d471457cf26b28366d460b47acd834dbf2224b92"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\local_reference_analysis.md",
+    "sha256": "214b6db63a09e75f02356f2710ec44bd9fd71d359e9fce573da41914202551db"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\model_architecture_audit.md",
+    "sha256": "20ed67983358b4dca6b2de72848d00eb72d1690304a0b9e00ec93f3d8744d989"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\module_input_output_mapping.md",
+    "sha256": "b6c59dba55a5579107c105c990054d16c066e7affbb0a6316b863e3084d43de0"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\progress_checkpoint.md",
+    "sha256": "2bccdbf47252bac891b40332057a052a7973028ccc2a160cf8b7983668ac8f18"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reference_contact_sheet.png",
+    "sha256": "fdb43a8b7c0358b68c7308f869c0b3f3b44c5b30de7e35df002c6b2162587d9b"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\web_reference_analysis.md",
+    "sha256": "3ae667bcca2a07652c5f5646a2cb5db142c2790753687b83cbdcf2c85e9798d6"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\drawio\\conversion_manifest.json",
+    "sha256": "3adb2101599f894b398fdc33dc23c8abc4c208584e8dc55e5aef780babb34bdd"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\drawio\\delivery_files.json",
+    "sha256": "524b472f51537fe55a35205d3a44dbf137eae1718c2ab668f29549026f8d28c5"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\drawio\\drawio_conversion_report.md",
+    "sha256": "112d709b269856b8f297238c2ae07edc68ee5274a69c8b9c356ead5dfb5f5084"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\drawio\\editor_validation.json",
+    "sha256": "1dae80224f5c1fac2ac2f5a907b6031ad19c0c7643fdb3d238bc6733a218e5a0"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\drawio\\MedSPAR_main_figure_drawio_preview.png",
+    "sha256": "e64d0f3f4f5bf306de7699abe63cb36cb115a5633f65d37fcdcc56a2c1cb587d"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\drawio\\MedSPAR_main_figure_drawio_preview.svg",
+    "sha256": "94fe1a898387eb531e48bb4c6c0fd4192669d6c41b2b1f1012603b654ef6e1a4"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\drawio\\native_xml_review.json",
+    "sha256": "ec0a8d6cf87e765cbf5c759d4330af50ec196b9449fcdb90c5375894f2e299cd"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\final\\MedSPAR_main_figure.pdf",
+    "sha256": "2a8df879f572b3c92607a63eaf416cb0a3ad4a37ec0ed584ce7c892f7b0170e1"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\final\\MedSPAR_main_figure.png",
+    "sha256": "fe9d2f95c65a0a2fd04217d47448fd534774e0b8c24a1a327d6d112ba925b885"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\final\\MedSPAR_main_figure.svg",
+    "sha256": "46442f72dad348cf71fb08e6179ec1f9930294d023366153e4b35650c8477e64"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\layout_proposals\\proposal_A.png",
+    "sha256": "bbc15d164b6b4cf9ced68ad06756b91bffae0c2315f840c24fbf634dbf0aa162"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\layout_proposals\\proposal_A.svg",
+    "sha256": "043e7d03fb3f0c04be5322da49eda896c08be49d96fe33c0aab68ba7d44c84dd"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\layout_proposals\\proposal_B.png",
+    "sha256": "bac27ee67db77d9915427d873c8c5b674908b544f3b359d4995884d5d6330d74"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\layout_proposals\\proposal_B.svg",
+    "sha256": "edb45bfe4055d167be93af01b2ec24172bb76c71b7a4b855620a58ba12a52f09"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\layout_proposals\\proposal_C.png",
+    "sha256": "7010e017cab92fc5abefe198e91755eea0b16c5e0ffc22ffeaa7343f9756911f"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\layout_proposals\\proposal_C.svg",
+    "sha256": "6fe352522cf647124e2ee4011dee5f956985d05215c74a51cdcb14c77404a836"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\notation_simplified\\caption.tex",
+    "sha256": "c6501a54499e47113861aa17a947f912631e3f6e5bcbd2bb2990f52f1e84951d"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\notation_simplified\\CHANGELOG.md",
+    "sha256": "cedf0d25e10df609eedd56b698f2d4ea9fd7bf9c7632d96a402408573bf0b064"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\notation_simplified\\MedSPAR_main_figure_minimal.pdf",
+    "sha256": "2dbab3df946c4884ebb3990d9a08526334d2bc2b4c110adc19a4bdf29bad9c6d"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\notation_simplified\\MedSPAR_main_figure_minimal.png",
+    "sha256": "42f56d82a62e2a07817b3424bcea0ce02d45d7e357de5797ece7bedbdcf2ab5a"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\notation_simplified\\MedSPAR_main_figure_minimal.svg",
+    "sha256": "de51e7d8564d1333e574671b23872ce9e8afae9256bef27c718cb2a31c3f2bcb"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reference_based_v2\\DESIGN_NOTES.md",
+    "sha256": "011ce64f10ea482307872649df7b227f676859f011fcbb594d90e26ce8f68ddf"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reference_based_v2\\MedSPAR_main_figure_v2.pdf",
+    "sha256": "0efe31c58701e58613384df60cf607f7459f0a2fa49248802b926c1c76597a9d"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reference_based_v2\\MedSPAR_main_figure_v2.png",
+    "sha256": "1e16e48e0af41653bcf23d97340fafbb4343873519ded78de2e97d642b4701e5"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reference_based_v2\\MedSPAR_main_figure_v2.svg",
+    "sha256": "596d4af2b5c9b0d877c89c9ee1898ff411476d13613c32a095988b28775a8d53"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\final.png",
+    "sha256": "e9e624dcd809636a18caac0c4c3aa8ba2a139869093814e253e971ccaa10e306"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\geometry_check.json",
+    "sha256": "6e34aad1744d9edc8919517f31ef689d25966fc7954afcce3ebaa62a69940f96"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\paper_180mm_150dpi.png",
+    "sha256": "ef099dedff21076023747177b5e27c9b8e1310aa768e43511161c9340c27bf8a"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\pdf_final.png",
+    "sha256": "54a48ed2f0a767f9b6e5ca513ee01e8860aaf724f363ae4c0c1e65baeaab2995"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\pdf_round2.png",
+    "sha256": "ba221893e89c707e4b30f9ea5db0697a3dfa43574c0cf904b33b5c16d53baf23"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\pdf_round3.png",
+    "sha256": "94ffbb82db51604dab7817fb5f228535631f06a991321deedf2e2c41b580475e"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\round1.png",
+    "sha256": "3e989b7ea036a61720649b8db1100121010a77de47642d4b8acf04351f3ea259"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\round2.png",
+    "sha256": "c46af7290f0ec60a712430959015cb9a49228095303bb8554ef03f16f7775348"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\round3.png",
+    "sha256": "4f526cfda0d770facc9e7850f6c4721f9dd9b273e5d0917dc74d020153d7c08b"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\round4.png",
+    "sha256": "a347948619af7f00d8967acb98fa4dade5b24d4a850c834de7dba27c02b9fed8"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\round5.png",
+    "sha256": "e9e624dcd809636a18caac0c4c3aa8ba2a139869093814e253e971ccaa10e306"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\scientific_review.md",
+    "sha256": "4d828dce617eb4e55afef4fb17fba9ec8483c78ce9fce6969cceca0f7a621706"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\svg_browser.png",
+    "sha256": "a4aef92c8eb29e36e407b99305d22202fff8383511e4517723c7595ae96c2a94"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\build_symbol_audit.py",
+    "sha256": "95d37ee0ff28e34bd469242c1e47dce3734323a0252fca1aa1ecc8a356bbb1f8"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\contact_sheet.py",
+    "sha256": "22f2158b6a919edc433a1445e808aec7e6d7330c056cf4fae1061967ed21a817"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\convert_to_drawio.py",
+    "sha256": "84b147712d9c0e4cb56c7a8168a52052875772a85fdfbb6784dc1110506673a6"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\draw_main_figure.py",
+    "sha256": "b63674e387417f7aedb6d3ac706d5b1b34bd7069cb8e68a36829b2021b889910"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\draw_notation_simplified.py",
+    "sha256": "11d85da2c2c9f4b09c02c6ef7fa34ef101e6a6c90b643f20c159c7438b79bc7e"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\draw_notation_simplified_expanded.py",
+    "sha256": "7630c73a832cd484a31096badb4642b8a21c62eca5039ee670078611d7bac758"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\draw_reference_based_v2.py",
+    "sha256": "242be6eaaa9188f5160fa53ac5ddbcabdaa695a1bcd0cbf57f4972034333cdaa"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\layout_proposals.py",
+    "sha256": "e478446c99ecfe6f4d1e8fe4609cab9a643c654ee50074620165562e54617d00"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\qa_drawio_native.py",
+    "sha256": "7033ff74e495da4b803110ef28432f8c913e31b329fbb8e0d11fc12903060a7b"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\symbol_audit\\code_figure_consistency.md",
+    "sha256": "4968788206322ae4057aab7751ffe5d3de28f51c4cb487bd56bae43a6ca3b433"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\symbol_audit\\consistency_resolution_plan.md",
+    "sha256": "34f59246c22b46a6453a4eb9f7c0cba54bb347f6f73966eee7517cd64a168ce8"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\symbol_audit\\figure_text_inventory.json",
+    "sha256": "93a0f336c412204ec666fa6539f510888737cbb1ac89bcb2b72ca4796894f5a2"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\symbol_audit\\paper_figure_consistency.md",
+    "sha256": "defb6a8f857af28d4b76ab998808e47765586b9958d4f2e7d97262abfb5b1061"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\symbol_audit\\README.md",
+    "sha256": "8bc1f953ee6c27d8bf0e959d590462383221f452c3e5702f5cc3a1065714f2c4"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\symbol_audit\\recommended_notation_set.md",
+    "sha256": "b3e22dd09ad498e550ca725305b74fabd4bb8f6d22c1e3f7f5460b6e87952936"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\symbol_audit\\symbol_audit.md",
+    "sha256": "8fd7c24f0ecf071780a59903cc6b095d7e46d109fc7a773b50fffc8fef55b6d0"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\assets\\asset_provenance.md",
+    "sha256": "2ddddfe4df76297c75bfd5f96b6db46b5fe3f045e132a984e1675e2e08e5f330"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\assets\\LICENSE_STIX.txt",
+    "sha256": "bab3d31dfef07f483624f2f65f2711e76065b8e7273278b1c071ede1041c9959"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\assets\\medical_ct_example.png",
+    "sha256": "9d1f551d53d25f37f432120370c944121e08d8de9e6ce599214d405ff63436c6"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\download_official.py",
+    "sha256": "8b17ddc7a258bec2aa41a4f7807c12439f57a5556f2566e086ed217f4f75cc20"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\EnhancingSAM_CVPR2025.pdf",
+    "sha256": "b708b974ac6838a4622c37dbdefe8c55d3667acc7d001af1fb8f8b55f0705707"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\EnhancingSAM_CVPR2025_p1.png",
+    "sha256": "90594c5ad8855b67490edff1fbc3edf4c2445e7c1ab247c5eedbde2cccf946da"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\EnhancingSAM_CVPR2025_p2.png",
+    "sha256": "28ed7f4c18c8fb7b9b61f4d33132454b4be61e31875f70783f8b786dcd8f309d"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\EnhancingSAM_CVPR2025_p3.png",
+    "sha256": "46e9b103362f5f3bd7910aa156223c2ed1c1617dfacd7d3ff7c0b76185621390"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\EnhancingSAM_CVPR2025_p4.png",
+    "sha256": "61ecff795f46fd12bec8fc5f2597d122491a6b42aa60e1e9d098828996673ee5"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\EnhancingSAM_CVPR2025_p5.png",
+    "sha256": "588e1feb4cd53b1b0428b710347a5ce2a210bc398a14139321ba90d1c144c1d3"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\EnhancingSAM_CVPR2025_pages.png",
+    "sha256": "1775842eeac04963b628e6a1ad20fdc84e520d431b5b6137d2a5b4e2049faf96"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\GSVA_CVPR2024_p1.png",
+    "sha256": "b8a82cf24c2f7a4cd9194a994fa241e72d292ecc43d91c063ff568d6c4019dd0"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\GSVA_CVPR2024_p2.png",
+    "sha256": "8fefc86c151077aa5f7fd338c614f3250eaa8d3a055adf3440d8dd471ca397fb"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\GSVA_CVPR2024_p3.png",
+    "sha256": "c5ba4fcc46be681e94d574c882e6e199ccc8444fdfd77729cb36e32b43e8010f"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\GSVA_CVPR2024_p4.png",
+    "sha256": "eee984d2fa30156632ecc1a1eef2064c6e8859ce4592024988b09e16545a5a25"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\GSVA_CVPR2024_p5.png",
+    "sha256": "7c0fa11cc99833609873a647d155154a4a1fbc0c6d302fe1600dd3e28b9aadf9"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\GSVA_CVPR2024_pages.png",
+    "sha256": "9716752fc35aefb1893ddec03a6af7343f0089a30253bda94156967eddc663b7"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\InstructSeg_ICCV2025.pdf",
+    "sha256": "c6676bf50cdc58f4eb8b8e527635be7185bd9234829c19e5ca6153e758d5f56a"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\InstructSeg_ICCV2025_p1.png",
+    "sha256": "4dc15d908647fe10c0012471eb5bbff02fa38efe3f6ae4415cef5e55c258fd28"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\InstructSeg_ICCV2025_p2.png",
+    "sha256": "8402a4910e886ac58617b4ecb37b867598ad40ef97a718eb1c45a4227f5f0ec0"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\InstructSeg_ICCV2025_p3.png",
+    "sha256": "df5bef30cb20651546e2ee7b3809371632c95d497b5b4a50adb1e8cd439744c2"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\InstructSeg_ICCV2025_p4.png",
+    "sha256": "e3b8c2679ec04eb03b66c306ba41727212a3390d8a86b5e4bd07542ed73a9a67"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\InstructSeg_ICCV2025_p5.png",
+    "sha256": "052679f2d702e4c3654acab772518c2cc4caa5f0d66ecef07f51aa34835330ab"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\InstructSeg_ICCV2025_pages.png",
+    "sha256": "7b953b46ca1c1f81983d215ae273e57364391bfe31e056193713ba0fe27bbe74"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\LIRA_p1.png",
+    "sha256": "abd6840dba6fd0c1ff7934bab4e610f83a787fd234a2130acd92b6c6e4562bad"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\LIRA_p2.png",
+    "sha256": "930ef8dc2427a4d25d2c175b4f479b23cefde3f5da05c3dd948846ce7849effb"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\LIRA_p3.png",
+    "sha256": "5b2b1ec8bf45827ff5ff712fc168b92f49441d0c8a54e6e56ac7aea13f6fbbde"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\LIRA_p4.png",
+    "sha256": "93994f3a2db5d1dff7873592dbd9d4c6e9472cbca192c7e1e0446110c5753a9e"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\LIRA_p5.png",
+    "sha256": "887aac17a06fe8271b11241dea73900d3dd350941d26dac628a64b0ebf46e2be"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\LIRA_pages.png",
+    "sha256": "40745db9bfc869e0ed42b979b7df8a2d6e3ef284da981ae091eb6580d0f5079b"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\LISA_p1.png",
+    "sha256": "fd04007c37d758058e24a9c20ffe6f927cc0dcf9fd80678ed106ca8d01723fe0"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\LISA_p2.png",
+    "sha256": "74bc0a18aef9a1cbcc98c5f204f116ddc684b6bfdbfc80f1e60f957483a48a90"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\LISA_p3.png",
+    "sha256": "eee43d1b82564034586a235097435a524b29f6b6de81f569aea06815d3a11dc6"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\LISA_p4.png",
+    "sha256": "0f35f2b7cf1f8e0c22494e590e6a0dd19fd6fa9480a6b7e8a52fba25f71456cd"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\LISA_p5.png",
+    "sha256": "ea26d4c51baf33573cc5ed43d5c357620d8c95477c46ad2cb7fae5f5e3e46c89"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\LISA_pages.png",
+    "sha256": "0652faaba2e40f4751e7f2f87211b925819e3a57b995b0a5d63847dcd8948cee"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\OMGLLaVA_NeurIPS2024.pdf",
+    "sha256": "fd02f8fa5937d2c20b6308387e5b570c3bfeeba0b97330d805e7f38f09d4d191"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\OMGLLaVA_NeurIPS2024_p1.png",
+    "sha256": "f1f5a664cb9b6c137d1e566469d07ff27e3b4a054e24b98b65f4abe38adcf912"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\OMGLLaVA_NeurIPS2024_p2.png",
+    "sha256": "b22c649a18a5941b86da6c18c18e532d37682571dd344561a3fd94d87e3d60fb"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\OMGLLaVA_NeurIPS2024_p3.png",
+    "sha256": "b15507fe5dbaece030943d81d9865bdf2ea635ca5749efc286e73fd9280ed61d"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\OMGLLaVA_NeurIPS2024_p4.png",
+    "sha256": "93593f9f28f6b22acab22ee8804fc2eab8489ad26f4b95eb09160b808d25e3b2"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\OMGLLaVA_NeurIPS2024_p5.png",
+    "sha256": "30a6b323227951b52fa75325d5abcfccc628949b5097b99e8a60b2404ddb9271"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\OMGLLaVA_NeurIPS2024_pages.png",
+    "sha256": "46f1e2f0a18fa3955e23a981bc6dbe036ead4ffb72535825c3d2d910dcd949f9"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\PixelLM_p1.png",
+    "sha256": "c64e3156fb50dc53f29ed183d01d59fa87e9458eb569ecb3d8e67a62cbead1b1"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\PixelLM_p2.png",
+    "sha256": "cd8acaa8fdd2e32698c37172395a02ac575b09784b1d6031a06012a91494ba81"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\PixelLM_p3.png",
+    "sha256": "0ba866f7ba98fc7da13d171d79f39141e04b958672014bc31d8838f6cd24c2fe"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\PixelLM_p4.png",
+    "sha256": "bb69c2f5b897530c22a1d3e1f337bcfc5bce67fdede3636d0884c5ace0d45124"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\PixelLM_p5.png",
+    "sha256": "adc01854ce04a9423973fe30af0af4ffef95d4a0187efafc3ae32d2c0bf4958d"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\PixelLM_pages.png",
+    "sha256": "20999e2e0a00a72f8dbb475dfd2a5bf28a92f3b8bb16959fbb899a6b656bacf5"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\READ_CVPR2025_p1.png",
+    "sha256": "3b71ea84adc19fc6fb109b91164baf11ce2d5ce686845c070830ed0dd70c04b0"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\READ_CVPR2025_p2.png",
+    "sha256": "8eb8ab24f9cf80451109299bae11a613fb1d089d3344515c10735c0827df1262"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\READ_CVPR2025_p3.png",
+    "sha256": "00a2aa410cc0238f0f8d51f0ff42314ebae6e241c1cb15aa3ae679e98a18127d"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\READ_CVPR2025_p4.png",
+    "sha256": "9b4ad9eb75f975061b333df3a094fdf0f2b4e6b06a8ef73ccbb6a00c7a295b7e"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\READ_CVPR2025_p5.png",
+    "sha256": "966af8f26bd0b271abde0a71ef71961c279e48b89953b7684cd77fe172746aa2"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\READ_CVPR2025_pages.png",
+    "sha256": "e2daf1c17f1007c9934c8f94c5dc7faceadcc6f0f12e5a756b711910caa3a8d7"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\render_reference_pages.py",
+    "sha256": "260164d0afc2c4297f237cca955bb7621d3254ae5ca6939de45d61fec22c0584"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\SAM_ICCV2023.pdf",
+    "sha256": "77992e7a518edcaf5200a750299b98f99de051066f7c1dac357e6baf8ce068bb"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\SAM_ICCV2023_p1.png",
+    "sha256": "ec2e21abd1d6f2ada0bb9c8860d50fa2e9b204e311bc1a647fc49e73e0cbc203"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\SAM_ICCV2023_p2.png",
+    "sha256": "cbd2c7a8f062e19af9aecff9d89d5eed041ebca70709b2d6484ce095c96a3701"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\SAM_ICCV2023_p3.png",
+    "sha256": "5aecd85754f136c8a133ba5d8bd38afe6013f5389df6923092e0269ad6c13ca0"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\SAM_ICCV2023_p4.png",
+    "sha256": "e9991f9e4234080198b8fa8385e1d208223afb1ad02e16ed3099be88cc7c9182"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\SAM_ICCV2023_p5.png",
+    "sha256": "22bae58f95731c29ffb6b96d3560ca64328d1d600a129bee8c99a108719049b9"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\SAM_ICCV2023_pages.png",
+    "sha256": "2537794fe30e97026c978e3e0852409a49b3e53a84fb4040d1041904685c3158"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\SimpleViLMedSAM_CVPR2026.pdf",
+    "sha256": "af5c229f2e829af76f5b4480c224a1dfd1888bb499addbff98263f2c494bd61b"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\SimpleViLMedSAM_CVPR2026_p1.png",
+    "sha256": "701691d130add578d69010cd32f5309dbf561fd49e45c0962f1189c9ada24fd3"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\SimpleViLMedSAM_CVPR2026_p2.png",
+    "sha256": "341e1be1afa8ba41eddce4a1a2f562ee421cb72352d609edc0f28126998cdaa8"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\SimpleViLMedSAM_CVPR2026_p3.png",
+    "sha256": "9f4a80f727ba413a38fca179547f923550c4d6de53a3528ee18e32f71d850125"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\SimpleViLMedSAM_CVPR2026_p4.png",
+    "sha256": "4076475e6202186a0a84ef90aa6e2367d23622e3df0d1db8100185bb994d4560"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\SimpleViLMedSAM_CVPR2026_p5.png",
+    "sha256": "00c63082e68154b6e994f2fe6fe0f3015e4f9efce1312bad86ab526db8e70a59"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\source\\references\\SimpleViLMedSAM_CVPR2026_pages.png",
+    "sha256": "60b0d2c63605c223331e653ea9ef9c48314d4c5bea11781033c46d1572c7d27b"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\notation_simplified\\final.png",
+    "sha256": "a1fc9744a68b527c09b6d2b193a650ba69ad2b661928a4abcda82f954769db60"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\notation_simplified\\geometry_check.json",
+    "sha256": "de6d76985a67eac6b9150993d704f5ac29289fe0b4e71d36757c30ec9d8b7819"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\notation_simplified\\label_changes.json",
+    "sha256": "456da0cec750f1433e5eaae7e3a0b80847899a652bb45eb561088a9475b6d7f6"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\notation_simplified\\new_text_inventory.json",
+    "sha256": "78a8fd8c9908d46ddd0b9bf8c6be8e85aa737127b4e9d265401bda5e71d0928e"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\notation_simplified\\pdf_paper_size.png",
+    "sha256": "7c73febbc51f10aafb18b8934e7a17bc84d6673b04a4813bf5b3d584bf1912e5"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\notation_simplified\\round1.png",
+    "sha256": "3241917f49e6202baca8ce21a80e97123a1078b6778d7e8d5b1fc289c39ad912"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\notation_simplified\\svg_browser.png",
+    "sha256": "7653acadbdfc7b4e0bda03124f95d992d63e3303c0be8bde53d83311592d533f"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\notation_simplified\\verification.json",
+    "sha256": "f4dde5711bd53db568bfa7c59014cba1dd278abc4ea221c9e87ba65dddfe6009"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\reference_v2\\export_check.json",
+    "sha256": "c12fb69968584ac8f6e1089a92f678851dc00253b98979804782a3ce746ec4b4"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\reference_v2\\final.png",
+    "sha256": "9c255f3ca650f8194c87b5d227890829b0088596f4d69ec15b00c0216ad99f30"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\reference_v2\\geometry_check.json",
+    "sha256": "ece4bc3662b9dd4d70a7a612b5bf13e61208496d46a9f303f889445bb406bca4"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\reference_v2\\pdf_paper_size.png",
+    "sha256": "f0a8ed86fad02cf6b533164fb843e03b275fa0b7305d8983cb9a69b78bf731d8"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\reference_v2\\round1.png",
+    "sha256": "ad88386dec70ead9b56d17c019d03ef89430c758d5946c4008eb1423b02e23e0"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\reference_v2\\round2.png",
+    "sha256": "fe1d8e086f716024e47c9e5a15786554f64f9ab32f2a0f01c2ee1340d080ee79"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\reference_v2\\round3.png",
+    "sha256": "9c255f3ca650f8194c87b5d227890829b0088596f4d69ec15b00c0216ad99f30"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\figure_redesign\\reviews\\reference_v2\\svg_browser.png",
+    "sha256": "af8d5625ff0e9a4b8684963909ddbc49485dfdab59d4fcb2a9e29b5f83462a8a"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\CODE_AUDIT_AND_VERIFICATION.md",
+    "sha256": "670f2c6b6b5aaa4c4796522826f4d3facf46b2a933dc2ed08ad65d622dc241b0"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\Idea.md",
+    "sha256": "66b69a592fb8d579b18877925dc61e90de2bffbb31a0ee66f55c00603d7f17b6"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LLM_MedSAM\u8bf4\u660e.md",
+    "sha256": "eb1ae504f4f19d4fab04f4e603e75af70d1312b2d390b9d31eadd10e6aeaa8fe"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\MedSAM\u8bf4\u660e.md",
+    "sha256": "5e1b76a636efb3bc2d0f09757edc34a62a0c5216b26110395eac8bf997c5ca69"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\README.md",
+    "sha256": "733a03051d7fb83064ce12e91b55f4fe2fe20e85be9bf98987330c5d286740d5"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\README_FINAL_STAGE2_OPTIMIZATION.md",
+    "sha256": "9312bc76a87676a06b30233c8eed67814ceee498123a87c0bd04e4c5624ebf24"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\README_STAGE2_USAGE.md",
+    "sha256": "044985de21cb6fe7e88faaf787cb0e9deb6de6e616a7570d3b4d02f4b0d41001"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\requirements-stage2.txt",
+    "sha256": "6c9516bab0e38c9b9948f9e820faa5251e05c6c043c75f38c80bd72b60ae4c28"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\run_all.sh",
+    "sha256": "1cf7c76a18a9b17ced2facd192470319ab6f7c5f7a3240fe1e459ba6fdfaf52b"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\\u5b9e\u9a8c\u8bb0\u5f55.md",
+    "sha256": "bbee9609924f874a7157222981afb4088e55e8168ab9a99b637da9f5e272bdb8"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\configs\\llm_l1_qwen2b.yaml",
+    "sha256": "997d77826207db72ff74b8ba102677f8c18beca9063e832a08e45aa42ea85e4f"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\configs\\llm_l2_qwen2b.yaml",
+    "sha256": "3df64bd6066e0d27d2448257f5e9b2fc69b5db3d51240d2bd5a3f6a121595d57"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\configs\\llm_l3_qwen2b.yaml",
+    "sha256": "645ef9273137212bb30474b53c81ba8ad0091f6f06ca94d8178ea0c6c1a1d0d5"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\evaluation\\eval_llm_medsam.py",
+    "sha256": "ca54b318dd2db5c19ce79777848b7ba1c629b7cb15583626c34aa047052e8e1a"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\evaluation\\eval_llm_medsam_generation.py",
+    "sha256": "c65f3193cfaa48717de47b5376507535a1f59a08e7811f1ea82a1ed6797cb79d"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\evaluation\\eval_llm_medsam_teacher_forcing.py",
+    "sha256": "5cce8ecb5abed4ccf58d1b4ca03b643181bfe4811996eb23e43588a7b762cdff"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\evaluation\\eval_medsam_baseline.py",
+    "sha256": "520ff2b1590e7a4a9dc0f236863f09ab6cf7c33e71c1bcef94a9d60d9569b35b"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\evaluation\\eval_steer_medsam.py",
+    "sha256": "86b7a7d1bd8b73f4e7d415ef3c8192594e95ef03332d2bf4abc59dfc18aa9916"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\llm_medsam\\ablation.py",
+    "sha256": "d895b7d981371503d913da049714b60ae42a7df651eeb1b62a5651a288d899cc"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\llm_medsam\\collator.py",
+    "sha256": "2d645d02366ff9f92aa9f21df36eaa0bc82f361e9b2c5be860184ea2c5d040e6"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\llm_medsam\\dataset.py",
+    "sha256": "fcbd0006c0bd253abc80dd02274032a1d451bd4cf6893619e4c11a515b9079d4"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\llm_medsam\\generation.py",
+    "sha256": "cc1f3df9a74d4141d06a4d80565dd6162888ac1cce03c986e4431b1d29c21e0c"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\llm_medsam\\llm_backbone.py",
+    "sha256": "942634edfa54a7e1ffa4e725b862d535ff4e69385b05a5ce290c48d986c390c0"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\llm_medsam\\losses.py",
+    "sha256": "798b2c7f525d45af57b2a523e953cb278317b34996656ad5933d12e1c7cf6e4c"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\llm_medsam\\medsam_bridge.py",
+    "sha256": "09feaa7ad7d2b507f1daa9337187337fb0ed9c93b0c05f218855f2476a790545"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\llm_medsam\\model.py",
+    "sha256": "0dc85e65ad59ceb9beff7789bd84e14260b6900eaab53c002105cb311c752886"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\llm_medsam\\projectors.py",
+    "sha256": "050faa18e6268b435dae525c1ba03eb73cefbe17793721bf18f81803246cd519"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\llm_medsam\\seg_token.py",
+    "sha256": "9c846359aa86ef25b803cf47f855498b02a0d4e941c4fd0a04e87510b4e2b708"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\llm_medsam\\spatial_grounding.py",
+    "sha256": "f28ba46208adb52631fef0cc8102fab5a3a252a7e408ce56653fc8c520790728"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\llm_medsam\\stage_policy.py",
+    "sha256": "0190a71515036bdc24e423e8a6450b12d716449fa9b3f61fc20014c7b1818ea3"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\llm_medsam\\train_utils.py",
+    "sha256": "d88fc21f3a0d2433c3fa0f64e9d2836e9b896b72166ce5651e98e2f97ec9dc6c"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\llm_medsam\\vision_backbones.py",
+    "sha256": "1a9549819c1f40a1e7faef47f0c35bf5187430ba1a3b4dd832cab18af17a1d53"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\llm_medsam\\__init__.py",
+    "sha256": "406935bfd963e6f1a143e3075e8c3ff07af8d840b6a840c5fb9ed75efc05781f"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\build_server_patch.py",
+    "sha256": "e82007e91b4de51962d9fc1e655a3d6212f013b1442ba3f7e345de0446ce1824"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\check_run_all_evaluation.py",
+    "sha256": "cedf8e82a9d8b8156589ff06fa7b561e251da7c5676c2011028407751757edf6"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\check_unified.py",
+    "sha256": "98c268346dee15aa28ac6322cf3d5bb6b85edf0ec69a0a5db5c58d65492b4ea4"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\check_unified_static.py",
+    "sha256": "a045fbff5ce6a458f2de384332e1acb02ad4402304e319f4db6ff5743aa4204d"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\CODE_AUDIT_AND_VERIFICATION.md",
+    "sha256": "670f2c6b6b5aaa4c4796522826f4d3facf46b2a933dc2ed08ad65d622dc241b0"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\CVPR2027_REFERENCE_EVIDENCE.md",
+    "sha256": "a65910d4e1fb20526e727516eba9c24f230f6d463891211c8d4fb0636563e279"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\CVPR2027_REFERENCE_WRITING_GUIDE.md",
+    "sha256": "e352c3b74a578e92bc12dabe04a8334f36ebe25ae8e165e3a36698d171068057"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\CVPR2027_REFERENCE_WRITING_PROMPT.md",
+    "sha256": "3440afc43225039ecc02e76f00460db508db434eb753f25f98bfa7d94c24ea11"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\ICLR_INTRO_RELATED_WORK_DRAFT.md",
+    "sha256": "00da3c8d2eb69817801fd106d46499e9c26dc18e0a2c8caeb9df87635a0318dd"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\ICLR_INTRO_RELATED_WORK_REFERENCES.bib",
+    "sha256": "a8778d66aab445e996e141173241bfc8c457fd817e4a9bf3f99d8ebd53b64258"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\ICLR_PAPER_OUTLINE.md",
+    "sha256": "1b6ef6bb0bd073c1d0b8d6257b54d072869dbd7ca25b1c276c0e1ef56627bcbf"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\ICLR_RESEARCH_AUDIT.md",
+    "sha256": "aae4a7ca572ad1b39959869b71e66f188c69c0dc852575c991d72e27c78480a2"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\implement_helpers_unified.py",
+    "sha256": "748b6b7d5020911e28955ba5a9be46582aefac1e012feffbe94d10063d4449ff"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\implement_unified.py",
+    "sha256": "d5d7637cb886a0aaea5bdce00db6215e60376625fc81d8cbb3969c2c2b1befcd"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\package_independent_p.py",
+    "sha256": "a5d927d6df944458540e5653eee07474e7814d2be02fb9ba09fd3d4189687b01"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\package_unified.py",
+    "sha256": "79cc6d1e13db1c830e5fd4158e65e87812e58329c0125d4097f735a3d987fc1e"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\README.md",
+    "sha256": "733a03051d7fb83064ce12e91b55f4fe2fe20e85be9bf98987330c5d286740d5"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\README_AI_PAPER_WRITING.md",
+    "sha256": "0c1db1f6690c12044c7fb387cd6d3efe39ef92140500207d881d09525171cd90"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\README_FINAL_STAGE2_OPTIMIZATION.md",
+    "sha256": "9312bc76a87676a06b30233c8eed67814ceee498123a87c0bd04e4c5624ebf24"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\README_LOCAL_ONLY.md",
+    "sha256": "237eac13ef76fd1a0c89d68c0718f73c7c529f714d415852fcc36dfc124a266c"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\README_STAGE2_USAGE.md",
+    "sha256": "044985de21cb6fe7e88faaf787cb0e9deb6de6e616a7570d3b4d02f4b0d41001"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\requirements-stage2.txt",
+    "sha256": "6c9516bab0e38c9b9948f9e820faa5251e05c6c043c75f38c80bd72b60ae4c28"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\run_independent_p_checks.py",
+    "sha256": "69fb1d27faa3eb6ee6101f059a3ed356e8e05e667bf07cb7dcaf94a9b9c25b83"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\update_unified_checkpoint_eval.py",
+    "sha256": "3620ce6666fef9cdf6d13bc4dc3838b9d435d38c716b46947e5c6a66f7632125"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\update_unified_training.py",
+    "sha256": "e71bdc113fdea003a98ff7be2a8451acc502021285765a5100a9b9eff61ba636"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\write_unified_scripts.py",
+    "sha256": "7ed66bd577c5dec303df31780b368bcbf15baf65460de89c92d9fd6444a184df"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\write_unified_verifier.py",
+    "sha256": "a91a87af0b63e79733aef9e205db22fa4d77cdee39f79a506b9f95748c51df27"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\P_INDEPENDENT_PATCH\\DEPLOY.md",
+    "sha256": "d4e07f1ac58ab5fce886429f080a07a5667a8bb8ed796ea1b14fe800b25b8ad8"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\P_INDEPENDENT_PATCH\\MANIFEST.md",
+    "sha256": "bc489794982240b2c94fd330b85dafbf93cd9e60e04f0c71c79a7de260236bc1"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\P_INDEPENDENT_PATCH\\run_all.sh",
+    "sha256": "d580b435d3bc3081d8b7c407d4b4e80bb8eeac1b199e0d5bf0964d59893fa773"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\scripts\\eval_ablation.sh",
+    "sha256": "d9a312a4cd5e0959191d77b0d9a1941906df27b2d1f1e2b17e1655058085ee16"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\scripts\\run_legacy_l1_l3.sh",
+    "sha256": "3ce4b23a2c2a0aade2ee645247a7da287eddb85ee82450db772554483bfb40c3"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\scripts\\stage0_eval_medsam_baseline.sh",
+    "sha256": "b2c39f408bba4c34bbac4bb0c7478a559e6cbdb3d88e171d0dfd2f50f2fd5cf3"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\scripts\\stage0_train_medsam_baseline.sh",
+    "sha256": "76893f570b5fcec9213b5ebc5bd3ffa094b0e16b378764903e48ee80df7fd7d1"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\scripts\\stage1_eval_steer_medsam.sh",
+    "sha256": "f91b202923399ef4185d0b472bab4f11fb82670ea927c455b525f69a8178f746"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\scripts\\stage1_train_steer_medsam.sh",
+    "sha256": "d9566d943824eef13f1e85513dc41ca3bc93f93b69ee1b244fb571a6133bd908"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\scripts\\stage2_eval_auto_prompt_seg.sh",
+    "sha256": "ad8180d6de2470d0c5d7b72c1ec6e7b92387bbdc723207e291d793c3a70bd980"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\scripts\\stage2_eval_llm_medsam.sh",
+    "sha256": "6d5d8ea89e01d8c57de1df2eebe3a69e7aa2cf60b199a4f88f885a01826af1c8"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\scripts\\stage2_eval_llm_medsam_generation.sh",
+    "sha256": "9fbed46aa501be6b64531a1215069629d40e2f4fd182cb09cccbf7eb3b8690f5"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\scripts\\stage2_l1_train_box_seg.sh",
+    "sha256": "0bd18606353481372fde687348db994d6536faa825c194d256454647b658004f"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\scripts\\stage2_l2_train_box_dropout.sh",
+    "sha256": "1314705919915987c3fccbfe1c9ed11d73819a88c68992d5d93cd3a76ead544b"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\scripts\\stage2_l3_train_seg_only.sh",
+    "sha256": "7459b6ae2e29754cb67f8ab4f3e8efdd57ae9fe3870531007201a6a2fe381755"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\scripts\\stage2_p1_train_spatial_grounding.sh",
+    "sha256": "a5ea560de065a4ed628221e3830e17acf53ff9be5d5d024a7dd2051db6755815"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\scripts\\stage2_p2_train_dual_prompt.sh",
+    "sha256": "445361bd22b4663deeb6649e84e28bf027f5c1aa0f6eddbcc7c88ce9c0c891b1"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\scripts\\stage2_p3_train_auto_prompt.sh",
+    "sha256": "29e7ff1f378c54a5a21488b604cd9ea9eb492077ff3316cdef9a6cbcef30d066"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\scripts\\stage2_p4_train_joint_refine.sh",
+    "sha256": "3c43f5819033c6d9f9885f43caa3e614a33fc4716acc0e63ce70ad35db7fc2fd"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\scripts\\stage2_train_common.sh",
+    "sha256": "a938975ed77e39564fedc91ddd621f285764586ddbd1dc928949182590bdfc2c"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\scripts\\train_ablation.sh",
+    "sha256": "2c633cf98fa90e4a1dbe912abf95b92db23e9c3e0eadc7f49981e6ca03aa5f70"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\scripts\\train_ablation_box_only.sh",
+    "sha256": "65ec7d6b664632756a2a16d28fe944dfc633157deb92b1a1174a6cca8769ff1d"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\scripts\\train_ablation_medsam_vision.sh",
+    "sha256": "cf6c3251d84bf5d93d5ebf43fe8c9a56c421724eaaccfb56dddb6b5693a35fad"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\scripts\\train_ablation_no_reasoning.sh",
+    "sha256": "161aa80763fcc4393e955ec0edad052b5cff9d9f1e0d4eb4c45f46c6928c7c88"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\scripts\\train_ablation_no_semantic.sh",
+    "sha256": "222edf92e130418b0ea95884f737144ab9c45738dc927152a88ac3bd39cf82e1"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\scripts\\train_ablation_no_spatial_sup.sh",
+    "sha256": "28c5fda4acf3b0951dbeee2cb6f0bc1c51b9e0cf830a20219135962e9b0f26cb"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\scripts\\train_full.sh",
+    "sha256": "278a0bd2b63997fa6b6328149179d6c48d8a43449f40060a33ef5ddd1ad4ad9c"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\scripts\\verify_stage2_pipeline.sh",
+    "sha256": "9a681b8f855e2d0a85e79411211cf5a09c4405074a0b4f56ef4cd14d5109e8de"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\segment_anything\\automatic_mask_generator.py",
+    "sha256": "77842dcb57c68e6eeaeed8a73c5fd079cd20967c2176daf1f115d5be2b2416d9"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\segment_anything\\build_sam.py",
+    "sha256": "f8d09bf0233f3635f1a4d52c049390d8c115a501461f839631757616eda70519"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\segment_anything\\predictor.py",
+    "sha256": "f4125a596a7871043c3f29217b9ff69dfc779490beec2f743d71d8ffe8c51a40"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\segment_anything\\__init__.py",
+    "sha256": "1c22ab77db285b05b7e0a60cd417459182613ea5c746dffec6993a5f86cdbcf1"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\DEPLOY.md",
+    "sha256": "a7f76502eba8036f6387457f1b1b0f7a910b5262e511167047a00f1124d2211a"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\MANIFEST.md",
+    "sha256": "6b4e0d8f849fd0561afb4fd766d582f281c37d68909d0fb270f3897cd926bd0f"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\run_all.sh",
+    "sha256": "75f7ce0326f950f49b7bb37e2fd4cd6358c2d167de5c01cd6b8f7836d38c529a"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\steer_medsam\\box_ops.py",
+    "sha256": "dfedb7e9f22fda07b307c4b5f431d59f41d5d3f60f0ff9dc67c23538de356447"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\steer_medsam\\dataset.py",
+    "sha256": "aafca339913d3aacdeafd21a5f9ffddcc535d42c8e282242c60e2c317984e42b"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\steer_medsam\\gated_cross_attention.py",
+    "sha256": "bbfda67a9dcf4c941f56f0eb99eab964715584bfc4b256c6ee59acb698e347c4"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\steer_medsam\\losses.py",
+    "sha256": "2a728d46385824b57b8abdb167c5d3b116f0d7b3430fec3e84e93cec365a2a7c"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\steer_medsam\\model.py",
+    "sha256": "3495ae51dec23303ebc58b56fc0cd281af5338f0320f9d2c5021415dc4ee703f"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\steer_medsam\\patch_head.py",
+    "sha256": "2b518251abaf73a1af4ba26738ce97907309d39a8fab13c4c3b47f56aac0c4c4"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\steer_medsam\\prompt_builder.py",
+    "sha256": "c68eb7fafc8a746e17ff1320b762bb480d9b2a75e2926de5def76ec9e91fc3da"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\steer_medsam\\README_STEER_MEDSAM.md",
+    "sha256": "49e074df2c68f4030dba7d4b140c5144c89ae89fd1058e83cfffabb9e351245f"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\steer_medsam\\steered_image_encoder.py",
+    "sha256": "e47a3c5a147ff58c1f777c86a71f36e107a13898cd82b8e79550186a521079b7"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\steer_medsam\\text_encoder.py",
+    "sha256": "a68a736e6184734fda788013d9a37510511b9f944438b52e070f5610b6189f53"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\steer_medsam\\train_utils.py",
+    "sha256": "6b0fc7494f04e95fdcb9f3bdaeb6471b1a5f21bf62ceadce7176635e64389eb5"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\steer_medsam\\__init__.py",
+    "sha256": "1924681d56ac88b80e7147a3259294af8d862b9d23dde3c08052f7924d5f7cd1"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\tests\\test_generation.py",
+    "sha256": "87c6977c45fbeb72eff422b2c56de84800b045e38b951dbb74b73b1de91d4cec"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\tests\\test_model_grounding.py",
+    "sha256": "d07c5fb6c7794da18351c9adecb329af3011dc52b3aa868edc296923e3f2d5f1"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\tests\\test_shell_contract.py",
+    "sha256": "c4c74cd4b89d2263ce63ccc62ff0c3b5ee945d63ad11e3ae6f21e743ea9ae8d9"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\tests\\test_training_contract.py",
+    "sha256": "4852fa4752da37225eba8b3b40afba7165f644eb73cb33dc2c19ba41d5c303bb"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\tools\\add_seg_token_to_llm.py",
+    "sha256": "26aa1aa4b2405a2e038907db185887cad7ba03d0faeefd81e8dcdcc68b11c2b7"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\tools\\add_target_phrase_to_json.py",
+    "sha256": "d9195f6a87f3d3ecf69cb8433b1149d1741a9ef9381736a9c86dbea3efe8d095"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\tools\\check_dataset_json.py",
+    "sha256": "113fd149cdfb51f58522f9f875a454a56d90038eaef8ee686cfb40826252a475"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\tools\\inspect_trainable_params.py",
+    "sha256": "b31a09645431b96b6a9d3079bcfb94f8984b11f39ad73a5e4cdde495cba2e2e8"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\tools\\run_sanity_checks.py",
+    "sha256": "eab19cae278fb2af9fe20ce9f29ec00e912d3fa7bf174b507f25dbbe1fdbe3a4"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\tools\\test_seg_token.py",
+    "sha256": "2d4a07e92f87c5f9c9e8ac33b238d432cc835b3207408248610de0f6cef4a509"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\tools\\verify_stage2_pipeline.py",
+    "sha256": "e7bd5e2a5aa7e6d1430a78eba8944ac9ebb0b0b83c5c40ab5ec5f5704730002d"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\tools\\visualize_steer_batch.py",
+    "sha256": "7f849ed809466454de12c8e9c94cea327f35993fee3c84476dc69ca7cb068d0d"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\train\\train_llm_medsam.py",
+    "sha256": "b4bd41c6b8ec7515c5b2dbe96697ae8600ef78754d9588ab18d10f8dde96069b"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\train\\train_medsam_baseline.py",
+    "sha256": "9f7a2ae423dedbeee5497a97040b7dd989110924c7f0b8e28b15098b69b67f4f"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\train\\train_steer_medsam.py",
+    "sha256": "48638b75128335241315e72ca48dc1f52a92e8323a5721666bbdcac36e29f352"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\UNIFIED_ABLATION_PATCH\\ABLATION_SUMMARY.md",
+    "sha256": "bb72f5f8624623b70b02b624d07e2211094aee77dcfe839d2695f1152f4e1f9e"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\UNIFIED_ABLATION_PATCH\\DELETE_LIST.txt",
+    "sha256": "bfcb20045b48d02b18875cbb74673a8b68b5b627ac417028ef452444992f4568"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\UNIFIED_ABLATION_PATCH\\DEPLOY.md",
+    "sha256": "a28342248e6c7336af9e783052c85b0d4291de8df3a6ad8dcf5d59cabda5cd29"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\UNIFIED_ABLATION_PATCH\\MANIFEST.md",
+    "sha256": "ef4665ee19268cb6d39ffbc743bbe50207fc1aaa94a43fc1faa0fb761f12702a"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\UNIFIED_ABLATION_PATCH\\run_all.sh",
+    "sha256": "1cf7c76a18a9b17ced2facd192470319ab6f7c5f7a3240fe1e459ba6fdfaf52b"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\utils\\SurfaceDice.py",
+    "sha256": "f74bcb49e84a7e1e10ee4cd0c3b780bcf20b83fa649b6628fb484b4e03694be5"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\verification\\sanity_results.json",
+    "sha256": "4c4e30ffa0d0f36fffbe4ae795b7fec156249198c1a127b38fea2b523277b30e"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\verification\\structural_gradients.json",
+    "sha256": "93587a1ad6c966a67d234a74fe52787c81f54f3de2878c3645778865e60fbc26"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\UNIFIED_ABLATION_PATCH\\evaluation\\eval_llm_medsam.py",
+    "sha256": "ca54b318dd2db5c19ce79777848b7ba1c629b7cb15583626c34aa047052e8e1a"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\UNIFIED_ABLATION_PATCH\\evaluation\\eval_llm_medsam_generation.py",
+    "sha256": "c65f3193cfaa48717de47b5376507535a1f59a08e7811f1ea82a1ed6797cb79d"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\UNIFIED_ABLATION_PATCH\\llm_medsam\\ablation.py",
+    "sha256": "d895b7d981371503d913da049714b60ae42a7df651eeb1b62a5651a288d899cc"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\UNIFIED_ABLATION_PATCH\\llm_medsam\\generation.py",
+    "sha256": "cc1f3df9a74d4141d06a4d80565dd6162888ac1cce03c986e4431b1d29c21e0c"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\UNIFIED_ABLATION_PATCH\\llm_medsam\\model.py",
+    "sha256": "0dc85e65ad59ceb9beff7789bd84e14260b6900eaab53c002105cb311c752886"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\UNIFIED_ABLATION_PATCH\\llm_medsam\\stage_policy.py",
+    "sha256": "0190a71515036bdc24e423e8a6450b12d716449fa9b3f61fc20014c7b1818ea3"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\UNIFIED_ABLATION_PATCH\\llm_medsam\\train_utils.py",
+    "sha256": "d88fc21f3a0d2433c3fa0f64e9d2836e9b896b72166ce5651e98e2f97ec9dc6c"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\UNIFIED_ABLATION_PATCH\\llm_medsam\\vision_backbones.py",
+    "sha256": "1a9549819c1f40a1e7faef47f0c35bf5187430ba1a3b4dd832cab18af17a1d53"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\UNIFIED_ABLATION_PATCH\\scripts\\eval_ablation.sh",
+    "sha256": "d9a312a4cd5e0959191d77b0d9a1941906df27b2d1f1e2b17e1655058085ee16"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\UNIFIED_ABLATION_PATCH\\scripts\\train_ablation.sh",
+    "sha256": "2c633cf98fa90e4a1dbe912abf95b92db23e9c3e0eadc7f49981e6ca03aa5f70"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\UNIFIED_ABLATION_PATCH\\scripts\\train_ablation_box_only.sh",
+    "sha256": "65ec7d6b664632756a2a16d28fe944dfc633157deb92b1a1174a6cca8769ff1d"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\UNIFIED_ABLATION_PATCH\\scripts\\train_ablation_medsam_vision.sh",
+    "sha256": "cf6c3251d84bf5d93d5ebf43fe8c9a56c421724eaaccfb56dddb6b5693a35fad"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\UNIFIED_ABLATION_PATCH\\scripts\\train_ablation_no_reasoning.sh",
+    "sha256": "161aa80763fcc4393e955ec0edad052b5cff9d9f1e0d4eb4c45f46c6928c7c88"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\UNIFIED_ABLATION_PATCH\\scripts\\train_ablation_no_semantic.sh",
+    "sha256": "222edf92e130418b0ea95884f737144ab9c45738dc927152a88ac3bd39cf82e1"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\UNIFIED_ABLATION_PATCH\\scripts\\train_ablation_no_spatial_sup.sh",
+    "sha256": "28c5fda4acf3b0951dbeee2cb6f0bc1c51b9e0cf830a20219135962e9b0f26cb"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\UNIFIED_ABLATION_PATCH\\scripts\\train_full.sh",
+    "sha256": "278a0bd2b63997fa6b6328149179d6c48d8a43449f40060a33ef5ddd1ad4ad9c"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\UNIFIED_ABLATION_PATCH\\tools\\verify_stage2_pipeline.py",
+    "sha256": "bd2c1dce4f996bd151c23c4e8b9f046769c348eabd81dd858221689daea1694b"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\UNIFIED_ABLATION_PATCH\\train\\train_llm_medsam.py",
+    "sha256": "474b6a30509937a8ecb27c83fbc39d2a3d1b4a223d4f699185b1b77d24ac08a2"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\evaluation\\eval_llm_medsam.py",
+    "sha256": "7567433bbd11106b2beb9d082f80329896ea285f096b7362af66e3fec111860f"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\evaluation\\eval_llm_medsam_generation.py",
+    "sha256": "ffe64c6bb770ead3b1b8d7ae3ec6fb5918d3068162e4a63c22f0b078ef191115"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\evaluation\\eval_llm_medsam_teacher_forcing.py",
+    "sha256": "5cce8ecb5abed4ccf58d1b4ca03b643181bfe4811996eb23e43588a7b762cdff"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\llm_medsam\\collator.py",
+    "sha256": "2d645d02366ff9f92aa9f21df36eaa0bc82f361e9b2c5be860184ea2c5d040e6"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\llm_medsam\\dataset.py",
+    "sha256": "fcbd0006c0bd253abc80dd02274032a1d451bd4cf6893619e4c11a515b9079d4"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\llm_medsam\\generation.py",
+    "sha256": "b3392a8214fac5358371b56dbe638f46442b2ea12007449a1bfca2243671ce63"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\llm_medsam\\llm_backbone.py",
+    "sha256": "d0952a17fd374ad0faf95514dbdc505aa9593bcc70aa94142d65b1d3cf26d204"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\llm_medsam\\losses.py",
+    "sha256": "798b2c7f525d45af57b2a523e953cb278317b34996656ad5933d12e1c7cf6e4c"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\llm_medsam\\medsam_bridge.py",
+    "sha256": "09feaa7ad7d2b507f1daa9337187337fb0ed9c93b0c05f218855f2476a790545"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\llm_medsam\\model.py",
+    "sha256": "fc6cf9cb23dae322fc91b1524b8ed6b7320fbe9e9a78b3b6ae41f5b7098a4faf"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\llm_medsam\\seg_token.py",
+    "sha256": "9c846359aa86ef25b803cf47f855498b02a0d4e941c4fd0a04e87510b4e2b708"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\llm_medsam\\spatial_grounding.py",
+    "sha256": "f28ba46208adb52631fef0cc8102fab5a3a252a7e408ce56653fc8c520790728"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\llm_medsam\\stage_policy.py",
+    "sha256": "196e091bad98c4234b38348fe73325d2c8f71d3ec0e78b35c97d03bd3f4ce745"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\llm_medsam\\train_utils.py",
+    "sha256": "0ff2cee550bb55493619292037819826b8659412fc21f95d7f863c61903f8c7e"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\llm_medsam\\vision_backbones.py",
+    "sha256": "03d3010106257b4dc481eec7e00b9f8e2d16ce0e46fe7ad0d15191a30f4c72d2"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\scripts\\run_legacy_l1_l3.sh",
+    "sha256": "3ce4b23a2c2a0aade2ee645247a7da287eddb85ee82450db772554483bfb40c3"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\scripts\\stage2_eval_auto_prompt_seg.sh",
+    "sha256": "ad8180d6de2470d0c5d7b72c1ec6e7b92387bbdc723207e291d793c3a70bd980"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\scripts\\stage2_eval_llm_medsam.sh",
+    "sha256": "6d5d8ea89e01d8c57de1df2eebe3a69e7aa2cf60b199a4f88f885a01826af1c8"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\scripts\\stage2_eval_llm_medsam_generation.sh",
+    "sha256": "9fbed46aa501be6b64531a1215069629d40e2f4fd182cb09cccbf7eb3b8690f5"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\scripts\\stage2_l1_train_box_seg.sh",
+    "sha256": "0bd18606353481372fde687348db994d6536faa825c194d256454647b658004f"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\scripts\\stage2_l2_train_box_dropout.sh",
+    "sha256": "1314705919915987c3fccbfe1c9ed11d73819a88c68992d5d93cd3a76ead544b"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\scripts\\stage2_l3_train_seg_only.sh",
+    "sha256": "7459b6ae2e29754cb67f8ab4f3e8efdd57ae9fe3870531007201a6a2fe381755"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\scripts\\stage2_p1_train_spatial_grounding.sh",
+    "sha256": "a5ea560de065a4ed628221e3830e17acf53ff9be5d5d024a7dd2051db6755815"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\scripts\\stage2_p2_train_dual_prompt.sh",
+    "sha256": "445361bd22b4663deeb6649e84e28bf027f5c1aa0f6eddbcc7c88ce9c0c891b1"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\scripts\\stage2_p3_train_auto_prompt.sh",
+    "sha256": "29e7ff1f378c54a5a21488b604cd9ea9eb492077ff3316cdef9a6cbcef30d066"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\scripts\\stage2_p4_train_joint_refine.sh",
+    "sha256": "3c43f5819033c6d9f9885f43caa3e614a33fc4716acc0e63ce70ad35db7fc2fd"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\scripts\\stage2_train_common.sh",
+    "sha256": "74e0abf9beafa3e7324e0ca5d812ae9b20b110fe958a044df4ed6cbf37209ca4"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\scripts\\verify_stage2_pipeline.sh",
+    "sha256": "9a681b8f855e2d0a85e79411211cf5a09c4405074a0b4f56ef4cd14d5109e8de"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\tools\\add_seg_token_to_llm.py",
+    "sha256": "26aa1aa4b2405a2e038907db185887cad7ba03d0faeefd81e8dcdcc68b11c2b7"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\tools\\verify_stage2_pipeline.py",
+    "sha256": "3aa441abc6379febfe66b138e07c684af1a77ef014e8226ca89cd3984ac9878f"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\SERVER_PATCH\\train\\train_llm_medsam.py",
+    "sha256": "80fe35b5265037cf2c962c5807be93d4da47938ccaeb02402c121e8811ea9afa"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\segment_anything\\modeling\\common.py",
+    "sha256": "77581b8217e25c9ace51f7356fccd1a07ed2962d0f74aae2491f1001750565f1"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\segment_anything\\modeling\\image_encoder.py",
+    "sha256": "afd56922b0c2903f0ddcc75ea2819b42c534c6a830082794f8b93028a2d0c19c"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\segment_anything\\modeling\\mask_decoder.py",
+    "sha256": "270dea7cb1103e7ad04932b7c45e5b0d5ba0db0a8a13734a55bbce0e002fadf7"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\segment_anything\\modeling\\prompt_encoder.py",
+    "sha256": "6961f2b6b336501ecaed497b5642e2626d60a81e6b861455822678df256f3664"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\segment_anything\\modeling\\sam.py",
+    "sha256": "4a5eb2d47f10e2762c29eed6212c190a54709edc3ce01c1f136bce6d901473a6"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\segment_anything\\modeling\\transformer.py",
+    "sha256": "9bd360481a8f693e0b4054a229b5a5bb60efc38bb92e004de138009eba98cd94"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\segment_anything\\modeling\\__init__.py",
+    "sha256": "7bd468bf97fea2758bcdf18977dc8e60d6f90d1d02f5413a2870740005ecfbe8"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\segment_anything\\utils\\amg.py",
+    "sha256": "a308a3908bdab30515e0f68f4f3ff7dfd00a35055106b4e83635dc0c5df2ef11"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\segment_anything\\utils\\onnx.py",
+    "sha256": "1e89e913b79660ac1c8870c8d494adc23ee9f591e90c14d53ec6587e6ce18ade"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\segment_anything\\utils\\transforms.py",
+    "sha256": "6351ec01f61abfb69a529bb7de105f86a52d519e5d25c004c96b0e483b9791af"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\segment_anything\\utils\\__init__.py",
+    "sha256": "5f0b78fc8a07e575fded364917a215ebb440df00d90c789d9a3d801fee6f1223"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\P_INDEPENDENT_PATCH\\evaluation\\eval_llm_medsam.py",
+    "sha256": "fbb19a17de9ecc3ee3edafced05392a62d0c4cf1126376a2076d13e018dffb05"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\P_INDEPENDENT_PATCH\\llm_medsam\\llm_backbone.py",
+    "sha256": "942634edfa54a7e1ffa4e725b862d535ff4e69385b05a5ce290c48d986c390c0"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\P_INDEPENDENT_PATCH\\llm_medsam\\model.py",
+    "sha256": "f28dea0e136792f29be0324fe6a6c3d0d5ad6ace997132ef671c3abd4085370b"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\P_INDEPENDENT_PATCH\\llm_medsam\\stage_policy.py",
+    "sha256": "19ddd52618543b5b2b19619d7c39518f49779e8eaf7bc4133a2ee05a0f206ea5"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\P_INDEPENDENT_PATCH\\llm_medsam\\train_utils.py",
+    "sha256": "01ad452c23811b3f34e2d25f0feb9d44d0bd98817314621763829b00f93f567f"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\P_INDEPENDENT_PATCH\\scripts\\stage2_train_common.sh",
+    "sha256": "a938975ed77e39564fedc91ddd621f285764586ddbd1dc928949182590bdfc2c"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\P_INDEPENDENT_PATCH\\tools\\verify_stage2_pipeline.py",
+    "sha256": "ea4556677fb5698468eff942d8650f975f2b7a035a43fb49a2ca906e217e13c3"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\P_INDEPENDENT_PATCH\\train\\train_llm_medsam.py",
+    "sha256": "c37d85fcd2e14b4d526d2b261a9643f15347b248fa094532b7a429e87a715e50"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\independent_p_base\\run_all.sh",
+    "sha256": "75f7ce0326f950f49b7bb37e2fd4cd6358c2d167de5c01cd6b8f7836d38c529a"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\llm_medsam\\__init__.py",
+    "sha256": "406935bfd963e6f1a143e3075e8c3ff07af8d840b6a840c5fb9ed75efc05781f"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\steer_medsam\\__init__.py",
+    "sha256": "1924681d56ac88b80e7147a3259294af8d862b9d23dde3c08052f7924d5f7cd1"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\tests\\test_generation.py",
+    "sha256": "87c6977c45fbeb72eff422b2c56de84800b045e38b951dbb74b73b1de91d4cec"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\tests\\test_model_grounding.py",
+    "sha256": "d07c5fb6c7794da18351c9adecb329af3011dc52b3aa868edc296923e3f2d5f1"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\tests\\test_shell_contract.py",
+    "sha256": "c4c74cd4b89d2263ce63ccc62ff0c3b5ee945d63ad11e3ae6f21e743ea9ae8d9"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\tests\\test_training_contract.py",
+    "sha256": "4852fa4752da37225eba8b3b40afba7165f644eb73cb33dc2c19ba41d5c303bb"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\tests_independent\\test_independent_p.py",
+    "sha256": "0289703b2df9905ecc54b40c8fc23e4504f91631988ea85f1d16632564d9e165"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\tools\\run_sanity_checks.py",
+    "sha256": "eab19cae278fb2af9fe20ce9f29ec00e912d3fa7bf174b507f25dbbe1fdbe3a4"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\unified_base\\run_all.sh",
+    "sha256": "1dc21b2ca959195997c36254d23b0ec08f0239ae1c4f3db169ca2edc41b73f9e"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\verification\\deployment_check.json",
+    "sha256": "cab4ddcbdfca261f873dcbb79453d14c63d3f58663ca691495adb98c055a1187"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\verification\\independent_p_checks.json",
+    "sha256": "0d533d8451e47cf213044cfd508ca4bafe6dc0523c180e622309305c9e5a4f51"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\verification\\package_check.json",
+    "sha256": "295d092fd1a24d292845568a72e516c59390929e80c3b2d71b7b716c2d2409c9"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\verification\\sanity_results.json",
+    "sha256": "4c4e30ffa0d0f36fffbe4ae795b7fec156249198c1a127b38fea2b523277b30e"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\verification\\source_change_manifest.json",
+    "sha256": "e0a2a2753d87c7c79188e5ed53ca2490639369bea50d43120ff45ec0a4e71b31"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\verification\\structural_gradients.json",
+    "sha256": "93587a1ad6c966a67d234a74fe52787c81f54f3de2878c3645778865e60fbc26"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\verification\\unified_static.json",
+    "sha256": "51c53cda9127479876e53687c63dfccab8edcf01ac67d2dc9a40f27b98d162b4"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\unified_base\\evaluation\\eval_llm_medsam.py",
+    "sha256": "fbb19a17de9ecc3ee3edafced05392a62d0c4cf1126376a2076d13e018dffb05"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\unified_base\\evaluation\\eval_llm_medsam_generation.py",
+    "sha256": "ffe64c6bb770ead3b1b8d7ae3ec6fb5918d3068162e4a63c22f0b078ef191115"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\unified_base\\llm_medsam\\generation.py",
+    "sha256": "b3392a8214fac5358371b56dbe638f46442b2ea12007449a1bfca2243671ce63"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\unified_base\\llm_medsam\\model.py",
+    "sha256": "f28dea0e136792f29be0324fe6a6c3d0d5ad6ace997132ef671c3abd4085370b"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\unified_base\\llm_medsam\\stage_policy.py",
+    "sha256": "19ddd52618543b5b2b19619d7c39518f49779e8eaf7bc4133a2ee05a0f206ea5"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\unified_base\\llm_medsam\\train_utils.py",
+    "sha256": "01ad452c23811b3f34e2d25f0feb9d44d0bd98817314621763829b00f93f567f"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\unified_base\\llm_medsam\\vision_backbones.py",
+    "sha256": "03d3010106257b4dc481eec7e00b9f8e2d16ce0e46fe7ad0d15191a30f4c72d2"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\unified_base\\tools\\verify_stage2_pipeline.py",
+    "sha256": "ea4556677fb5698468eff942d8650f975f2b7a035a43fb49a2ca906e217e13c3"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\unified_base\\train\\train_llm_medsam.py",
+    "sha256": "c37d85fcd2e14b4d526d2b261a9643f15347b248fa094532b7a429e87a715e50"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\independent_p_base\\evaluation\\eval_llm_medsam.py",
+    "sha256": "7567433bbd11106b2beb9d082f80329896ea285f096b7362af66e3fec111860f"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\independent_p_base\\llm_medsam\\llm_backbone.py",
+    "sha256": "d0952a17fd374ad0faf95514dbdc505aa9593bcc70aa94142d65b1d3cf26d204"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\independent_p_base\\llm_medsam\\model.py",
+    "sha256": "fc6cf9cb23dae322fc91b1524b8ed6b7320fbe9e9a78b3b6ae41f5b7098a4faf"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\independent_p_base\\llm_medsam\\stage_policy.py",
+    "sha256": "196e091bad98c4234b38348fe73325d2c8f71d3ec0e78b35c97d03bd3f4ce745"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\independent_p_base\\llm_medsam\\train_utils.py",
+    "sha256": "0ff2cee550bb55493619292037819826b8659412fc21f95d7f863c61903f8c7e"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\independent_p_base\\scripts\\stage2_train_common.sh",
+    "sha256": "74e0abf9beafa3e7324e0ca5d812ae9b20b110fe958a044df4ed6cbf37209ca4"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\independent_p_base\\tools\\verify_stage2_pipeline.py",
+    "sha256": "3aa441abc6379febfe66b138e07c684af1a77ef014e8226ca89cd3984ac9878f"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\reasegllm\\LOCAL_ONLY\\independent_p_base\\train\\train_llm_medsam.py",
+    "sha256": "80fe35b5265037cf2c962c5807be93d4da47938ccaeb02402c121e8811ea9afa"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\01_\u65b9\u6848\u4e0e\u76ee\u5f55\u786e\u8ba4\u63d0\u793a\u8bcd.md",
+    "sha256": "7cb9a3766cb864de0438eb1ca13ff05ebaa759229c39f9336862d811f1063c4e"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\02_\u6267\u884c\u8fc1\u79fb\u4e0e\u4ea4\u4ed8\u63d0\u793a\u8bcd.md",
+    "sha256": "a72ad48296843563c8f91b6c4c4d54b68302409ac574470c5dc8b7664f0b456a"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\MEDSPAR_DATASET_CONSTRUCTION.md",
+    "sha256": "471ae704bd9740ba3ba2c746ea64686dd1ef3afac91c6bce4c9299988635012f"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\MEDSPAR_DATASET_CONSTRUCTION_SPEC.md",
+    "sha256": "994c7f2d6fd95eead5b0e179674dc28e0252591210072b57d368efee9cb185bd"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\MEDSPAR_DATASET_METHODS.md",
+    "sha256": "ea341a493e7cca74e0f1944cde427179fa8fdb31dd09720216e578080c611a6d"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\PAPER_OUTLINE.md",
+    "sha256": "a40774541b263c3bfc9260612d57a65c71da51488be59e7d59be19f0a7da4371"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\PAPER_PLAN.md",
+    "sha256": "cd6d09ace8128f6986fe5f12cfc9c5e99f85add22da57ded35c5c7eb02c952c1"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\README_MEDSPAR_CVPR2027_OUTLINE_PROMPT.md",
+    "sha256": "2c98cf382586c26dd24bf7408b96adf78b5807a0282dfda7f88b2cd03e348adb"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\README_MEDSPAR_CVPR2027_PLANNING_PROMPT.md",
+    "sha256": "88cd47a8adce85a33755207f022785cca35eeac793d8e001a2ffd481a47291ba"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\README_MEDSPAR_OVERVIEW_DRAWING_PROMPT.md",
+    "sha256": "b473bd12c40ddbe6311669d850be2c1bfe36e326bc984737683133dfd26fdc56"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\README_MEDSPAR_SECTION_4_1_WRITING_PROMPT.md",
+    "sha256": "13fdd40a72dd4a184a7d2db4f954d6904e3c06b604a7f7135f0124f34c6ef591"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\README_MEDSPAR_SECTION_4_2_WRITING_PROMPT.md",
+    "sha256": "12b5907c644d130e49e0cc846670dd7093bc9c5e7309e3d5af735ac59ae4eccf"
+  },
+  {
+    "path": "C:\\Users\\wanghan\\Documents\\ChatGPT\\Reaseg\\teaser_figure_analysis.md",
+    "sha256": "3de31daba52b54b4f2efdc3a09024b4cc4cb95f719b664090151534853c2fd2d"
+  }
+]

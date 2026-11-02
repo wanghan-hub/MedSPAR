@@ -1,0 +1,230 @@
+{
+  "date": "2026-11-02",
+  "source_root": "E:\\Project\\ReaSeg\\data",
+  "groups": [
+    {
+      "name": "BraTS",
+      "records": {
+        "train": 3902,
+        "val": 488,
+        "test": 488
+      },
+      "total": 4878,
+      "status": "configured; manifests counted; experiment provenance pending"
+    },
+    {
+      "name": "Breast",
+      "records": {
+        "train": 3816,
+        "val": 477,
+        "test": 474
+      },
+      "total": 4767,
+      "status": "configured; manifests counted; experiment provenance pending"
+    },
+    {
+      "name": "Kidney",
+      "records": {
+        "train": 3466,
+        "val": 432,
+        "test": 435
+      },
+      "total": 4333,
+      "status": "configured; manifests counted; experiment provenance pending"
+    },
+    {
+      "name": "Liver",
+      "records": {
+        "train": 2776,
+        "val": 350,
+        "test": 346
+      },
+      "total": 3472,
+      "status": "configured; manifests counted; experiment provenance pending"
+    },
+    {
+      "name": "Lung",
+      "records": {
+        "train": 3348,
+        "val": 421,
+        "test": 414
+      },
+      "total": 4183,
+      "status": "configured; manifests counted; experiment provenance pending"
+    },
+    {
+      "name": "Pancreas",
+      "records": {
+        "train": 3191,
+        "val": 400,
+        "test": 397
+      },
+      "total": 3988,
+      "status": "configured; manifests counted; experiment provenance pending"
+    },
+    {
+      "name": "Poly",
+      "records": {
+        "train": 2597,
+        "val": 324,
+        "test": 327
+      },
+      "total": 3248,
+      "status": "configured; manifests counted; experiment provenance pending"
+    },
+    {
+      "name": "Prostate",
+      "records": {
+        "train": 3027,
+        "val": 374,
+        "test": 381
+      },
+      "total": 3782,
+      "status": "configured; manifests counted; experiment provenance pending"
+    },
+    {
+      "name": "Skin",
+      "records": {
+        "train": 3335,
+        "val": 398,
+        "test": 461
+      },
+      "total": 4194,
+      "status": "configured; manifests counted; experiment provenance pending"
+    },
+    {
+      "name": "Thyroid",
+      "records": {
+        "train": 2303,
+        "val": 576,
+        "test": 614
+      },
+      "total": 3493,
+      "status": "configured; manifests counted; experiment provenance pending"
+    }
+  ],
+  "total_records": 40338,
+  "totals": {
+    "train": 31761,
+    "val": 4240,
+    "test": 4337
+  },
+  "sample_field_types": {
+    "BraTS": {
+      "image": "str",
+      "mask": "str",
+      "input": "str",
+      "output": "str",
+      "body_part": "str",
+      "modality": "str",
+      "target": "str",
+      "target_position": "dict"
+    },
+    "Breast": {
+      "image": "str",
+      "mask": "str",
+      "input": "str",
+      "output": "str",
+      "body_part": "str",
+      "modality": "str",
+      "target": "str",
+      "target_position": "dict"
+    },
+    "Kidney": {
+      "image": "str",
+      "mask": "str",
+      "input": "str",
+      "output": "str",
+      "body_part": "str",
+      "modality": "str",
+      "target": "str",
+      "target_position": "dict"
+    },
+    "Liver": {
+      "image": "str",
+      "mask": "str",
+      "input": "str",
+      "output": "str",
+      "body_part": "str",
+      "modality": "str",
+      "target": "str",
+      "target_position": "dict"
+    },
+    "Lung": {
+      "image": "str",
+      "mask": "str",
+      "input": "str",
+      "output": "str",
+      "body_part": "str",
+      "modality": "str",
+      "target": "str",
+      "target_position": "dict"
+    },
+    "Pancreas": {
+      "image": "str",
+      "mask": "str",
+      "input": "str",
+      "output": "str",
+      "body_part": "str",
+      "modality": "str",
+      "target": "str",
+      "target_position": "dict"
+    },
+    "Poly": {
+      "image": "str",
+      "mask": "str",
+      "input": "str",
+      "output": "str",
+      "body_part": "str",
+      "modality": "str",
+      "target": "str",
+      "target_position": "dict"
+    },
+    "Prostate": {
+      "image": "str",
+      "mask": "str",
+      "input": "str",
+      "output": "str",
+      "body_part": "str",
+      "modality": "str",
+      "target": "str",
+      "target_position": "dict"
+    },
+    "Skin": {
+      "image": "str",
+      "mask": "str",
+      "input": "str",
+      "output": "str",
+      "body_part": "str",
+      "modality": "str",
+      "target": "str",
+      "target_position": "dict"
+    },
+    "Thyroid": {
+      "image": "str",
+      "mask": "str",
+      "input": "str",
+      "output": "str",
+      "body_part": "str",
+      "modality": "str",
+      "target": "str",
+      "target_position": "dict"
+    }
+  },
+  "prostate_shared_mask_groups": [
+    {
+      "split": "train",
+      "groups_sharing_image_mask_with_different_targets": 152
+    },
+    {
+      "split": "val",
+      "groups_sharing_image_mask_with_different_targets": 20
+    },
+    {
+      "split": "test",
+      "groups_sharing_image_mask_with_different_targets": 17
+    }
+  ],
+  "numeric_patient_prefixes_crossing_splits": 5,
+  "limits": "Counts only. No patient identifiers, raw questions, images or masks copied. Shared-mask groups require original target review; identity prefix rule is not a universal patient mapping."
+}

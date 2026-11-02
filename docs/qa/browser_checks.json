@@ -1,0 +1,153 @@
+{
+  "date": "2026-11-02",
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000,
+      "viewport": 1440,
+      "document": 1440,
+      "images": [
+        {
+          "src": "./assets/images/teaser/task-overview.svg",
+          "loaded": true
+        },
+        {
+          "src": "./assets/images/dataset/construction.svg",
+          "loaded": true
+        },
+        {
+          "src": "./assets/images/framework/medspar-architecture.png",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "name": "tablet",
+      "width": 768,
+      "height": 1024,
+      "viewport": 768,
+      "document": 768,
+      "images": [
+        {
+          "src": "./assets/images/teaser/task-overview.svg",
+          "loaded": true
+        },
+        {
+          "src": "./assets/images/dataset/construction.svg",
+          "loaded": true
+        },
+        {
+          "src": "./assets/images/framework/medspar-architecture.png",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "viewport": 390,
+      "document": 390,
+      "images": [
+        {
+          "src": "./assets/images/teaser/task-overview.svg",
+          "loaded": true
+        },
+        {
+          "src": "./assets/images/dataset/construction.svg",
+          "loaded": true
+        },
+        {
+          "src": "./assets/images/framework/medspar-architecture.png",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "name": "small-mobile",
+      "width": 320,
+      "height": 740,
+      "viewport": 320,
+      "document": 320,
+      "images": [
+        {
+          "src": "./assets/images/teaser/task-overview.svg",
+          "loaded": true
+        },
+        {
+          "src": "./assets/images/dataset/construction.svg",
+          "loaded": true
+        },
+        {
+          "src": "./assets/images/framework/medspar-architecture.png",
+          "loaded": true
+        }
+      ]
+    }
+  ],
+  "console_errors": [],
+  "failed_requests": [],
+  "assertions": [
+    "desktop: HTTP 200",
+    "desktop: no horizontal document overflow",
+    "desktop: all main images decoded",
+    "tablet: HTTP 200",
+    "tablet: no horizontal document overflow",
+    "tablet: all main images decoded",
+    "mobile: HTTP 200",
+    "mobile: no horizontal document overflow",
+    "mobile: all main images decoded",
+    "small-mobile: HTTP 200",
+    "small-mobile: no horizontal document overflow",
+    "small-mobile: all main images decoded",
+    "navigation reaches method hash",
+    "figure dialog opens",
+    "Escape closes dialog",
+    "focus returns to dialog trigger",
+    "Close button closes dialog",
+    "clipboard copies the preview command",
+    "reduced-motion disables smooth scrolling",
+    "no-JS: ten dataset rows remain",
+    "no-JS: method text visible",
+    "project subpath: all images load under /MedSPAR/assets/",
+    "project subpath: CSS loads",
+    "project subpath: JavaScript enhancement loads",
+    "teaser/task-overview.svg: SVG HTTP 200",
+    "teaser/task-overview.svg: SVG text within canvas",
+    "teaser/task-overview-mobile.svg: SVG HTTP 200",
+    "teaser/task-overview-mobile.svg: SVG text within canvas",
+    "framework/method-overview.svg: SVG HTTP 200",
+    "framework/method-overview.svg: SVG text within canvas",
+    "dataset/construction.svg: SVG HTTP 200",
+    "dataset/construction.svg: SVG text within canvas",
+    "dataset/construction-mobile.svg: SVG HTTP 200",
+    "dataset/construction-mobile.svg: SVG text within canvas",
+    "no browser console/page errors",
+    "no failed browser resource requests"
+  ],
+  "svg_text_overflow": [
+    {
+      "file": "teaser/task-overview.svg",
+      "overflows": []
+    },
+    {
+      "file": "teaser/task-overview-mobile.svg",
+      "overflows": []
+    },
+    {
+      "file": "framework/method-overview.svg",
+      "overflows": []
+    },
+    {
+      "file": "dataset/construction.svg",
+      "overflows": []
+    },
+    {
+      "file": "dataset/construction-mobile.svg",
+      "overflows": []
+    }
+  ],
+  "preview": "Temporary python -m http.server on an automatically selected loopback port",
+  "passed": true
+}

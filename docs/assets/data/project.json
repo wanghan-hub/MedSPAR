@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-11-02",
+  "name": "MedSPAR",
+  "expansion": "Spatial Prompt Adaptation for Medical Reasoning Segmentation",
+  "task": "2D image/question to generated answer and binary target mask",
+  "status": "research preparation; static site implemented; research release pending",
+  "runtime_note": "Editorial registry only. The website does not fetch this file. Update index.html and README.md alongside this registry.",
+  "urls": {
+    "paper": null,
+    "code": null,
+    "dataset": null,
+    "models": null,
+    "project_page": null
+  },
+  "datasets": [
+    {
+      "name": "BraTS",
+      "records": {
+        "train": 3902,
+        "val": 488,
+        "test": 488
+      },
+      "total": 4878,
+      "status": "configured; manifests counted; experiment provenance pending"
+    },
+    {
+      "name": "Breast",
+      "records": {
+        "train": 3816,
+        "val": 477,
+        "test": 474
+      },
+      "total": 4767,
+      "status": "configured; manifests counted; experiment provenance pending"
+    },
+    {
+      "name": "Kidney",
+      "records": {
+        "train": 3466,
+        "val": 432,
+        "test": 435
+      },
+      "total": 4333,
+      "status": "configured; manifests counted; experiment provenance pending"
+    },
+    {
+      "name": "Liver",
+      "records": {
+        "train": 2776,
+        "val": 350,
+        "test": 346
+      },
+      "total": 3472,
+      "status": "configured; manifests counted; experiment provenance pending"
+    },
+    {
+      "name": "Lung",
+      "records": {
+        "train": 3348,
+        "val": 421,
+        "test": 414
+      },
+      "total": 4183,
+      "status": "configured; manifests counted; experiment provenance pending"
+    },
+    {
+      "name": "Pancreas",
+      "records": {
+        "train": 3191,
+        "val": 400,
+        "test": 397
+      },
+      "total": 3988,
+      "status": "configured; manifests counted; experiment provenance pending"
+    },
+    {
+      "name": "Poly",
+      "records": {
+        "train": 2597,
+        "val": 324,
+        "test": 327
+      },
+      "total": 3248,
+      "status": "configured; manifests counted; experiment provenance pending"
+    },
+    {
+      "name": "Prostate",
+      "records": {
+        "train": 3027,
+        "val": 374,
+        "test": 381
+      },
+      "total": 3782,
+      "status": "configured; manifests counted; experiment provenance pending"
+    },
+    {
+      "name": "Skin",
+      "records": {
+        "train": 3335,
+        "val": 398,
+        "test": 461
+      },
+      "total": 4194,
+      "status": "configured; manifests counted; experiment provenance pending"
+    },
+    {
+      "name": "Thyroid",
+      "records": {
+        "train": 2303,
+        "val": 576,
+        "test": 614
+      },
+      "total": 3493,
+      "status": "configured; manifests counted; experiment provenance pending"
+    }
+  ],
+  "inventory_totals": {
+    "train": 31761,
+    "val": 4240,
+    "test": 4337
+  },
+  "inventory_unit": "JSON records; not unique images or patients",
+  "results": null,
+  "citation": null,
+  "authors": null,
+  "license": null,
+  "placeholders": [
+    {
+      "id": "TODO_TITLE",
+      "status": "pending",
+      "required_evidence": "Confirm final publication title separate from project expansion",
+      "replacement_scope": "Hero/metadata/README/Citation together"
+    },
+    {
+      "id": "TODO_AUTHORS",
+      "status": "pending",
+      "required_evidence": "Author order, affiliations, consent and author URLs",
+      "replacement_scope": "Hero byline; README header; citation"
+    },
+    {
+      "id": "TODO_PAPER",
+      "status": "pending",
+      "required_evidence": "Reachable paper identifier and verified status/version",
+      "replacement_scope": "Hero/resources/README; add live link only then"
+    },
+    {
+      "id": "TODO_PROJECT_URL",
+      "status": "pending",
+      "required_evidence": "Confirm Git remote owner/name and verified Pages deployment",
+      "replacement_scope": "README/project resource URL/metadata; no deployed badge now"
+    },
+    {
+      "id": "TODO_CODE_SYNC",
+      "status": "pending",
+      "required_evidence": "Approved release source integrated in target repo, with version identity",
+      "replacement_scope": "Replace source-location caveat and validate commands from fresh clone; no automatic source migration"
+    },
+    {
+      "id": "TODO_PACKAGE_CASE",
+      "status": "pending",
+      "required_evidence": "Release directory/import naming consistency and normal CLI pass",
+      "replacement_scope": "Root README and source note; separate authorized research-code fix"
+    },
+    {
+      "id": "TODO_ENVIRONMENT",
+      "status": "pending",
+      "required_evidence": "Successful pinned Python, torch/torchvision/CUDA, Transformers/PEFT and model-revision record",
+      "replacement_scope": "README installation and `project.json`"
+    },
+    {
+      "id": "TODO_DATA_RELEASE",
+      "status": "pending",
+      "required_evidence": "Per-source/version permissions, authoritative source/case/target manifest and reachable official/release URLs",
+      "replacement_scope": "Dataset section, source table, resources, README"
+    },
+    {
+      "id": "TODO_SPLITS_MASKS",
+      "status": "pending",
+      "required_evidence": "Correct target masks; cross-split identity audit; corrected manifests/hashes; affected reevaluations",
+      "replacement_scope": "Visible data caveat; counts/register/README must reflect corrected inventory"
+    },
+    {
+      "id": "TODO_REVIEW_LOGS",
+      "status": "pending",
+      "required_evidence": "Generation/review model revisions, coverage, sampling denominator and review records",
+      "replacement_scope": "Dataset caption; keep reported/verified distinction until then"
+    },
+    {
+      "id": "TODO_TEASER_CASE",
+      "status": "pending",
+      "required_evidence": "Authorized same-record image/question/GT/current prediction and exact run identity",
+      "replacement_scope": "Replace task teaser with true case or append case; preserve task caption"
+    },
+    {
+      "id": "TODO_FINAL_FIGURE",
+      "status": "pending",
+      "required_evidence": "Agreed final diagram, verified labels/arrows/caption and embedded-image rights",
+      "replacement_scope": "Method SVG/caption; preserve three visual routes"
+    },
+    {
+      "id": "TODO_RESULTS",
+      "status": "pending",
+      "required_evidence": "New-main checkpoint/run/config/decoding/data identity; per-record scores and prediction evidence; corrected data; comparable baselines",
+      "replacement_scope": "Results block, README and JSON. Recompute all tables from raw evidence"
+    },
+    {
+      "id": "TODO_DECODING_PROTOCOL",
+      "status": "pending",
+      "required_evidence": "Explicitly matched selected decoding settings or transparent separate protocols",
+      "replacement_scope": "Evaluation prose/table notes; cannot silently fix code in docs task"
+    },
+    {
+      "id": "TODO_HD95",
+      "status": "pending",
+      "required_evidence": "Optional separately implemented/validated spacing and failure conventions",
+      "replacement_scope": "Leave absent unless completed; do not block otherwise complete release merely to add a new metric"
+    },
+    {
+      "id": "TODO_QUALITATIVE",
+      "status": "pending",
+      "required_evidence": "Display rights and anonymization check; exact image/question/mask/prediction mapping; representative failure",
+      "replacement_scope": "Replace empty case panel with real assets/captions"
+    },
+    {
+      "id": "TODO_INFERENCE_DEMO",
+      "status": "pending",
+      "required_evidence": "Verified mask-free inference command using real released weights and image/question",
+      "replacement_scope": "README Quick start; do not represent evaluator as a generic demo"
+    },
+    {
+      "id": "TODO_MODELS",
+      "status": "pending",
+      "required_evidence": "Actual downloadable weight, checksum, full dependencies, model license, successful load/generate/score",
+      "replacement_scope": "Hero/resources/checkpoint table"
+    },
+    {
+      "id": "TODO_CITATION",
+      "status": "pending",
+      "required_evidence": "Confirmed paper metadata matching public identifier",
+      "replacement_scope": "Add accurate BibTeX and only then citation-copy interaction"
+    },
+    {
+      "id": "TODO_LICENSE",
+      "status": "pending",
+      "required_evidence": "Owner's project-wide license decision plus third-party/data/weight obligations",
+      "replacement_scope": "README/site licensing and release metadata; do not auto-apply upstream license"
+    }
+  ]
+}

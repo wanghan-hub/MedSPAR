@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+<title id="title">Offline image-language-mask construction</title><desc id="desc">Conceptual workflow derived from processing and generation material. Annotation-derived aids belong to offline QA construction, not automatic segmentation inference.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#216960"/></marker></defs>
+<rect width="1200" height="300" fill="#fff"/>
+<g font-family="Arial, sans-serif">
+<text x="30" y="35" fill="#216960" font-size="12" font-weight="700" text-anchor="start">OFFLINE CONSTRUCTION</text>
+<rect x="30" y="70" width="245" height="137" rx="5" fill="#f4f7f5" stroke="#d8e2de"/>
+<path d="M31 76V201" stroke="#216960" stroke-width="3"/>
+<text x="48" y="99" fill="#172d33" font-size="20" font-weight="600" text-anchor="start">Source pairs</text>
+<text x="48" y="126" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">Image + original target mask</text>
+<text x="48" y="149" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">Source-specific preprocessing</text>
+<text x="48" y="172" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">and 2D sample extraction</text>
+<rect x="328" y="70" width="245" height="137" rx="5" fill="#f4f7f5" stroke="#d8e2de"/>
+<path d="M329 76V201" stroke="#216960" stroke-width="3"/>
+<text x="346" y="99" fill="#172d33" font-size="20" font-weight="600" text-anchor="start">Language construction</text>
+<text x="346" y="126" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">Target metadata + visual aids</text>
+<text x="346" y="149" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">QA prompt requirements</text>
+<text x="346" y="172" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">Question + reference answer</text>
+<rect x="626" y="70" width="245" height="137" rx="5" fill="#f4f7f5" stroke="#d8e2de"/>
+<path d="M627 76V201" stroke="#216960" stroke-width="3"/>
+<text x="644" y="99" fill="#172d33" font-size="20" font-weight="600" text-anchor="start">Checks and review</text>
+<text x="644" y="126" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">Format / completeness checks</text>
+<text x="644" y="149" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">Model recheck (reported)</text>
+<text x="644" y="172" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">Expert sampling (reported)</text>
+<rect x="924" y="70" width="245" height="137" rx="5" fill="#f4f7f5" stroke="#d8e2de"/>
+<path d="M925 76V201" stroke="#216960" stroke-width="3"/>
+<text x="942" y="99" fill="#172d33" font-size="20" font-weight="600" text-anchor="start">Structured records</text>
+<text x="942" y="126" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">image / input / output / mask</text>
+<text x="942" y="149" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">Auxiliary target metadata</text>
+<text x="942" y="172" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">Split manifests</text>
+<path d="M275 137H328" fill="none" stroke="#216960" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M573 137H626" fill="none" stroke="#216960" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M871 137H924" fill="none" stroke="#216960" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="30" y="255" fill="#9a4b2d" font-size="12" font-weight="700" text-anchor="start">ANNOTATION BOUNDARY</text>
+<text x="282" y="255" fill="#52676d" font-size="16" font-weight="400" text-anchor="start">Boxes / mask visualizations guide offline QA; automatic inference takes image + question.</text>
+</g></svg>

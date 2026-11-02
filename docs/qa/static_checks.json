@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-02",
+  "passed": true,
+  "errors": [],
+  "html_structure": "balanced tags, unique IDs, single h1, language and doctype",
+  "checked_local_resources": [
+    "./PROJECT_WEBSITE_PLAN.md",
+    "./assets/css/style.css",
+    "./assets/images/dataset/construction-mobile.svg",
+    "./assets/images/dataset/construction.svg",
+    "./assets/images/favicon.svg",
+    "./assets/images/framework/medspar-architecture.png",
+    "./assets/images/teaser/task-overview-mobile.svg",
+    "./assets/images/teaser/task-overview.svg",
+    "./assets/js/main.js"
+  ],
+  "anchors_and_idrefs": "all resolved",
+  "external_links": [
+    "http://localhost:8000",
+    "https://github.com/bowang-lab/MedSAM",
+    "https://github.com/facebookresearch/segment-anything"
+  ],
+  "registered_pending_items": 20,
+  "asset_provenance": "hashes checked",
+  "scope": "Structural/static check, not W3C validation or clinical/privacy certification"
+}

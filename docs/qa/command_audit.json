@@ -1,0 +1,146 @@
+{
+  "canonical_launcher": "FAILED: ModuleNotFoundError: No module named medspar",
+  "diagnostic_method": "Temporary in-process import alias medspar -> existing MedSPAR directory for syntax/expansion inspection only; no files modified, no models imported/loaded, no training run. This is not a canonical CLI pass.",
+  "checks": [
+    {
+      "stage": "stage0",
+      "experiment": "main",
+      "action": "train",
+      "diagnostic_expansion_pass": true,
+      "expanded_command": "'C:\\Python314\\python.exe' -m torch.distributed.run --standalone --nproc_per_node=6 'E:\\Project\\MedSPAR\\train\\train_stage0_medsam.py' --data_root /data/ReaSeg/data --datasets Skin BraTS Poly Breast Kidney Liver Lung Pancreas Prostate Thyroid --train_split train --val_split val --medsam_checkpoint '\\data\\ReaSeg\\pretrained\\medsam_vit_b.pth' --model_type vit_b --text_encoder '\\data\\ReaSeg\\pretrained\\bert-base-uncased' --text_max_length 64 --local_files_only --cross_attn_layers 2 5 6 11 --cross_attn_heads 12 --vision_dim 768 --image_size 1024 --prompt_p_context 0.8 --train_box_mode mixed --bbox_shift 20 --enlarge_ratio 1.5 --lambda_patch 0.0 --no_patch_head --epochs 50 --batch_size 2 --val_batch_size 2 --profile_compute --num_workers 4 --lr_connector 0.0001 --lr_gca 0.0001 --lr_mask_decoder 5e-05 --lr_patch_head 0.0001 --weight_decay 0.01 --grad_clip 1.0 --amp bf16 --seed 2026 --save_every 10 --val_every 1 --gpu_ids 0,1,2,3,4,5 --num_gpus 6 --dist_backend nccl --smoke_batches 0 --output_dir 'E:\\Project\\MedSPAR\\work_dir\\stage0_medsam' --resume ''"
+    },
+    {
+      "stage": "stage0",
+      "experiment": "main",
+      "action": "eval",
+      "diagnostic_expansion_pass": true,
+      "expanded_command": "'C:\\Python314\\python.exe' 'E:\\Project\\MedSPAR\\evaluation\\eval_stage0_medsam.py' --data_root /data/ReaSeg/data --datasets Skin BraTS Poly Breast Kidney Liver Lung Pancreas Prostate Thyroid --medsam_checkpoint '\\data\\ReaSeg\\pretrained\\medsam_vit_b.pth' --split test --batch_size 2 --num_workers 4 --precision bf16 --output_dir 'E:\\Project\\MedSPAR\\output\\stage0_medsam_test' --local_files_only --steer_checkpoint 'E:\\Project\\MedSPAR\\work_dir\\stage0_medsam\\best.pth' --text_encoder '\\data\\ReaSeg\\pretrained\\bert-base-uncased'"
+    },
+    {
+      "stage": "stage1",
+      "experiment": "main",
+      "action": "train",
+      "diagnostic_expansion_pass": true,
+      "expanded_command": "'C:\\Python314\\python.exe' -m torch.distributed.run --standalone --nproc_per_node=6 'E:\\Project\\MedSPAR\\train\\train_stage1.py' --data_root /data/ReaSeg/data --datasets Skin BraTS Poly Breast Kidney Liver Lung Pancreas Prostate Thyroid --train_split train --val_split val --medsam_checkpoint '\\data\\ReaSeg\\pretrained\\medsam_vit_b.pth' --model_type vit_b --text_encoder '\\data\\ReaSeg\\pretrained\\bert-base-uncased' --text_max_length 64 --local_files_only --cross_attn_layers 2 5 6 11 --cross_attn_heads 12 --vision_dim 768 --image_size 1024 --prompt_p_context 0.8 --train_box_mode mixed --bbox_shift 20 --enlarge_ratio 1.5 --lambda_patch 0.2 --epochs 50 --batch_size 2 --val_batch_size 2 --profile_compute --num_workers 4 --lr_connector 0.0001 --lr_gca 0.0001 --lr_mask_decoder 5e-05 --lr_patch_head 0.0001 --weight_decay 0.01 --grad_clip 1.0 --amp bf16 --seed 2026 --save_every 10 --val_every 1 --gpu_ids 0,1,2,3,4,5 --num_gpus 6 --dist_backend nccl --smoke_batches 0 --output_dir 'E:\\Project\\MedSPAR\\work_dir\\stage1_TC-MVE' --resume ''"
+    },
+    {
+      "stage": "stage1",
+      "experiment": "main",
+      "action": "eval",
+      "diagnostic_expansion_pass": true,
+      "expanded_command": "'C:\\Python314\\python.exe' 'E:\\Project\\MedSPAR\\evaluation\\eval_stage1_tc_mve.py' --data_root /data/ReaSeg/data --datasets Skin BraTS Poly Breast Kidney Liver Lung Pancreas Prostate Thyroid --medsam_checkpoint '\\data\\ReaSeg\\pretrained\\medsam_vit_b.pth' --split test --batch_size 2 --num_workers 4 --precision bf16 --output_dir 'E:\\Project\\MedSPAR\\output\\stage1_TC-MVE_test' --local_files_only --steer_checkpoint 'E:\\Project\\MedSPAR\\work_dir\\stage1_TC-MVE\\best.pth' --text_encoder '\\data\\ReaSeg\\pretrained\\bert-base-uncased'"
+    },
+    {
+      "stage": "stage2",
+      "experiment": "main",
+      "action": "train",
+      "diagnostic_expansion_pass": true,
+      "expanded_command": "'C:\\Python314\\python.exe' -m torch.distributed.run --standalone --nproc_per_node=6 'E:\\Project\\MedSPAR\\train\\train_stage2.py' --data_root /data/ReaSeg/data --datasets Skin BraTS Poly Breast Kidney Liver Lung Pancreas Prostate Thyroid --train_split train --val_split val --image_size 1024 --bbox_shift 20 --enlarge_ratio 1.5 --train_box_mode mixed --eval_box_mode tight --vision_type TC_MVE --medsam_checkpoint '\\data\\ReaSeg\\pretrained\\medsam_vit_b.pth' --model_type vit_b --steer_text_encoder '\\data\\ReaSeg\\pretrained\\bert-base-uncased' --steer_cross_attn_layers 2 5 6 11 --steer_text_max_length 64 --vision_dim 768 --llm_name_or_path '\\data\\ReaSeg\\pretrained\\Qwen3.5-2B-SEG' --llm_torch_dtype bf16 --local_files_only --max_length 1024 --seg_token '[SEG]' --use_lora --lora_r 16 --lora_alpha 32 --lora_dropout 0.05 --lora_target_modules q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj --visual_grid 16 --stage unified --lambda_lm 1.0 --lambda_mask 1.0 --seg_loss_weight 1.0 --train_lm_embeddings --train_lm_head --lr_lm_embedding 1e-05 --lr_lm_head 1e-05 --epochs 30 --batch_size 2 --num_workers 4 --lr_projector 0.0001 --lr_mask_decoder 5e-05 --lr_lora 0.0001 --weight_decay 0.01 --grad_clip 1.0 --precision bf16 --seed 2026 --save_every 10 --val_every 1 --gpu_ids 0,1,2,3,4,5 --num_gpus 6 --dist_backend nccl --ddp_find_unused_parameters --lambda_attn 1.0 --lambda_box 0.5 --lambda_prompt 0.5 --num_reasoning_queries 4 --num_pos_points 4 --num_neg_points 4 --grounder_layers 2 --grounder_dim 256 --no-unfreeze_steer_modules --unfreeze_last_vit_blocks 0 --lr_grounding 0.0001 --lr_steer 1e-06 --lr_vision 1e-06 --system_prompt 'You are a helpful medical image segmentation assistant.' --gradient_checkpointing --max_new_tokens 512 --smoke_batches 0 --val_batch_size 2 --profile_compute --experiment_id main --stage1_checkpoint 'E:\\Project\\MedSPAR\\work_dir\\stage1_TC-MVE\\best.pth' --stage0_checkpoint '' --output_dir 'E:\\Project\\MedSPAR\\work_dir\\stage2_MedSPAR' --resume ''"
+    },
+    {
+      "stage": "stage2",
+      "experiment": "main",
+      "action": "eval",
+      "diagnostic_expansion_pass": true,
+      "expanded_command": "'C:\\Python314\\python.exe' 'E:\\Project\\MedSPAR\\evaluation\\eval_stage2_medspar.py' --data_root /data/ReaSeg/data --datasets Skin BraTS Poly Breast Kidney Liver Lung Pancreas Prostate Thyroid --medsam_checkpoint '\\data\\ReaSeg\\pretrained\\medsam_vit_b.pth' --split test --batch_size 2 --num_workers 4 --precision bf16 --output_dir 'E:\\Project\\MedSPAR\\output\\main_test' --local_files_only --checkpoint 'E:\\Project\\MedSPAR\\work_dir\\stage2_MedSPAR\\best.pth' --experiment_id main --llm_name_or_path '\\data\\ReaSeg\\pretrained\\Qwen3.5-2B-SEG' --steer_text_encoder '\\data\\ReaSeg\\pretrained\\bert-base-uncased' --llm_torch_dtype bf16 --prompt_source auto --max_samples 0"
+    },
+    {
+      "stage": "stage2",
+      "experiment": "no_rq",
+      "action": "train",
+      "diagnostic_expansion_pass": true,
+      "expanded_command": "'C:\\Python314\\python.exe' -m torch.distributed.run --standalone --nproc_per_node=6 'E:\\Project\\MedSPAR\\train\\train_stage2.py' --data_root /data/ReaSeg/data --datasets Skin BraTS Poly Breast Kidney Liver Lung Pancreas Prostate Thyroid --train_split train --val_split val --image_size 1024 --bbox_shift 20 --enlarge_ratio 1.5 --train_box_mode mixed --eval_box_mode tight --vision_type TC_MVE --medsam_checkpoint '\\data\\ReaSeg\\pretrained\\medsam_vit_b.pth' --model_type vit_b --steer_text_encoder '\\data\\ReaSeg\\pretrained\\bert-base-uncased' --steer_cross_attn_layers 2 5 6 11 --steer_text_max_length 64 --vision_dim 768 --llm_name_or_path '\\data\\ReaSeg\\pretrained\\Qwen3.5-2B-SEG' --llm_torch_dtype bf16 --local_files_only --max_length 1024 --seg_token '[SEG]' --use_lora --lora_r 16 --lora_alpha 32 --lora_dropout 0.05 --lora_target_modules q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj --visual_grid 16 --stage unified --lambda_lm 1.0 --lambda_mask 1.0 --seg_loss_weight 1.0 --train_lm_embeddings --train_lm_head --lr_lm_embedding 1e-05 --lr_lm_head 1e-05 --epochs 30 --batch_size 2 --num_workers 4 --lr_projector 0.0001 --lr_mask_decoder 5e-05 --lr_lora 0.0001 --weight_decay 0.01 --grad_clip 1.0 --precision bf16 --seed 2026 --save_every 10 --val_every 1 --gpu_ids 0,1,2,3,4,5 --num_gpus 6 --dist_backend nccl --ddp_find_unused_parameters --lambda_attn 1.0 --lambda_box 0.5 --lambda_prompt 0.5 --num_reasoning_queries 4 --num_pos_points 4 --num_neg_points 4 --grounder_layers 2 --grounder_dim 256 --no-unfreeze_steer_modules --unfreeze_last_vit_blocks 0 --lr_grounding 0.0001 --lr_steer 1e-06 --lr_vision 1e-06 --system_prompt 'You are a helpful medical image segmentation assistant.' --gradient_checkpointing --max_new_tokens 512 --smoke_batches 0 --val_batch_size 2 --profile_compute --experiment_id no_rq --stage1_checkpoint 'E:\\Project\\MedSPAR\\work_dir\\stage1_TC-MVE\\best.pth' --stage0_checkpoint '' --output_dir 'E:\\Project\\MedSPAR\\work_dir\\no_rq' --resume ''"
+    },
+    {
+      "stage": "stage2",
+      "experiment": "no_rq",
+      "action": "eval",
+      "diagnostic_expansion_pass": true,
+      "expanded_command": "'C:\\Python314\\python.exe' 'E:\\Project\\MedSPAR\\evaluation\\eval_stage2_medspar.py' --data_root /data/ReaSeg/data --datasets Skin BraTS Poly Breast Kidney Liver Lung Pancreas Prostate Thyroid --medsam_checkpoint '\\data\\ReaSeg\\pretrained\\medsam_vit_b.pth' --split test --batch_size 2 --num_workers 4 --precision bf16 --output_dir 'E:\\Project\\MedSPAR\\output\\no_rq_test' --local_files_only --checkpoint 'E:\\Project\\MedSPAR\\work_dir\\no_rq\\best.pth' --experiment_id no_rq --llm_name_or_path '\\data\\ReaSeg\\pretrained\\Qwen3.5-2B-SEG' --steer_text_encoder '\\data\\ReaSeg\\pretrained\\bert-base-uncased' --llm_torch_dtype bf16 --prompt_source auto --max_samples 0"
+    },
+    {
+      "stage": "stage2",
+      "experiment": "no_semantic",
+      "action": "train",
+      "diagnostic_expansion_pass": true,
+      "expanded_command": "'C:\\Python314\\python.exe' -m torch.distributed.run --standalone --nproc_per_node=6 'E:\\Project\\MedSPAR\\train\\train_stage2.py' --data_root /data/ReaSeg/data --datasets Skin BraTS Poly Breast Kidney Liver Lung Pancreas Prostate Thyroid --train_split train --val_split val --image_size 1024 --bbox_shift 20 --enlarge_ratio 1.5 --train_box_mode mixed --eval_box_mode tight --vision_type TC_MVE --medsam_checkpoint '\\data\\ReaSeg\\pretrained\\medsam_vit_b.pth' --model_type vit_b --steer_text_encoder '\\data\\ReaSeg\\pretrained\\bert-base-uncased' --steer_cross_attn_layers 2 5 6 11 --steer_text_max_length 64 --vision_dim 768 --llm_name_or_path '\\data\\ReaSeg\\pretrained\\Qwen3.5-2B-SEG' --llm_torch_dtype bf16 --local_files_only --max_length 1024 --seg_token '[SEG]' --use_lora --lora_r 16 --lora_alpha 32 --lora_dropout 0.05 --lora_target_modules q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj --visual_grid 16 --stage unified --lambda_lm 1.0 --lambda_mask 1.0 --seg_loss_weight 1.0 --train_lm_embeddings --train_lm_head --lr_lm_embedding 1e-05 --lr_lm_head 1e-05 --epochs 30 --batch_size 2 --num_workers 4 --lr_projector 0.0001 --lr_mask_decoder 5e-05 --lr_lora 0.0001 --weight_decay 0.01 --grad_clip 1.0 --precision bf16 --seed 2026 --save_every 10 --val_every 1 --gpu_ids 0,1,2,3,4,5 --num_gpus 6 --dist_backend nccl --ddp_find_unused_parameters --lambda_attn 1.0 --lambda_box 0.5 --lambda_prompt 0.5 --num_reasoning_queries 4 --num_pos_points 4 --num_neg_points 4 --grounder_layers 2 --grounder_dim 256 --no-unfreeze_steer_modules --unfreeze_last_vit_blocks 0 --lr_grounding 0.0001 --lr_steer 1e-06 --lr_vision 1e-06 --system_prompt 'You are a helpful medical image segmentation assistant.' --gradient_checkpointing --max_new_tokens 512 --smoke_batches 0 --val_batch_size 2 --profile_compute --experiment_id no_semantic --stage1_checkpoint 'E:\\Project\\MedSPAR\\work_dir\\stage1_TC-MVE\\best.pth' --stage0_checkpoint '' --output_dir 'E:\\Project\\MedSPAR\\work_dir\\no_semantic' --resume ''"
+    },
+    {
+      "stage": "stage2",
+      "experiment": "no_semantic",
+      "action": "eval",
+      "diagnostic_expansion_pass": true,
+      "expanded_command": "'C:\\Python314\\python.exe' 'E:\\Project\\MedSPAR\\evaluation\\eval_stage2_medspar.py' --data_root /data/ReaSeg/data --datasets Skin BraTS Poly Breast Kidney Liver Lung Pancreas Prostate Thyroid --medsam_checkpoint '\\data\\ReaSeg\\pretrained\\medsam_vit_b.pth' --split test --batch_size 2 --num_workers 4 --precision bf16 --output_dir 'E:\\Project\\MedSPAR\\output\\no_semantic_test' --local_files_only --checkpoint 'E:\\Project\\MedSPAR\\work_dir\\no_semantic\\best.pth' --experiment_id no_semantic --llm_name_or_path '\\data\\ReaSeg\\pretrained\\Qwen3.5-2B-SEG' --steer_text_encoder '\\data\\ReaSeg\\pretrained\\bert-base-uncased' --llm_torch_dtype bf16 --prompt_source auto --max_samples 0"
+    },
+    {
+      "stage": "stage2",
+      "experiment": "box_only",
+      "action": "train",
+      "diagnostic_expansion_pass": true,
+      "expanded_command": "'C:\\Python314\\python.exe' -m torch.distributed.run --standalone --nproc_per_node=6 'E:\\Project\\MedSPAR\\train\\train_stage2.py' --data_root /data/ReaSeg/data --datasets Skin BraTS Poly Breast Kidney Liver Lung Pancreas Prostate Thyroid --train_split train --val_split val --image_size 1024 --bbox_shift 20 --enlarge_ratio 1.5 --train_box_mode mixed --eval_box_mode tight --vision_type TC_MVE --medsam_checkpoint '\\data\\ReaSeg\\pretrained\\medsam_vit_b.pth' --model_type vit_b --steer_text_encoder '\\data\\ReaSeg\\pretrained\\bert-base-uncased' --steer_cross_attn_layers 2 5 6 11 --steer_text_max_length 64 --vision_dim 768 --llm_name_or_path '\\data\\ReaSeg\\pretrained\\Qwen3.5-2B-SEG' --llm_torch_dtype bf16 --local_files_only --max_length 1024 --seg_token '[SEG]' --use_lora --lora_r 16 --lora_alpha 32 --lora_dropout 0.05 --lora_target_modules q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj --visual_grid 16 --stage unified --lambda_lm 1.0 --lambda_mask 1.0 --seg_loss_weight 1.0 --train_lm_embeddings --train_lm_head --lr_lm_embedding 1e-05 --lr_lm_head 1e-05 --epochs 30 --batch_size 2 --num_workers 4 --lr_projector 0.0001 --lr_mask_decoder 5e-05 --lr_lora 0.0001 --weight_decay 0.01 --grad_clip 1.0 --precision bf16 --seed 2026 --save_every 10 --val_every 1 --gpu_ids 0,1,2,3,4,5 --num_gpus 6 --dist_backend nccl --ddp_find_unused_parameters --lambda_attn 1.0 --lambda_box 0.5 --lambda_prompt 0.5 --num_reasoning_queries 4 --num_pos_points 4 --num_neg_points 4 --grounder_layers 2 --grounder_dim 256 --no-unfreeze_steer_modules --unfreeze_last_vit_blocks 0 --lr_grounding 0.0001 --lr_steer 1e-06 --lr_vision 1e-06 --system_prompt 'You are a helpful medical image segmentation assistant.' --gradient_checkpointing --max_new_tokens 512 --smoke_batches 0 --val_batch_size 2 --profile_compute --experiment_id box_only --stage1_checkpoint 'E:\\Project\\MedSPAR\\work_dir\\stage1_TC-MVE\\best.pth' --stage0_checkpoint '' --output_dir 'E:\\Project\\MedSPAR\\work_dir\\box_only' --resume ''"
+    },
+    {
+      "stage": "stage2",
+      "experiment": "box_only",
+      "action": "eval",
+      "diagnostic_expansion_pass": true,
+      "expanded_command": "'C:\\Python314\\python.exe' 'E:\\Project\\MedSPAR\\evaluation\\eval_stage2_medspar.py' --data_root /data/ReaSeg/data --datasets Skin BraTS Poly Breast Kidney Liver Lung Pancreas Prostate Thyroid --medsam_checkpoint '\\data\\ReaSeg\\pretrained\\medsam_vit_b.pth' --split test --batch_size 2 --num_workers 4 --precision bf16 --output_dir 'E:\\Project\\MedSPAR\\output\\box_only_test' --local_files_only --checkpoint 'E:\\Project\\MedSPAR\\work_dir\\box_only\\best.pth' --experiment_id box_only --llm_name_or_path '\\data\\ReaSeg\\pretrained\\Qwen3.5-2B-SEG' --steer_text_encoder '\\data\\ReaSeg\\pretrained\\bert-base-uncased' --llm_torch_dtype bf16 --prompt_source auto --max_samples 0"
+    },
+    {
+      "stage": "stage2",
+      "experiment": "no_spatial_heatmap_loss",
+      "action": "train",
+      "diagnostic_expansion_pass": true,
+      "expanded_command": "'C:\\Python314\\python.exe' -m torch.distributed.run --standalone --nproc_per_node=6 'E:\\Project\\MedSPAR\\train\\train_stage2.py' --data_root /data/ReaSeg/data --datasets Skin BraTS Poly Breast Kidney Liver Lung Pancreas Prostate Thyroid --train_split train --val_split val --image_size 1024 --bbox_shift 20 --enlarge_ratio 1.5 --train_box_mode mixed --eval_box_mode tight --vision_type TC_MVE --medsam_checkpoint '\\data\\ReaSeg\\pretrained\\medsam_vit_b.pth' --model_type vit_b --steer_text_encoder '\\data\\ReaSeg\\pretrained\\bert-base-uncased' --steer_cross_attn_layers 2 5 6 11 --steer_text_max_length 64 --vision_dim 768 --llm_name_or_path '\\data\\ReaSeg\\pretrained\\Qwen3.5-2B-SEG' --llm_torch_dtype bf16 --local_files_only --max_length 1024 --seg_token '[SEG]' --use_lora --lora_r 16 --lora_alpha 32 --lora_dropout 0.05 --lora_target_modules q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj --visual_grid 16 --stage unified --lambda_lm 1.0 --lambda_mask 1.0 --seg_loss_weight 1.0 --train_lm_embeddings --train_lm_head --lr_lm_embedding 1e-05 --lr_lm_head 1e-05 --epochs 30 --batch_size 2 --num_workers 4 --lr_projector 0.0001 --lr_mask_decoder 5e-05 --lr_lora 0.0001 --weight_decay 0.01 --grad_clip 1.0 --precision bf16 --seed 2026 --save_every 10 --val_every 1 --gpu_ids 0,1,2,3,4,5 --num_gpus 6 --dist_backend nccl --ddp_find_unused_parameters --lambda_attn 0.0 --lambda_box 0.5 --lambda_prompt 0.5 --num_reasoning_queries 4 --num_pos_points 4 --num_neg_points 4 --grounder_layers 2 --grounder_dim 256 --no-unfreeze_steer_modules --unfreeze_last_vit_blocks 0 --lr_grounding 0.0001 --lr_steer 1e-06 --lr_vision 1e-06 --system_prompt 'You are a helpful medical image segmentation assistant.' --gradient_checkpointing --max_new_tokens 512 --smoke_batches 0 --val_batch_size 2 --profile_compute --experiment_id no_spatial_heatmap_loss --stage1_checkpoint 'E:\\Project\\MedSPAR\\work_dir\\stage1_TC-MVE\\best.pth' --stage0_checkpoint '' --output_dir 'E:\\Project\\MedSPAR\\work_dir\\no_spatial_heatmap_loss' --resume ''"
+    },
+    {
+      "stage": "stage2",
+      "experiment": "no_spatial_heatmap_loss",
+      "action": "eval",
+      "diagnostic_expansion_pass": true,
+      "expanded_command": "'C:\\Python314\\python.exe' 'E:\\Project\\MedSPAR\\evaluation\\eval_stage2_medspar.py' --data_root /data/ReaSeg/data --datasets Skin BraTS Poly Breast Kidney Liver Lung Pancreas Prostate Thyroid --medsam_checkpoint '\\data\\ReaSeg\\pretrained\\medsam_vit_b.pth' --split test --batch_size 2 --num_workers 4 --precision bf16 --output_dir 'E:\\Project\\MedSPAR\\output\\no_spatial_heatmap_loss_test' --local_files_only --checkpoint 'E:\\Project\\MedSPAR\\work_dir\\no_spatial_heatmap_loss\\best.pth' --experiment_id no_spatial_heatmap_loss --llm_name_or_path '\\data\\ReaSeg\\pretrained\\Qwen3.5-2B-SEG' --steer_text_encoder '\\data\\ReaSeg\\pretrained\\bert-base-uncased' --llm_torch_dtype bf16 --prompt_source auto --max_samples 0"
+    },
+    {
+      "stage": "stage2",
+      "experiment": "medsam_vision",
+      "action": "train",
+      "diagnostic_expansion_pass": true,
+      "expanded_command": "'C:\\Python314\\python.exe' -m torch.distributed.run --standalone --nproc_per_node=6 'E:\\Project\\MedSPAR\\train\\train_stage2.py' --data_root /data/ReaSeg/data --datasets Skin BraTS Poly Breast Kidney Liver Lung Pancreas Prostate Thyroid --train_split train --val_split val --image_size 1024 --bbox_shift 20 --enlarge_ratio 1.5 --train_box_mode mixed --eval_box_mode tight --vision_type medsam --medsam_checkpoint '\\data\\ReaSeg\\pretrained\\medsam_vit_b.pth' --model_type vit_b --steer_text_encoder '\\data\\ReaSeg\\pretrained\\bert-base-uncased' --steer_cross_attn_layers 2 5 6 11 --steer_text_max_length 64 --vision_dim 768 --llm_name_or_path '\\data\\ReaSeg\\pretrained\\Qwen3.5-2B-SEG' --llm_torch_dtype bf16 --local_files_only --max_length 1024 --seg_token '[SEG]' --use_lora --lora_r 16 --lora_alpha 32 --lora_dropout 0.05 --lora_target_modules q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj --visual_grid 16 --stage unified --lambda_lm 1.0 --lambda_mask 1.0 --seg_loss_weight 1.0 --train_lm_embeddings --train_lm_head --lr_lm_embedding 1e-05 --lr_lm_head 1e-05 --epochs 30 --batch_size 2 --num_workers 4 --lr_projector 0.0001 --lr_mask_decoder 5e-05 --lr_lora 0.0001 --weight_decay 0.01 --grad_clip 1.0 --precision bf16 --seed 2026 --save_every 10 --val_every 1 --gpu_ids 0,1,2,3,4,5 --num_gpus 6 --dist_backend nccl --ddp_find_unused_parameters --lambda_attn 1.0 --lambda_box 0.5 --lambda_prompt 0.5 --num_reasoning_queries 4 --num_pos_points 4 --num_neg_points 4 --grounder_layers 2 --grounder_dim 256 --no-unfreeze_steer_modules --unfreeze_last_vit_blocks 0 --lr_grounding 0.0001 --lr_steer 1e-06 --lr_vision 1e-06 --system_prompt 'You are a helpful medical image segmentation assistant.' --gradient_checkpointing --max_new_tokens 512 --smoke_batches 0 --val_batch_size 2 --profile_compute --experiment_id medsam_vision --stage1_checkpoint '' --stage0_checkpoint 'E:\\Project\\MedSPAR\\work_dir\\stage0_medsam\\best.pth' --output_dir 'E:\\Project\\MedSPAR\\work_dir\\medsam_vision' --resume ''"
+    },
+    {
+      "stage": "stage2",
+      "experiment": "medsam_vision",
+      "action": "eval",
+      "diagnostic_expansion_pass": true,
+      "expanded_command": "'C:\\Python314\\python.exe' 'E:\\Project\\MedSPAR\\evaluation\\eval_stage2_medspar.py' --data_root /data/ReaSeg/data --datasets Skin BraTS Poly Breast Kidney Liver Lung Pancreas Prostate Thyroid --medsam_checkpoint '\\data\\ReaSeg\\pretrained\\medsam_vit_b.pth' --split test --batch_size 2 --num_workers 4 --precision bf16 --output_dir 'E:\\Project\\MedSPAR\\output\\medsam_vision_test' --local_files_only --checkpoint 'E:\\Project\\MedSPAR\\work_dir\\medsam_vision\\best.pth' --experiment_id medsam_vision --llm_name_or_path '\\data\\ReaSeg\\pretrained\\Qwen3.5-2B-SEG' --steer_text_encoder '\\data\\ReaSeg\\pretrained\\bert-base-uncased' --llm_torch_dtype bf16 --prompt_source auto --max_samples 0"
+    },
+    {
+      "stage": "stage2",
+      "experiment": "coarse_mask_only",
+      "action": "train",
+      "diagnostic_expansion_pass": true,
+      "expanded_command": "'C:\\Python314\\python.exe' -m torch.distributed.run --standalone --nproc_per_node=6 'E:\\Project\\MedSPAR\\train\\train_stage2.py' --data_root /data/ReaSeg/data --datasets Skin BraTS Poly Breast Kidney Liver Lung Pancreas Prostate Thyroid --train_split train --val_split val --image_size 1024 --bbox_shift 20 --enlarge_ratio 1.5 --train_box_mode mixed --eval_box_mode tight --vision_type TC_MVE --medsam_checkpoint '\\data\\ReaSeg\\pretrained\\medsam_vit_b.pth' --model_type vit_b --steer_text_encoder '\\data\\ReaSeg\\pretrained\\bert-base-uncased' --steer_cross_attn_layers 2 5 6 11 --steer_text_max_length 64 --vision_dim 768 --llm_name_or_path '\\data\\ReaSeg\\pretrained\\Qwen3.5-2B-SEG' --llm_torch_dtype bf16 --local_files_only --max_length 1024 --seg_token '[SEG]' --use_lora --lora_r 16 --lora_alpha 32 --lora_dropout 0.05 --lora_target_modules q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj --visual_grid 16 --stage unified --lambda_lm 1.0 --lambda_mask 1.0 --seg_loss_weight 1.0 --train_lm_embeddings --train_lm_head --lr_lm_embedding 1e-05 --lr_lm_head 1e-05 --epochs 30 --batch_size 2 --num_workers 4 --lr_projector 0.0001 --lr_mask_decoder 5e-05 --lr_lora 0.0001 --weight_decay 0.01 --grad_clip 1.0 --precision bf16 --seed 2026 --save_every 10 --val_every 1 --gpu_ids 0,1,2,3,4,5 --num_gpus 6 --dist_backend nccl --ddp_find_unused_parameters --lambda_attn 1.0 --lambda_box 0.5 --lambda_prompt 0.5 --num_reasoning_queries 4 --num_pos_points 4 --num_neg_points 4 --grounder_layers 2 --grounder_dim 256 --no-unfreeze_steer_modules --unfreeze_last_vit_blocks 0 --lr_grounding 0.0001 --lr_steer 1e-06 --lr_vision 1e-06 --system_prompt 'You are a helpful medical image segmentation assistant.' --gradient_checkpointing --max_new_tokens 512 --smoke_batches 0 --val_batch_size 2 --profile_compute --experiment_id coarse_mask_only --stage1_checkpoint 'E:\\Project\\MedSPAR\\work_dir\\stage1_TC-MVE\\best.pth' --stage0_checkpoint '' --output_dir 'E:\\Project\\MedSPAR\\work_dir\\coarse_mask_only' --resume ''"
+    },
+    {
+      "stage": "stage2",
+      "experiment": "coarse_mask_only",
+      "action": "eval",
+      "diagnostic_expansion_pass": true,
+      "expanded_command": "'C:\\Python314\\python.exe' 'E:\\Project\\MedSPAR\\evaluation\\eval_stage2_medspar.py' --data_root /data/ReaSeg/data --datasets Skin BraTS Poly Breast Kidney Liver Lung Pancreas Prostate Thyroid --medsam_checkpoint '\\data\\ReaSeg\\pretrained\\medsam_vit_b.pth' --split test --batch_size 2 --num_workers 4 --precision bf16 --output_dir 'E:\\Project\\MedSPAR\\output\\coarse_mask_only_test' --local_files_only --checkpoint 'E:\\Project\\MedSPAR\\work_dir\\coarse_mask_only\\best.pth' --experiment_id coarse_mask_only --llm_name_or_path '\\data\\ReaSeg\\pretrained\\Qwen3.5-2B-SEG' --steer_text_encoder '\\data\\ReaSeg\\pretrained\\bert-base-uncased' --llm_torch_dtype bf16 --prompt_source auto --max_samples 0"
+    },
+    {
+      "stage": "stage2",
+      "experiment": "semantic_only",
+      "action": "train",
+      "diagnostic_expansion_pass": true,
+      "expanded_command": "'C:\\Python314\\python.exe' -m torch.distributed.run --standalone --nproc_per_node=6 'E:\\Project\\MedSPAR\\train\\train_stage2.py' --data_root /data/ReaSeg/data --datasets Skin BraTS Poly Breast Kidney Liver Lung Pancreas Prostate Thyroid --train_split train --val_split val --image_size 1024 --bbox_shift 20 --enlarge_ratio 1.5 --train_box_mode mixed --eval_box_mode tight --vision_type TC_MVE --medsam_checkpoint '\\data\\ReaSeg\\pretrained\\medsam_vit_b.pth' --model_type vit_b --steer_text_encoder '\\data\\ReaSeg\\pretrained\\bert-base-uncased' --steer_cross_attn_layers 2 5 6 11 --steer_text_max_length 64 --vision_dim 768 --llm_name_or_path '\\data\\ReaSeg\\pretrained\\Qwen3.5-2B-SEG' --llm_torch_dtype bf16 --local_files_only --max_length 1024 --seg_token '[SEG]' --use_lora --lora_r 16 --lora_alpha 32 --lora_dropout 0.05 --lora_target_modules q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj --visual_grid 16 --stage unified --lambda_lm 1.0 --lambda_mask 1.0 --seg_loss_weight 1.0 --train_lm_embeddings --train_lm_head --lr_lm_embedding 1e-05 --lr_lm_head 1e-05 --epochs 30 --batch_size 2 --num_workers 4 --lr_projector 0.0001 --lr_mask_decoder 5e-05 --lr_lora 0.0001 --weight_decay 0.01 --grad_clip 1.0 --precision bf16 --seed 2026 --save_every 10 --val_every 1 --gpu_ids 0,1,2,3,4,5 --num_gpus 6 --dist_backend nccl --ddp_find_unused_parameters --lambda_attn 1.0 --lambda_box 0.5 --lambda_prompt 0.5 --num_reasoning_queries 4 --num_pos_points 4 --num_neg_points 4 --grounder_layers 2 --grounder_dim 256 --no-unfreeze_steer_modules --unfreeze_last_vit_blocks 0 --lr_grounding 0.0001 --lr_steer 1e-06 --lr_vision 1e-06 --system_prompt 'You are a helpful medical image segmentation assistant.' --gradient_checkpointing --max_new_tokens 512 --smoke_batches 0 --val_batch_size 2 --profile_compute --experiment_id semantic_only --stage1_checkpoint 'E:\\Project\\MedSPAR\\work_dir\\stage1_TC-MVE\\best.pth' --stage0_checkpoint '' --output_dir 'E:\\Project\\MedSPAR\\work_dir\\semantic_only' --resume ''"
+    },
+    {
+      "stage": "stage2",
+      "experiment": "semantic_only",
+      "action": "eval",
+      "diagnostic_expansion_pass": true,
+      "expanded_command": "'C:\\Python314\\python.exe' 'E:\\Project\\MedSPAR\\evaluation\\eval_stage2_medspar.py' --data_root /data/ReaSeg/data --datasets Skin BraTS Poly Breast Kidney Liver Lung Pancreas Prostate Thyroid --medsam_checkpoint '\\data\\ReaSeg\\pretrained\\medsam_vit_b.pth' --split test --batch_size 2 --num_workers 4 --precision bf16 --output_dir 'E:\\Project\\MedSPAR\\output\\semantic_only_test' --local_files_only --checkpoint 'E:\\Project\\MedSPAR\\work_dir\\semantic_only\\best.pth' --experiment_id semantic_only --llm_name_or_path '\\data\\ReaSeg\\pretrained\\Qwen3.5-2B-SEG' --steer_text_encoder '\\data\\ReaSeg\\pretrained\\bert-base-uncased' --llm_torch_dtype bf16 --prompt_source auto --max_samples 0"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MedSPAR: Spatial Prompt Adaptation for Medical Reasoning Segmentation. Explore the implemented method, data construction and research status.">
+  <meta name="theme-color" content="#173d43">
+  <title>MedSPAR — Spatial Prompt Adaptation for Medical Reasoning Segmentation</title>
+  <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="wordmark" href="#top" aria-label="MedSPAR home">Med<span>SPAR</span><span class="brand-dot" aria-hidden="true">.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#motivation">Overview</a><a href="#dataset">Data</a><a href="#method">Method</a><a href="#results">Results</a><a href="#resources">Resources</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero container" id="top" aria-labelledby="project-title">
+      <p class="eyebrow">2D medical image reasoning segmentation</p>
+      <h1 id="project-title">Med<span>SPAR</span></h1>
+      <p class="project-expansion">Spatial Prompt Adaptation<br>for Medical Reasoning Segmentation</p>
+      <p class="hero-description">From a medical question to a target mask:<br class="desktop-break"> connecting answer representations with spatial visual features.</p>
+      <p class="byline" data-placeholder="TODO_AUTHORS">Authors and affiliations · pending confirmation</p>
+      <div class="hero-actions"><a class="button primary" href="#method">Explore the method <span aria-hidden="true">↗</span></a><a class="button" href="#resources">Research resources</a></div>
+      <div class="release-strip" aria-label="Release status">
+        <span class="status-label">Research in preparation</span>
+        <span data-placeholder="TODO_PAPER">Paper · pending</span><span data-placeholder="TODO_CODE_SYNC">Code release · pending</span><span data-placeholder="TODO_MODELS">Weights · pending</span>
+      </div>
+    </section>
+
+    <section class="teaser container" aria-labelledby="teaser-title">
+      <div class="figure-heading"><h2 id="teaser-title">Ask about a target. Ground it in the image.</h2><span class="figure-label">Task schematic</span></div>
+      <figure>
+        <picture><source media="(max-width: 540px)" srcset="./assets/images/teaser/task-overview-mobile.svg"><img src="./assets/images/teaser/task-overview.svg" width="1200" height="360" alt="Task schematic: a two-dimensional medical image and a natural-language question are inputs; the model generates an answer and the corresponding binary target mask."></picture>
+        <figcaption>No user-provided box or point is required by the automatic inference path. This is an input–output schematic, with no medical image or measured prediction. <span class="pending-inline" data-placeholder="TODO_TEASER_CASE">An approved real case is pending.</span></figcaption>
+      </figure>
+    </section>
+
+    <section class="section container intro" id="motivation" aria-labelledby="motivation-title">
+      <div class="section-label">01 / Research question</div>
+      <div class="intro-grid"><h2 id="motivation-title">How does an answer<br>become a spatial prompt?</h2><div class="prose"><p>Language can describe which target to segment, while the mask must identify its precise spatial extent. MedSPAR studies the interface between generated answer representations, a spatial visual grid and a medical segmentation decoder.</p><p>The implemented method connects question-conditioned visual features to answer-conditioned grounding, then adapts the resulting geometric and semantic signals for SAM. Whether these paths improve localization is a question for controlled evaluation.</p><p class="scope-note">Scope: a single 2D image and question → generated answer and binary target mask. Implementation evidence does not establish clinical validity or comparative performance.</p></div></div>
+    </section>
+
+    <section class="section section-tint" id="dataset" aria-labelledby="dataset-title"><div class="container">
+      <div class="section-label">02 / Data construction</div>
+      <div class="section-intro"><h2 id="dataset-title">Linking images, language<br>and pixel supervision.</h2><p>Existing segmentation annotations supply the target masks. Offline language construction adds a question and reference answer; annotation-derived visual aids are kept outside the automatic inference inputs.</p></div>
+      <figure class="pipeline-figure"><picture><source media="(max-width: 540px)" srcset="./assets/images/dataset/construction-mobile.svg"><img loading="lazy" src="./assets/images/dataset/construction.svg" width="1200" height="300" alt="Offline data pipeline: source image and mask pairs, target-aware language construction with annotation-derived aids, checks and review, then image–question–answer–mask records."></picture><figcaption>Conceptual construction workflow. Existing project records report Qwen3.5-27B generation, Qwen3.5-122B-A10B rechecking and three experts sampling 1% of records; review coverage and execution logs remain to be confirmed. These model names are reported settings, not independently verified run identities.</figcaption></figure>
+      <div class="inventory-heading"><h3>Ten configured task groups</h3><p>Local JSON record inventory · recounted 2 November 2026</p></div>
+      <div class="table-scroll" role="region" tabindex="0" aria-label="Dataset manifest record counts"><table>
+        <caption>Records in the available local manifests. Counts are not unique patients or images.</caption>
+        <thead><tr><th scope="col">Task group</th><th scope="col">Train</th><th scope="col">Validation</th><th scope="col">Test</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">BraTS</th><td>3,902</td><td>488</td><td>488</td></tr>
+          <tr><th scope="row">Breast</th><td>3,816</td><td>477</td><td>474</td></tr>
+          <tr><th scope="row">Kidney</th><td>3,466</td><td>432</td><td>435</td></tr>
+          <tr><th scope="row">Liver</th><td>2,776</td><td>350</td><td>346</td></tr>
+          <tr><th scope="row">Lung</th><td>3,348</td><td>421</td><td>414</td></tr>
+          <tr><th scope="row">Pancreas</th><td>3,191</td><td>400</td><td>397</td></tr>
+          <tr><th scope="row">Poly</th><td>2,597</td><td>324</td><td>327</td></tr>
+          <tr><th scope="row">Prostate</th><td>3,027</td><td>374</td><td>381</td></tr>
+          <tr><th scope="row">Skin</th><td>3,335</td><td>398</td><td>461</td></tr>
+          <tr><th scope="row">Thyroid</th><td>2,303</td><td>576</td><td>614</td></tr>
+        </tbody><tfoot><tr><th scope="row">Total · 40,338</th><td>31,761</td><td>4,240</td><td>4,337</td></tr></tfoot>
+      </table></div>
+      <aside class="evidence-note"><strong>Inventory, with an unresolved data audit.</strong> Group counts do not certify source inclusion, patient-disjoint splits or completed experiments. Prostate records have shared-mask target conflicts and cross-split patient IDs under the existing identity rule. Corrections and reevaluation are required before promoting benchmark claims. <span data-placeholder="TODO_DATA_RELEASE">Data release and source-specific permissions are pending.</span></aside>
+      <details class="record-details"><summary>What is a training record?</summary><p><code>image</code> + <code>input</code> provide the image and question. <code>output</code> + <code>mask</code> provide reference-answer and pixel supervision. Actual records also contain <code>body_part</code>, <code>modality</code>, <code>target</code> and <code>target_position</code>; these annotation fields are not inference inputs.</p><pre><code>{
+  "image": "&lt;relative image path&gt;",
+  "input": "&lt;question without [SEG]&gt;",
+  "output": "&lt;reference answer&gt; [SEG]",
+  "mask": "&lt;relative mask path&gt;"
+}</code></pre><p class="muted">Schema template only. No patient record or generated medical statement is displayed.</p></details>
+    </div></section>
+
+    <section class="section container" id="method" aria-labelledby="method-title">
+      <div class="section-label">03 / Methodology</div>
+      <div class="section-intro"><h2 id="method-title">Preserve the grid.<br>Adapt the prompts.</h2><p>Three visual paths connect language and segmentation: a compressed LLM prefix, a full grid for grounding, and image embeddings that reach the mask decoder directly.</p></div>
+      <figure class="method-figure"><div class="figure-toolbar"><span class="figure-label">Existing architecture draft · audited against code</span><button class="zoom-button" type="button" data-zoom="./assets/images/framework/medspar-architecture.png" data-caption="Existing MedSPAR architecture draft, copied unchanged and checked against current source. All grids, tokens and mask symbols are schematic, not experimental outputs." hidden>Enlarge figure <span aria-hidden="true">↗</span></button></div><img loading="lazy" src="./assets/images/framework/medspar-architecture.png" width="5100" height="3570" alt="MedSPAR architecture: question-conditioned TC-MVE produces grid X and embeddings E. X feeds the LLM prefix and ACSG; answer queries and a SEG anchor enter ACSG; SGPA makes box, coarse mask and semantic prompts; E directly feeds the SAM decoder."><figcaption>Existing architecture draft, copied unchanged and checked against the current source. Predicted geometry passes through SAM's prompt encoder; semantic tokens bypass it. Point prompts are disabled in all eight configured experiments. All grid, token and mask symbols are schematic. Final paper-figure selection remains pending.</figcaption></figure>
+      <div class="module-list">
+        <article><p class="module-number">01</p><div><h3>TC-MVE</h3><p class="module-expansion">Text-Conditioned Medical Visual Encoder</p><p>BERT text features pass through a connector into gated cross-attention before ViT blocks 2, 5, 6 and 11 (zero-based). Stage 1 trains Steer-MedSAM, including the decoder and auxiliary patch head.</p></div></article>
+        <article><p class="module-number">02</p><div><h3>ACSG</h3><p class="module-expansion">Answer-Conditioned Spatial Grounding</p><p>Answer states before [SEG] supply pooled queries. The state at [SEG] supplies an anchor. The query bank interacts with the full visual grid to produce spatial logits.</p></div></article>
+        <article><p class="module-number">03</p><div><h3>SGPA</h3><p class="module-expansion">Semantic–Geometric Prompt Adaptation</p><p>Predicted boxes and coarse masks form geometric prompts. Projected, gated semantic tokens join sparse prompts, while direct image embeddings retain spatial information for decoding.</p></div></article>
+      </div>
+      <div class="inference-note"><h3>Generation-time inference</h3><p>Image + question → free answer generation → exactly-one-SEG check → second LLM forward with cached visual features → automatic prompts → mask decoding. Missing or multiple SEG tokens are counted as failures.</p></div>
+      <details><summary>Training stages and implementation boundaries</summary><div class="stage-list"><p><strong>Stage 0 · visual control.</strong> Plain MedSAM; original image encoder, prompt encoder and IoU head frozen, decoder segmentation parameters trained. This branch prepares <code>medsam_vision</code>.</p><p><strong>Stage 1 · visual preparation.</strong> Same shared SAM freeze policy, plus trainable connector, GCA and patch head; BERT remains frozen. This prepares the complete Steer-MedSAM model for <code>main</code>.</p><p><strong>Stage 2 · joint adaptation.</strong> Visual branch frozen by default; LoRA, full embedding/LM-head matrices, visual-prefix modules, ACSG/SGPA and decoder segmentation parameters train. Reference-answer teacher forcing is used in training.</p><p>These paths are implemented in the inspected source. Full model execution, checkpoint round trips and CUDA/DDP validation were not performed in this website task.</p></div></details>
+    </section>
+
+    <section class="section section-tint" id="results" aria-labelledby="results-title"><div class="container">
+      <div class="section-label">04 / Experimental evidence</div>
+      <div class="section-intro"><h2 id="results-title">An explicit protocol.<br>A traceable result.</h2><p>The evaluator scores native-resolution target masks and retains generation failures in the denominator. Current-model run provenance and the corrected data protocol must be established before publishing benchmark scores.</p></div>
+      <div class="metric-row"><div><h3>Dice / IoU / Recall</h3><p>Implemented at native GT resolution</p></div><div><h3>All-record mean</h3><p>Invalid SEG cases score zero</p></div><div><h3>Stage 0/1 ≠ Stage 2</h3><p>GT-derived boxes versus automatic prompts</p></div></div>
+      <div class="placeholder-block" data-placeholder="TODO_RESULTS"><span class="placeholder-id">TODO_RESULTS</span><h3>Quantitative results pending verification</h3><p>This space is reserved for current <code>main</code> and matched comparisons, with dataset version, checkpoint, decoding settings, per-record scores and aggregation stated. Legacy runs and explicitly simulated scores are excluded.</p></div>
+      <details><summary>Protocol items still to resolve</summary><ul><li>Training validation uses repetition penalty 1.0 and no-repeat-ngram 0; independent evaluation defaults to 1.1 and 4.</li><li>The current Stage 2 JSON specifies 30 epochs; earlier prose says 15. Saved run configurations determine actual budgets.</li><li>HD95 is not reported by the current official evaluator. Physical spacing and empty-mask conventions would need separate validation.</li><li>Configured ablations exist; their completed runs and comparative effects are not established here.</li></ul></details>
+    </div></section>
+
+    <section class="section container" id="qualitative" aria-labelledby="qualitative-title">
+      <div class="section-label">05 / Qualitative cases</div><h2 id="qualitative-title">One question. One aligned case.</h2>
+      <p class="section-description">The eventual case study will align an authorized source image, its exact question, ground truth, a current-model prediction and overlay. Include a representative failure alongside successful cases.</p>
+      <div class="case-placeholder" data-placeholder="TODO_QUALITATIVE"><span class="placeholder-id">TODO_QUALITATIVE · no experimental images displayed</span><div class="case-slots" aria-label="Reserved case-study fields"><span>Source image</span><span>Ground truth</span><span>Prediction</span><span>Overlay</span></div><p>Awaiting a verified checkpoint, same-record outputs and permission to display the source image. These labeled spaces contain no fabricated medical image or mask.</p></div>
+    </section>
+
+    <section class="section section-tint" id="resources" aria-labelledby="resources-title"><div class="container">
+      <div class="section-label">06 / Resources</div><h2 id="resources-title">Follow the evidence.</h2>
+      <div class="resource-list"><div><h3>MedSPAR paper</h3><p>Public identifier and publication status pending.</p><span class="resource-status" data-placeholder="TODO_PAPER">Not linked</span></div><div><h3>Code and reproduction</h3><p>The inspected source is separate from this workspace; source synchronization and package naming remain unresolved.</p><span class="resource-status" data-placeholder="TODO_CODE_SYNC">Release pending</span></div><div><h3>Data and model weights</h3><p>Source-specific permissions, model identities and downloadable artifacts remain to be established.</p><span class="resource-status">Release pending</span></div></div>
+      <p class="resource-links"><a href="./PROJECT_WEBSITE_PLAN.md">Evidence &amp; maintenance plan <span aria-hidden="true">↗</span></a><a href="https://github.com/bowang-lab/MedSAM">Upstream MedSAM <span aria-hidden="true">↗</span></a><a href="https://github.com/facebookresearch/segment-anything">Upstream SAM <span aria-hidden="true">↗</span></a></p>
+      <details><summary>Local preview and research-command status</summary><p>The static website runs from this workspace without research dependencies:</p><div class="code-toolbar"><span>From the repository root</span><button type="button" data-copy="preview-command" hidden>Copy command</button></div><pre><code id="preview-command">python -m http.server 8000 --directory docs</code></pre><p>Open <a href="http://localhost:8000">http://localhost:8000</a>. Training and evaluation recipes are in the repository README, with explicit prerequisites. A normal source-launcher dry run failed on the <code>MedSPAR</code> / <code>medspar</code> package-name mismatch; no model-execution claim is made.</p></details>
+    </div></section>
+
+    <section class="section container citation" id="citation" aria-labelledby="citation-title"><div class="section-label">07 / Citation &amp; acknowledgements</div><h2 id="citation-title">Citation forthcoming.</h2><p data-placeholder="TODO_CITATION">A verified MedSPAR BibTeX entry will appear here once the final title, authors and public paper identifier are confirmed. Drafting plans do not establish a submission or acceptance.</p><p>MedSPAR builds on SAM, MedSAM, BERT and LoRA-based language-model adaptation. <span data-placeholder="TODO_LICENSE">Project-wide licensing is pending confirmation;</span> upstream code, data and weights retain their respective terms.</p></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="wordmark" href="#top">Med<span>SPAR</span>.</a><p>Research preparation snapshot · 2 November 2026<br>Static HTML / CSS / JavaScript · No patient imagery distributed</p><a href="#top">Back to top ↑</a></div></footer>
+  <dialog id="figure-dialog" aria-labelledby="dialog-title"><div class="dialog-toolbar"><h2 id="dialog-title">Method overview</h2><button type="button" id="close-dialog" aria-label="Close enlarged figure">Close ×</button></div><div class="dialog-image-scroll" tabindex="0" aria-label="Enlarged architecture figure; scroll horizontally to inspect details"><img id="dialog-image" alt=""></div><p id="dialog-caption"></p></dialog>
+  <p class="sr-only" role="status" aria-live="polite" id="copy-status"></p>
+</body>
+</html>

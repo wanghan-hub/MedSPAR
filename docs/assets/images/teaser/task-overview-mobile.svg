@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="800" viewBox="0 0 480 800" role="img" aria-labelledby="title desc">
+<title id="title">MedSPAR task schematic, narrow-screen layout</title><desc id="desc">The same image/question to answer/mask task, vertically arranged. All panels are text only.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#216960"/></marker></defs>
+<rect width="480" height="800" fill="#fff"/>
+<g font-family="Arial, sans-serif">
+<text x="30" y="35" fill="#216960" font-size="14" font-weight="700" text-anchor="start">INPUTS</text>
+<rect x="30" y="60" width="400" height="95" rx="5" fill="#f4f7f5" stroke="#d8e2de"/>
+<path d="M31 66V149" stroke="#216960" stroke-width="3"/>
+<text x="48" y="89" fill="#172d33" font-size="20" font-weight="600" text-anchor="start">2D medical image</text>
+<text x="48" y="116" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">Single image or extracted slice</text>
+<rect x="30" y="185" width="400" height="95" rx="5" fill="#f4f7f5" stroke="#d8e2de"/>
+<path d="M31 191V274" stroke="#216960" stroke-width="3"/>
+<text x="48" y="214" fill="#172d33" font-size="20" font-weight="600" text-anchor="start">Natural-language question</text>
+<text x="48" y="241" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">The target to be segmented</text>
+<path d="M430 107H450V357H430" fill="none" stroke="#216960" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M430 232H450" fill="none" stroke="#216960" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="30" y="320" width="400" height="110" rx="5" fill="#edf5f1" stroke="#d8e2de"/>
+<path d="M31 326V424" stroke="#216960" stroke-width="3"/>
+<text x="48" y="349" fill="#172d33" font-size="20" font-weight="600" text-anchor="start">MedSPAR</text>
+<text x="48" y="376" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">Question-conditioned segmentation</text>
+<text x="48" y="399" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">with automatic spatial prompts</text>
+<text x="30" y="474" fill="#216960" font-size="14" font-weight="700" text-anchor="start">OUTPUTS</text>
+<rect x="30" y="500" width="400" height="95" rx="5" fill="#f4f7f5" stroke="#d8e2de"/>
+<path d="M31 506V589" stroke="#216960" stroke-width="3"/>
+<text x="48" y="529" fill="#172d33" font-size="20" font-weight="600" text-anchor="start">Generated answer</text>
+<text x="48" y="556" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">Exactly one valid [SEG]</text>
+<rect x="30" y="625" width="400" height="95" rx="5" fill="#f4f7f5" stroke="#d8e2de"/>
+<path d="M31 631V714" stroke="#216960" stroke-width="3"/>
+<text x="48" y="654" fill="#172d33" font-size="20" font-weight="600" text-anchor="start">Binary target mask</text>
+<text x="48" y="681" fill="#52676d" font-size="15" font-weight="400" text-anchor="start">Produced for a valid generation</text>
+<path d="M230 430V455H15V547H30" fill="none" stroke="#216960" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M15 547V672H30" fill="none" stroke="#216960" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="30" y="762" fill="#9a4b2d" font-size="15" font-weight="600" text-anchor="start">SCHEMATIC ONLY / Approved real case pending</text>
+</g></svg>

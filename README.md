@@ -1,191 +1,210 @@
 # MedSPAR
 
-独立的新项目：Stage1 训练完整 Steer-MedSAM（其文本条件视觉编码器命名为 TC-MVE / `TC_MVE`）；Stage2 训练 MedSPAR。Stage0 是普通 MedSAM 的独立对照准备分支。所有阶段重新训练，不加载旧 reaseg 项目的训练权重。基础预训练资源仍需要。
+### Spatial Prompt Adaptation for Medical Reasoning Segmentation
 
-## 环境和数据
+**Connecting medical questions and generated answer representations to pixel-level segmentation.**
 
-沿用已验证的服务器环境，依赖见 `requirements.txt`，不盲目升级或安装未经验证的版本。需要支持 Qwen3.5 的 Transformers、PEFT、匹配 CUDA 的 PyTorch/torchvision，及 numpy、Pillow、tqdm、psutil。许可证见 `THIRD_PARTY_NOTICES.md`。
+[Project website source](docs/index.html) · [Local preview](#project-website) · [Method](#method) · [Reproduction](#installation) · [Evidence and open items](docs/PROJECT_WEBSITE_PLAN.md)
 
-服务器项目根目录 `/data/ReaSeg/MedSPAR`。所有以下命令从项目根目录执行。
-数据根 `/data/ReaSeg/data`，保留原来的数据集子目录、train/val/test JSON 及图像/mask相对路径；每条 JSON 使用 `input` 问题及 `output` 参考答案。Stage0/1/2沿用相同数据读取协议，不重新划分数据。
-基础资源目录 `/data/ReaSeg/pretrained`：`medsam_vit_b.pth`、`bert-base-uncased/`、`Qwen3.5-2B-SEG/`。
-最后一项必须是永久加入 [SEG]、同步保存 tokenizer/embedding 的基础 LLM，不是旧 Stage2 checkpoint。如果尚未准备，使用实际原始 Qwen 目录运行：
+![Schematic task overview: a 2D image and a question produce an answer and a target mask. No medical image or prediction is shown.](docs/assets/images/teaser/task-overview.svg)
 
-```bash
-python tools/add_seg_token_to_llm.py --model_path /data/ReaSeg/pretrained/Qwen3.5-2B --output_dir /data/ReaSeg/pretrained/Qwen3.5-2B-SEG --local_files_only --dtype bf16
+*Task schematic, not an experimental example. An approved image–question–mask case will replace `TODO_TEASER_CASE`.*
+
+> **Project preparation snapshot — 2 November 2026.** The method has source implementations; verified current-model performance and public releases remain pending. This Git workspace contains research drafts and historical code copies. The current implementation inspected for this page is a separate local checkout, `E:/Project/MedSPAR`, and is **not included at this repository root**. `TODO_CODE_SYNC`: integrate the intended release source and resolve its package-name issue before claiming that the commands below run from a fresh clone. No public repository remote, paper URL, model download, author list or project license was established. See the [evidence ledger](docs/PROJECT_WEBSITE_PLAN.md#fact-verification-ledger).
+
+## Introduction
+
+MedSPAR studies **2D medical image reasoning segmentation**: given an image and a natural-language question, generate an answer and predict the corresponding binary target mask. The implemented automatic inference path uses the image and question; reference answers and annotation-derived boxes are supervision rather than user inputs.
+
+The central research question is how answer representations and a `[SEG]` anchor can interact with a spatial visual grid and supply useful geometric and semantic conditions to a segmentation decoder. Implementation establishes the available computation; comparative benefits require matched, traceable experiments. No clinical-validation or state-of-the-art claim is made.
+
+## Implemented components
+
+- **TC-MVE — Text-Conditioned Medical Visual Encoder:** a BERT-conditioned MedSAM visual interface, trained within Steer-MedSAM in Stage 1.
+- **ACSG — Answer-Conditioned Spatial Grounding:** answer-state query pooling and a SEG anchor interact with the uncompressed visual grid.
+- **SGPA — Semantic–Geometric Prompt Adaptation:** predicted boxes, coarse masks and gated semantic tokens condition SAM mask decoding.
+- **Evaluation interfaces:** free generation, SEG validity checks, native-mask-grid scoring and per-record diagnostics are implemented. Their presence does not certify completed experiments.
+
+## Method
+
+![Code-derived overview showing separate visual-prefix, full-grid grounding and direct image-embedding paths.](docs/assets/images/framework/method-overview.svg)
+
+*Overview of the inspected `main` configuration. Arrows represent implemented data paths, not measured attention or model outputs.*
+
+1. The same question conditions BERT and the LLM. Gated cross-attention is inserted **before** ViT blocks at zero-based indices **2, 5, 6, 11**.
+2. Pre-neck patch tokens supply both a compressed/projected LLM prefix and the full spatial grid for grounding. Post-neck SAM image embeddings reach the mask decoder directly.
+3. Training uses reference-answer teacher forcing. Automatic inference generates an answer, requires exactly one valid `[SEG]`, then performs a second LLM forward to obtain answer/SEG states while reusing visual features.
+4. ACSG pools answer states before `[SEG]` into four default queries and projects the state **at** `[SEG]` into an anchor. Query self-attention, grid cross-attention and feed-forward layers update the query bank and produce spatial logits.
+5. SGPA sends the predicted box and coarse-mask logits through SAM's prompt encoder. Projected, gated semantic tokens bypass that encoder and concatenate with geometric sparse prompts. All eight configured experiments disable point prompts.
+
+| Stage | Implemented training policy | Dependency / verification boundary |
+|---|---|---|
+| 0: MedSAM control | Freeze original image encoder, prompt encoder and IoU head; train decoder segmentation parameters; BCE + Dice | Base MedSAM. Independent control branch, not a prerequisite for `main`. Runtime artifacts unavailable here. |
+| 1: Steer-MedSAM / TC-MVE | Same shared SAM policy; train text connector, GCA and auxiliary patch head; freeze BERT; add 0.2 patch BCE | Base MedSAM + BERT. Prepares the complete Stage 1 visual model. Runtime artifacts unavailable here. |
+| 2: MedSPAR | Default frozen visual branch; train LoRA, full embedding/LM-head matrices, visual prefix modules, ACSG/SGPA and decoder segmentation parameters | New Stage 1 + permanent-SEG LLM for `main`; new Stage 0 full SAM for `medsam_vision`. Full model/CUDA verification remains pending. |
+
+Current JSON defaults are 50 epochs for Stages 0/1 and **30** for Stage 2, seed 2026, six GPUs and batch size 2 per GPU. These are defaults, not verified run settings. Older README/migration notes say Stage 2 uses 15 epochs; actual run metadata must resolve that conflict.
+
+## Dataset
+
+The loaders organize ten **task groups**, rather than ten independent source datasets. Local manifests were recounted on 2 November 2026. Counts below are JSON records, not unique images or patients, and do not establish experimental completion.
+
+| Group | Sources represented in processing/generation material | Train | Val | Test |
+|---|---|---:|---:|---:|
+| BraTS | BraTS 2019/2020/2023; MSD Task01 BrainTumour | 3,902 | 488 | 488 |
+| Breast | Breast_Cancer_DCE-MRI_Data; MAMA-MIA | 3,816 | 477 | 474 |
+| Kidney | KiTS23 | 3,466 | 432 | 435 |
+| Liver | LiTS; MSD Task03 Liver; MSD Task08 HepaticVessel | 2,776 | 350 | 346 |
+| Lung | MSD Task06 Lung; NLSTSeg; NSCLC-Radiomics; QIN-Lung-Seg | 3,348 | 421 | 414 |
+| Pancreas | MSD Task07 Pancreas; PanTS | 3,191 | 400 | 397 |
+| Poly | CVC-300; CVC-ClinicDB; CVC-ColonDB; ETIS-LaribPolypDB; HyperKvasir; Kvasir-SEG | 2,597 | 324 | 327 |
+| Prostate | PI-CAI; PROMISE12; Prostate158; optional MSD Task05 support | 3,027 | 374 | 381 |
+| Skin | ISIC2017; ISIC2018; PH2 | 3,335 | 398 | 461 |
+| Thyroid | TN3K | 2,303 | 576 | 614 |
+| **Manifest inventory** | **Source inclusion is not independently traced for every record** | **31,761** | **4,240** | **4,337** |
+
+The total is **40,338 records**. All groups are configured and have local manifests; current-model experiment provenance is pending for every group. A preprocessing option alone does not establish inclusion: BUSI, FedBCa, BrainMRI, PolypDB and commented ISIC2016 support are not counted as confirmed additions. `TODO_DATA_RELEASE`: establish source versions, target mappings, provenance and redistribution permissions before publishing data or dataset links.
+
+**Known data limitation:** current Prostate manifests contain 189 image/mask pairs assigned to different targets and five patient-ID prefixes appearing across splits under the existing identity rule. Earlier audits include mask decoding that identifies target mismatches. These findings conflict with a blanket claim of patient-disjoint splits. Correct the source data and rerun affected evaluations before promoting scores. This website does not redistribute medical images, masks or patient identifiers.
+
+### Record format
+
+Preferred layout: `DATA_ROOT/<group>/<split>/<split>.json`, with paths relative to that split directory. The loader accepts a JSON list or a list under `data`, `samples`, `annotations` or `items`. Use an explicit standard split filename; the current fallback to the first JSON file can be ambiguous.
+
+The following is a **schema template with replacement markers**, not a real patient record:
+
+```json
+[
+  {
+    "image": "images/<IMAGE_FILE>",
+    "mask": "masks/<MASK_FILE>",
+    "input": "<NONEMPTY_QUESTION_WITHOUT_SEG>",
+    "output": "<REFERENCE_ANSWER> [SEG]",
+    "body_part": "<BODY_PART>",
+    "modality": "<MODALITY>",
+    "target": "<TARGET>",
+    "target_position": {
+      "bbox_xyxy": ["<X_MIN>", "<Y_MIN>", "<X_MAX>", "<Y_MAX>"],
+      "bbox_region": "<REGION>",
+      "bbox_text": "<LOCATION_TEXT>"
+    }
+  }
+]
 ```
 
-在 `scripts/experiment_defaults.sh` 手动设置 SEED（默认2026）及 GPU_IDS（默认0,1,2,3,4,5）。环境变量可覆盖：
+Actual bbox coordinates must be numeric. `image` and nonempty `input` are inference inputs; `mask` and `output` provide training/scoring supervision. The metadata fields above occur in inspected records and are not required model inputs. Canonical answers end with one `[SEG]`; the helper appends a missing token and rejects multiple tokens. RGB images are square-resized to 1024 × 1024; mask foreground is defined by grayscale values > 0, with nearest-neighbor mask resizing for training. Scoring restores predictions to the original mask grid.
+
+## Installation
+
+**Research-code prerequisite:** the current source checkout has a disk package `MedSPAR/`, while imports request `medspar`. The normal launcher dry run failed with `ModuleNotFoundError: No module named 'medspar'` in this environment. `TODO_PACKAGE_CASE` and `TODO_CODE_SYNC` must be resolved in the release checkout; this documentation task does not rename or copy research code.
+
+The following Bash recipe applies from the synchronized, corrected **research source root**, not from this documentation workspace:
 
 ```bash
-export DATA_ROOT=/data/ReaSeg/data PRETRAINED_ROOT=/data/ReaSeg/pretrained
-export GPU_IDS=0,1,2,3,4,5 EVAL_GPU_ID=0 SEED=2026
+cd /path/to/verified/MedSPAR-source  # TODO_CODE_SYNC: replace with the release source root
+python -m pip install -r requirements.txt
+export DATA_ROOT=/path/to/authorized/data
+export PRETRAINED_ROOT=/path/to/licensed/pretrained
+export GPU_IDS=0 SEED=2026
 ```
 
-默认训练和训练中验证使用六卡，每卡batch=2；独立验证/测试使用单卡、batch=2。`--batch_size`、`--val_batch_size`可显式覆盖，但公平对比应整组一致。每个实验从相同基础 LLM、同一新Stage1（或新Stage0）独立初始化，禁止从 main 继续训练消融。配置与有效开关均记录。
+The inspected requirements list PyTorch, torchvision, Transformers, PEFT, NumPy, Pillow, tqdm and psutil without version pins. `TODO_ENVIRONMENT`: record proven Python/PyTorch/CUDA/Transformers/PEFT versions and the actual base-model revision. Select a matching CUDA PyTorch/torchvision build first. The recipe has not been validated by model execution here.
 
-## 结构与训练范围
-
-图像＋用户问题 → TC-MVE → 视觉token压缩/投影＋LLM → 回答隐藏状态、SEG anchor、Reasoning Queries → ACSG空间定位 → SGPA自动框/粗掩码/语义提示 → SAM mask decoder。
-ACSG逻辑组为 `reasoning_query_pooler`、`seg_anchor_projector`、`semantic_spatial_grounder`；SGPA为 `automatic_geometric_prompt_generator`、`semantic_prompt_projector`、`prompt_fusion_gate`及提示适配。保留原参数结构，不新增包装层或checkpoint前缀。
-
-Stage0/Stage1共有SAM部分采用相同冻结策略：原Image Encoder、Prompt Encoder及IoU head冻结；mask decoder分割部分训练。Stage1额外训练BERT connector、插入的GCA、Patch Head，BERT backbone冻结。Stage0没有文本引导或Patch Head。两者共同BCE＋Dice；Stage1附加0.2 Patch BCE，均50epoch、同bbox/数据协议。
-Stage2默认15epoch，视觉分支冻结，训练LoRA、完整embedding/LM head、视觉压缩/投影、ACSG/SGPA及mask decoder分割部分；消融关闭的RQ或语义模块冻结。所有八组无点提示。`medsam_vision`加载新Stage0的完整SAM，而非混入Stage1 decoder；这是整体视觉方案对照。
-
-## Stage0 与 Stage1
+Expected external resources: `medsam_vit_b.pth`, `bert-base-uncased/`, and `Qwen3.5-2B-SEG/` under `PRETRAINED_ROOT`. These are configured local directory names, not verified downloadable releases. Prepare the permanent SEG tokenizer/embedding pair using the existing tool after obtaining the appropriate licensed base model:
 
 ```bash
-bash scripts/train_stage1_tc_mve.sh
-bash scripts/eval_stage1_tc_mve.sh --split val
-bash scripts/eval_stage1_tc_mve.sh
-bash scripts/train_stage0_medsam.sh
-bash scripts/eval_stage0_medsam.sh --split val
-bash scripts/eval_stage0_medsam.sh
+python tools/add_seg_token_to_llm.py \
+  --model_path "$PRETRAINED_ROOT/Qwen3.5-2B" \
+  --output_dir "$PRETRAINED_ROOT/Qwen3.5-2B-SEG" \
+  --local_files_only --dtype bf16
 ```
 
-Stage1权重：`work_dir/stage1_TC-MVE/best.pth`，测试：`output/stage1_TC-MVE_test/`。
-Stage0权重：`work_dir/stage0_medsam/best.pth`，测试：`output/stage0_medsam_test/`。
-每epoch自动验证，best按原生GT网格平均Dice选择；Stage0/1使用GT派生bbox的提示分割，仅用于各自视觉训练/对照，不能与Stage2自动提示指标混作同一种任务。
+## Quick start / inference
 
-## Stage2 八组训练、验证与测试
+The implemented CLI for image/question generation plus segmentation is the evaluation entry point. It also reads ground truth **after inference** for scoring; this is not a standalone image-only demo. A mask-free Python helper exists in `medspar/generation.py` but has no independently verified public CLI example yet (`TODO_INFERENCE_DEMO`).
 
-每epoch自动自由生成验证，best=`val_auto_dice`。训练使用参考output的teacher forcing监督，验证/测试仅图像和input生成，GT只用于最终评分；GT框不会进入自动推理。所有实验分别运行下面三条命令，独立val输出为 `output/<ID>_val/`。
-
-### main
-
-预测框＋粗掩码＋语义，保留RQ与空间监督。权重 `work_dir/stage2_MedSPAR/best.pth`；测试 `output/main_test/`。
+With real authorized test data and a new-project `main` checkpoint, the existing launcher runs:
 
 ```bash
-bash scripts/train_main.sh
-bash scripts/eval_stage2_medspar.sh --experiment main --split val
-bash scripts/eval_stage2_medspar.sh --experiment main
+python tools/run_experiments.py eval --stage stage2 --experiment main \
+  --eval_gpu_id 0 --max_samples 2 \
+  --checkpoint work_dir/stage2_MedSPAR/best.pth \
+  --output_dir output/main_smoke_test
 ```
 
-### no_rq
+This generates answers and masks and scores the first two records **per group**. Missing or multiple generated SEG tokens produce a failed segmentation; the evaluator keeps those records in the denominator. Use an empty output directory; the launcher refuses to overwrite a populated one.
 
-仅关闭Reasoning Queries，保留SEG anchor。权重 `work_dir/no_rq/best.pth`；测试 `output/no_rq_test/`。
+## Training
 
-```bash
-bash scripts/train_no_rq.sh
-bash scripts/eval_stage2_medspar.sh --experiment no_rq --split val
-bash scripts/eval_stage2_medspar.sh --experiment no_rq
-```
-
-### no_semantic
-
-仅关闭语义提示及融合门。权重 `work_dir/no_semantic/best.pth`；测试 `output/no_semantic_test/`。
-
-```bash
-bash scripts/train_no_semantic.sh
-bash scripts/eval_stage2_medspar.sh --experiment no_semantic --split val
-bash scripts/eval_stage2_medspar.sh --experiment no_semantic
-```
-
-### box_only
-
-仅关闭粗掩码SAM输入，仍保留语义提示。权重 `work_dir/box_only/best.pth`；测试 `output/box_only_test/`。
-
-```bash
-bash scripts/train_box_only.sh
-bash scripts/eval_stage2_medspar.sh --experiment box_only --split val
-bash scripts/eval_stage2_medspar.sh --experiment box_only
-```
-
-### no_spatial_heatmap_loss
-
-仅关闭lambda_attn，框和prompt监督保留。权重 `work_dir/no_spatial_heatmap_loss/best.pth`；测试 `output/no_spatial_heatmap_loss_test/`。
-
-```bash
-bash scripts/train_no_spatial_heatmap_loss.sh
-bash scripts/eval_stage2_medspar.sh --experiment no_spatial_heatmap_loss --split val
-bash scripts/eval_stage2_medspar.sh --experiment no_spatial_heatmap_loss
-```
-
-### medsam_vision
-
-视觉改为新Stage0微调的完整普通MedSAM。权重 `work_dir/medsam_vision/best.pth`；测试 `output/medsam_vision_test/`。
-
-```bash
-bash scripts/train_medsam_vision.sh
-bash scripts/eval_stage2_medspar.sh --experiment medsam_vision --split val
-bash scripts/eval_stage2_medspar.sh --experiment medsam_vision
-```
-
-### coarse_mask_only
-
-仅关闭box SAM输入，语义及全部几何监督保留。权重 `work_dir/coarse_mask_only/best.pth`；测试 `output/coarse_mask_only_test/`。
-
-```bash
-bash scripts/train_coarse_mask_only.sh
-bash scripts/eval_stage2_medspar.sh --experiment coarse_mask_only --split val
-bash scripts/eval_stage2_medspar.sh --experiment coarse_mask_only
-```
-
-### semantic_only
-
-关闭box和coarse SAM输入，几何分支/辅助监督保留。权重 `work_dir/semantic_only/best.pth`；测试 `output/semantic_only_test/`。
-
-```bash
-bash scripts/train_semantic_only.sh
-bash scripts/eval_stage2_medspar.sh --experiment semantic_only --split val
-bash scripts/eval_stage2_medspar.sh --experiment semantic_only
-```
-
-## 一键运行与续训
-
-```bash
-bash run_all.sh train
-bash run_all.sh eval
-bash scripts/run_all_ablations.sh train
-bash scripts/run_all_ablations.sh eval
-```
-
-一键顺序：新Stage1训练/测试 → main训练/测试 → 新Stage0训练/测试 → 七组消融训练/测试。已有非空输出目录会报错，不跳过、不覆盖。仅评估已完成权重时，用新 `EVAL_ROOT` 保存结果，或使用单实验 `--output_dir`。
-续训必须指定同一新实验的checkpoint，恢复模型/optimizer/scaler/epoch；配置漂移会拒绝，允许延长epoch总数。示例：
-
-```bash
-bash scripts/train_main.sh --resume work_dir/stage2_MedSPAR/last.pth --epochs 15
-bash scripts/train_stage1_tc_mve.sh --resume work_dir/stage1_TC-MVE/last.pth --epochs 50
-bash scripts/eval_stage2_medspar.sh --experiment main --checkpoint work_dir/stage2_MedSPAR/best.pth --output_dir output/main_retest
-```
-
-不要把 `--resume` 传给一键所有实验脚本。续训按epoch边界恢复，不承诺与未中断训练逐bit相同的随机数流。
-
-## 输出与指标
-
-训练输出：`config.json`、`train_config.json`、`training_budget.json`、`training_details.json`、`trainable_parameters.json`、`history.json`、`efficiency.json`、`compute_profile.json`、best/last及周期checkpoint。`validation/epoch_XXXX/`包含summary、per_dataset_summary和area_group_summary。
-测试输出：`config.json`/`eval_config.json`、`summary.json`、`overall_summary.csv`、`per_dataset_summary.json`、`per_sample_metrics.csv`、`efficiency.json`及效率兼容输出、`compute_profile.json`、`area_group_summary.csv`；Stage2额外SEG诊断、可选visualizations等专属内容保留。
-Dice/IoU/Recall在原生GT尺寸计算；缺失或多个SEG计失败，三项分数为0且仍计入总体分母，success rate单报。有效预测遇empty GT时Recall为1；Dice/IoU沿用epsilon公式。near_zero≤1e-6，low_dice<0.1；面积分组按原生GT前景占比：empty、<0.1%、0.1–0.5%、0.5–1%、≥1%。不删低分/小目标样本。
-参数统计按唯一参数计数；各模块统计可能共享重叠。效率分别记录训练、验证、保存、推理时间和显存；计算量只报告profiler支持算子的部分FLOPs，不伪称完整FLOPs。
-
-## 服务器验证顺序
-
-先预览真实命令（不加载模型）：
+After resolving the prerequisites above, preview each command with `--dry_run` before launching it:
 
 ```bash
 python tools/run_experiments.py train --stage stage1 --dry_run
-python -c "import torch, transformers, peft, torchvision; import train.train_stage1, train.train_stage2, evaluation.eval_stage2_medspar; print(torch.cuda.device_count())"
-python -m compileall -q TC_MVE medspar train evaluation tools
-for s in run_all.sh scripts/*.sh; do bash -n "$s"; done
+python tools/run_experiments.py train --stage stage1
+python tools/run_experiments.py train --stage stage2 --experiment main --epochs 30
+
+# Separate ordinary-MedSAM visual control, needed for medsam_vision only:
+python tools/run_experiments.py train --stage stage0
+python tools/run_experiments.py train --stage stage2 --experiment medsam_vision --epochs 30
 ```
 
-基础资源准备好后先真实单batch forward/backward/optimizer；使用独立smoke输出，不保存假checkpoint：
+The eight experiment IDs are `main`, `no_rq`, `no_semantic`, `box_only`, `no_spatial_heatmap_loss`, `medsam_vision`, `coarse_mask_only`, and `semantic_only`. Names describe input-path changes with additional qualifications: `box_only` keeps semantic prompts; `coarse_mask_only` also keeps semantic prompts; `semantic_only` retains geometric branches/auxiliary supervision; `no_spatial_heatmap_loss` disables only the heatmap loss. `no_rq` reduces both the query bank and semantic-token count. Do not interpret these as single-factor causal proof without checking the effective flags and training budgets.
 
 ```bash
-bash scripts/train_stage1_tc_mve.sh --smoke_batches 1 --output_dir work_dir/smoke_stage1
-bash scripts/train_stage0_medsam.sh --smoke_batches 1 --output_dir work_dir/smoke_stage0
+# Same-experiment resume; never initialize an ablation from a trained main:
+python tools/run_experiments.py train --stage stage2 --experiment main \
+  --resume work_dir/stage2_MedSPAR/last.pth --epochs 30
 ```
 
-正式完成Stage1后验证新视觉权重严格加载，再检查Stage2单batch：
+## Evaluation
 
 ```bash
-bash scripts/train_main.sh --smoke_batches 1 --output_dir work_dir/smoke_main
+python tools/run_experiments.py eval --stage stage1 --eval_gpu_id 0 --split test
+python tools/run_experiments.py eval --stage stage2 --experiment main \
+  --eval_gpu_id 0 --split test --output_dir output/main_test_verified
 ```
 
-首次Stage2 checkpoint生成后，用少量真实样本验证保存→加载→生成→GT评分：
+Automatic Stage 2 uses only image/question conditions for generation. Stage 0/1 use GT-derived boxes and must be reported separately. Validation and independent evaluation currently use different decoding defaults: repetition penalty / no-repeat-ngram are **1.0 / 0** versus **1.1 / 4**. `TODO_DECODING_PROTOCOL`: select and record a matched protocol before comparing validation-selected and final scores. The launcher does not expose these two overrides; the underlying evaluator does. No evaluation behavior was changed here.
+
+- Implemented primary metrics: Dice, IoU and Recall at native GT resolution; default probability threshold 0.5, bilinear logit resizing, epsilon `1e-6` in Dice/IoU. Empty-GT Recall is 1 for valid predictions; invalid SEG predictions score 0 on all three metrics.
+- Overall means average **all records**; per-group means are separate. A group-macro mean requires an explicit separate calculation. Do not substitute a single-group score for Overall. Mean Dice and mean IoU cannot be converted into one another using a nonlinear formula.
+- The current official evaluator does not report HD95. `TODO_HD95`: decide whether to implement and validate it in a separate research change, including physical spacing and empty-mask conventions.
+- Outputs include `eval_config.json`, `summary.json`, `per_dataset_summary.json`, `per_sample_metrics.csv`, generation/SEG diagnostics, area-group summaries and efficiency metadata. Requested visualizations/predictions remain local until rights and provenance are approved.
+
+## Results
+
+**`TODO_RESULTS`: current-model, run-traceable results pending.** Local paper fragments and an author-supplied summary CSV contain provisional comparisons, but current `main` checkpoint identity, run settings, prediction masks and the corrected data protocol were not available as a complete evidence chain. No benchmark score or improvement is promoted on this page. Explicitly simulated MedReasoner-FINE files are excluded from research results. Legacy `full`/`box_coarse_mask` results are not current MedSPAR results.
+
+**`TODO_QUALITATIVE`: approved same-record image, question, GT, current-model prediction and overlay pending.** The task and method SVGs are explanatory drawings; they contain no medical image, synthetic GT or experimental prediction.
+
+## Checkpoints
+
+| Artifact | Implemented save/load relation | Public availability |
+|---|---|---|
+| Stage 1 | `work_dir/stage1_TC-MVE/best.pth` initializes the complete Steer-MedSAM visual model for `main` | `TODO_MODELS` |
+| Stage 0 | `work_dir/stage0_medsam/best.pth` initializes complete SAM for `medsam_vision` | `TODO_MODELS` |
+| Stage 2 main | `work_dir/stage2_MedSPAR/best.pth`; `last.pth` resumes the same experiment | `TODO_MODELS` |
+
+Checkpoint code checks pipeline version, experiment flags, model configuration, SEG consistency and state keys/shapes. Stage 2 evaluation restores architecture settings and loads its own complete saved model; it does not chain old-project checkpoints. Base MedSAM and licensed text/LLM resources are still required. Current checkpoints were not loaded or tested in this documentation task.
+
+## Citation
+
+`TODO_CITATION`: confirm the final paper title, authors, affiliations, public identifier and publication status. No MedSPAR BibTeX is supplied until those fields are verified. CVPR 2027 filenames refer to drafting plans and do not establish submission or acceptance.
+
+## Acknowledgements and license
+
+The inspected implementation builds on [SAM](https://github.com/facebookresearch/segment-anything) and [MedSAM](https://github.com/bowang-lab/MedSAM), with BERT and LoRA-based LLM adaptation. The separate source checkout preserves the SAM Apache-2.0 text in `licenses/segment_anything_LICENSE` and records external-resource obligations in `THIRD_PARTY_NOTICES.md`.
+
+**`TODO_LICENSE`: no project-wide license has been confirmed.** Upstream SAM licensing does not automatically license all MedSPAR code, images, source datasets or weights. Dataset/model redistribution terms must be reviewed per source and revision. No raw data or model weights are bundled with this website. Academic information organization was informed by [MedReasoner](https://github.com/PRIS-CV/MedReasoner) and its [project page](https://pris-cv.github.io/MedReasoner/); no text, code, images or branding were copied.
+
+## Project website
+
+From this repository root:
 
 ```bash
-bash scripts/eval_stage2_medspar.sh --experiment main --checkpoint work_dir/stage2_MedSPAR/best.pth --max_samples 2 --output_dir output/smoke_main_test
+python -m http.server 8000 --directory docs
 ```
 
-加载应显示missing/unexpected均0；不接受旧项目checkpoint。通过后继续正式训练/完整测试。真实大模型梯度、CUDA内存、DDP行为及最终精度须在服务器验证，本地结构测试不能替代。
+Open [http://localhost:8000](http://localhost:8000). HTML, CSS, JavaScript and all images are inside `docs/`; no npm, build system or backend is required. Core content also renders without JavaScript or internet access. The [maintenance plan](docs/PROJECT_WEBSITE_PLAN.md) records placeholder IDs, replacement evidence and validation commands.
+
+For GitHub Pages, commit the intended documentation files to the target repository's `main` branch, then choose **Settings → Pages → Deploy from a branch → main → /docs** and save. Verify the Pages deployment before advertising its URL. Expected address template: `https://<GitHub-username>.github.io/MedSPAR/`. This is a template, not a published project link. See [GitHub's publishing-source instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).

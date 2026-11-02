@@ -4,13 +4,17 @@ for Medical Reasoning Segmentation
 </h1>
 
 <p align="center">
-  <a href="https://wanghan-hub.github.io/MedSPAR/"><img src="https://img.shields.io/static/v1?label=GitHub&message=Project&color=216960&logo=github-pages" alt="GitHub Project"></a>
+  <a href="https://wanghan-hub.github.io/MedSPAR/"><img src="https://img.shields.io/static/v1?label=GitHub&message=Project&color=4078C0&logo=github&logoColor=white" alt="GitHub Project"></a>
   &ensp;
   <img src="https://img.shields.io/static/v1?label=ArXiv&message=Paper%20%28Coming%20Soon%29&color=999999&logo=arxiv" alt="ArXiv Paper — coming soon">
   &ensp;
-  <a href="https://huggingface.co/datasets/HanWangAI/MedSPAR-Data"><img src="https://img.shields.io/static/v1?label=Dataset&message=MedSPAR-Data&color=E6B422&logo=huggingface" alt="Dataset MedSPAR-Data"></a>
+  <a href="https://huggingface.co/datasets/HanWangAI/MedSPAR-Data"><img src="https://img.shields.io/badge/Dataset-FFD21E?logo=huggingface&logoColor=black" alt="Hugging Face Dataset" title="Hugging Face Dataset"></a>
   &ensp;
-  <a href="https://huggingface.co/HanWangAI/MedSPAR"><img src="https://img.shields.io/static/v1?label=Models&message=MedSPAR&color=E6B422&logo=huggingface" alt="Models MedSPAR"></a>
+  <a href="https://huggingface.co/HanWangAI/MedSPAR"><img src="https://img.shields.io/badge/Models-FFD21E?logo=huggingface&logoColor=black" alt="Hugging Face Models" title="Hugging Face Models"></a>
+  &ensp;
+  <a href="https://www.modelscope.cn/datasets/HanWangAI/MedSPAR-Data"><img src="https://img.shields.io/badge/Dataset-624AFF?logo=modelscope&logoColor=white" alt="ModelScope Dataset" title="ModelScope Dataset"></a>
+  &ensp;
+  <a href="https://www.modelscope.cn/models/HanWangAI/MedSPAR"><img src="https://img.shields.io/badge/Models-624AFF?logo=modelscope&logoColor=white" alt="ModelScope Models" title="ModelScope Models"></a>
 </p>
 
 ## Introduction
@@ -33,27 +37,27 @@ MedSPAR preserves spatial visual features along two complementary paths: the ful
 
 ## Installation
 
-Clone the repository and create a Python environment:
+Clone the repository and create the `medspar` Conda environment:
 
 ```bash
 git clone https://github.com/wanghan-hub/MedSPAR.git
 cd MedSPAR
-python -m venv .venv
-source .venv/bin/activate
+conda create -n medspar python=3.10 -y
+conda activate medspar
 ```
 
-Install PyTorch and torchvision for your CUDA environment, then the remaining dependencies:
+Install PyTorch 2.7.1 with CUDA 11.8 and its matching torchvision and torchaudio packages, then install the remaining dependencies:
 
 ```bash
-python -m pip install torch torchvision
-python -m pip install transformers peft numpy Pillow tqdm psutil
+pip install torch==2.7.1+cu118 torchvision==0.22.1+cu118 torchaudio==2.7.1+cu118 --index-url https://download.pytorch.org/whl/cu118
+pip install -r requirements.txt
 ```
 
 The language-model configuration uses Qwen3.5; use a Transformers version that supports the selected backbone.
 
 ## Dataset
 
-Download **[MedSPAR-Data](https://huggingface.co/datasets/HanWangAI/MedSPAR-Data)** from Hugging Face. It pairs 2D medical images with segmentation questions, reference answers and binary target masks, covering brain, breast, kidney, liver, lung, pancreas, colorectal polyp, prostate, skin and thyroid tasks.
+Download **MedSPAR-Data** from [Hugging Face](https://huggingface.co/datasets/HanWangAI/MedSPAR-Data) or [ModelScope](https://www.modelscope.cn/datasets/HanWangAI/MedSPAR-Data). It pairs 2D medical images with segmentation questions, reference answers and binary target masks, covering brain, breast, kidney, liver, lung, pancreas, colorectal polyp, prostate, skin and thyroid tasks.
 
 Organize the data by task group and split:
 
@@ -91,7 +95,7 @@ The question provides the language input. The reference answer and binary mask p
 
 ## Model Weights
 
-Download the MedSPAR checkpoints from **[HanWangAI/MedSPAR](https://huggingface.co/HanWangAI/MedSPAR)**. Prepare the base MedSAM, BERT and language-model resources in the following layout:
+Download the MedSPAR checkpoints from [Hugging Face](https://huggingface.co/HanWangAI/MedSPAR) or [ModelScope](https://www.modelscope.cn/models/HanWangAI/MedSPAR). Prepare the base MedSAM, BERT and language-model resources in the following layout:
 
 ```text
 pretrained/
@@ -100,14 +104,7 @@ pretrained/
 └── Qwen3.5-2B-SEG/
 ```
 
-`Qwen3.5-2B-SEG` contains the language model and tokenizer with `[SEG]` registered as a permanent special token. To prepare it from the base language model:
-
-```bash
-python tools/add_seg_token_to_llm.py \
-  --model_path /path/to/Qwen3.5-2B \
-  --output_dir pretrained/Qwen3.5-2B-SEG \
-  --local_files_only --dtype bf16
-```
+`Qwen3.5-2B-SEG` contains the language model and tokenizer with `[SEG]` registered as a permanent special token. See [Training](#training) for base-model downloads and token preparation.
 
 Set the data, pretrained-resource and downloaded checkpoint paths:
 
@@ -134,7 +131,33 @@ This processes two samples per task group, generating text and segmentation pred
 
 ## Training
 
-Train the text-conditioned visual model, followed by MedSPAR:
+### 1. Prepare pretrained models
+
+Download the following resources and place them under `pretrained/`:
+
+- **[Qwen3.5-2B](https://huggingface.co/Qwen/Qwen3.5-2B)** → `pretrained/Qwen3.5-2B/`.
+- **[MedSAM ViT-B checkpoint](https://huggingface.co/wanglab/medsam-vit-base/resolve/main/medsam_vit_b.pth)** → `pretrained/medsam_vit_b.pth`.
+- **[BERT-base-uncased](https://huggingface.co/google-bert/bert-base-uncased)** → `pretrained/bert-base-uncased/`.
+
+Download the complete Qwen and BERT model directories, including their tokenizer and configuration files.
+
+### 2. Add the segmentation token
+
+Run `add_seg_token_to_llm.py` on the downloaded Qwen model to register `[SEG]` and save the updated tokenizer and model:
+
+```bash
+python tools/add_seg_token_to_llm.py \
+  --model_path pretrained/Qwen3.5-2B \
+  --output_dir pretrained/Qwen3.5-2B-SEG \
+  --seg_token "[SEG]" \
+  --local_files_only --dtype bf16
+```
+
+The training code uses `[SEG]` as its segmentation token. Use the generated `Qwen3.5-2B-SEG/` directory for training and inference.
+
+### 3. Train MedSPAR
+
+With `DATA_ROOT`, `PRETRAINED_ROOT` and `GPU_IDS` configured as above, train the text-conditioned visual model, followed by MedSPAR:
 
 ```bash
 # Stage 1: Steer-MedSAM visual preparation
